@@ -30,6 +30,7 @@ from pyanaconda import timezone
 from pyanaconda.i18n import _
 from pyanaconda.threads import threadMgr
 import logging
+import os, sys
 log = logging.getLogger("anaconda")
 
 def _writeKS(ksdata):
@@ -164,6 +165,9 @@ def doInstall(storage, payload, ksdata, instClass):
 
     with progress_report(_("Performing post-installation setup tasks")):
         payload.postInstall()
+
+    if (os.path.isdir("/run/install/repo/ADD_ON")):
+        os.system("sh /run/install/repo/ADD_ON/PostRun.sh")
 
     # Do bootloader.
     if not flags.flags.dirInstall:
