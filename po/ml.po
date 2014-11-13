@@ -1,0 +1,4074 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Red Hat, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Ani Peter <apeter@redhat.com>, 2013
+# Anish Anil Kumar <aneesh.nl@gmail.com>, 2012
+# dcantrel <dcantrell@redhat.com>, 2011
+# Dimitris Glezos <glezos@indifex.com>, 2011
+# harisibrahimkv <blucalvin@gmail.com>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: Anaconda\n"
+"Report-Msgid-Bugs-To: anaconda-devel-list@redhat.com\n"
+"POT-Creation-Date: 2013-06-27 08:31-0700\n"
+"PO-Revision-Date: 2013-06-20 03:20+0000\n"
+"Last-Translator: Brian Lane <bcl@redhat.com>\n"
+"Language-Team: Malayalam <discuss@lists.smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: anaconda:349
+#, c-format
+msgid ""
+"%s requires %s MB of memory to install, but you only have %s MB on this "
+"machine.\n"
+msgstr ""
+"%s-ഇനു %s MB മെമ്മറി ആവഷ്യമുണ്ട് ഇന്സ്ടാള്‍ ചെയ്യാന്‍, പക്ഷെ ഈ മെഷീനില്‍ %s MBയെ ഉള്ളൂ.\n"
+
+#: anaconda:351
+#, c-format
+msgid ""
+"The %s graphical installer requires %s MB of memory, but you only have %s MB."
+msgstr ""
+"%s ഗ്രാഫിക്കല്‍ ഇന്സ്ടാള്ളറിനു %s MB മെമ്മറി ആവഷ്യമുണ്ട്, പക്ഷെ നിങ്ങളൂടെ പക്കല്‍ %s MBയെ ഉള്ളു."
+
+#: anaconda:356
+msgid "Not enough RAM"
+msgstr "ആവശ്യത്തിനുളള റാം ഇല്ല"
+
+#: anaconda:357
+msgid ""
+" Try the text mode installer by running:\n"
+"\n"
+"'/usr/bin/liveinst -T'\n"
+"\n"
+" from a root terminal."
+msgstr ""
+" ഒരു റൂട്ട് ടെര്‍മിനലില്‍ നിന്നും ഇതു് നടപ്പാലാക്കി :\n"
+"\n"
+"'/usr/bin/liveinst -T'\n"
+"\n"
+"അടുത്ത ടെക്സ്റ്റ് മോഡ് ഇന്‍സ്റ്റോളര്‍ ശ്രമിച്ചു് നോക്കാം."
+
+#: anaconda:360
+msgid " Starting text mode."
+msgstr " ടെക്സ്റ്റ് മോഡ് ആരംഭിക്കുന്നു."
+
+#: anaconda:390 pyanaconda/rescue.py:295 pyanaconda/rescue.py:328
+#: pyanaconda/rescue.py:341 pyanaconda/rescue.py:409 pyanaconda/rescue.py:425
+#: pyanaconda/rescue.py:436
+msgid "OK"
+msgstr "ശരി"
+
+#: anaconda:498
+msgid "DISPLAY variable not set. Starting text mode."
+msgstr "അവതരണ നിബന്ധനകള്‍ നിര്‍വചിച്ചിട്ടില്ല. ടെക്സ്റ്റ് മോഡ് ആരംഭിക്കുന്നു."
+
+#: anaconda:506
+msgid "Graphical installation is not available. Starting text mode."
+msgstr "ഗ്രാഫിക്കല്‍ ഇന്‍സ്റ്റലേഷന്‍ ലഭ്യമല്ല. ടെക്സ്റ്റ് മോഡ് ആരംഭിക്കുന്നു."
+
+#: anaconda:514
+msgid ""
+"Text mode provides a limited set of installation options. It does not allow "
+"you to specify your own partitioning layout or package selections. Would you "
+"like to use VNC mode instead?"
+msgstr ""
+" ടെക്സ്റ്റ് മോഡില്‍ ഇന്‍സ്റ്റലേഷന്‍ രീതികള്‍ കുറവാണു്. നിങ്ങള്‍ക്കിഷ്ടമുള്ള തരത്തില്‍ സ്വന്തം പാര്‍ട്ടീഷനിങ് "
+"ശൈലി നല്‍കുകയോ അല്ലെങ്കില്‍ പാക്കേജുകള്‍ തെരഞ്ഞെടുക്കുകയോ ഇവിടെ സാധ്യമല്ല. അതിനാല്‍ വിഎന്‍സി "
+"മോഡിലേക്കു് മാറുന്നോ?"
+
+#: anaconda:637
+#, c-format
+msgid "Please ssh install@%s to begin the install."
+msgstr "ഇന്‍സ്റ്റോള്‍ ആരംഭിയ്ക്കുന്നതിനായി ssh install@%s ചെയ്യുക."
+
+#: anaconda:639
+msgid "Please ssh install@<host> to continue installation."
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ തുടരുന്നതിനായി ദയവായി install@<host> ssh ചെയ്യുക."
+
+#: pyanaconda/bootloader.py:238
+msgid "/boot filesystem"
+msgstr "/boot ഫയല്‍സിസ്റ്റം"
+
+#: pyanaconda/bootloader.py:389
+#, python-format
+msgid ""
+"RAID sets that contain '%s' must have one of the following raid levels: %s."
+msgstr ""
+"'%s' അടങ്ങിയിട്ടുള്ള റെയിഡ് സെറ്റുകള്‍ക്കു താഴെ പറയുന്ന റെയിഡ് ലെവളുകളില്‍ ഒന്നു വെണം: %s."
+
+#: pyanaconda/bootloader.py:397
+#, python-format
+msgid ""
+"RAID sets that contain '%s' must have one of the following metadata "
+"versions: %s."
+msgstr ""
+"'%s' അടങ്ങിയിട്ടുള്ള റെയിഡ് സെറ്റുകള്‍ക്കു താഴെ പറയുന്ന മെറ്റാ ഡാട്ട വെര്‍ഷനുകളില്‍ ഒന്നു വെണം: "
+"%s. "
+
+#: pyanaconda/bootloader.py:405
+#, python-format
+msgid ""
+"RAID sets that contain '%s' must have one of the following device types: %s."
+msgstr "'%s' അടങ്ങിയിട്ടുള്ള റെയിഡ് സെറ്റുകള്‍ക്കു താഴെ പറയുന്ന ടിവൈസ് ടൈപുകളില്‍ ഒന്നു വെണം: %s."
+
+#: pyanaconda/bootloader.py:421
+#, python-format
+msgid "%s must have one of the following disklabel types: %s."
+msgstr "%s- നു താഴെ പറയുന്ന ഡിസ്ക് ലേബല്‍ ടൈപുകളില്‍ ഒന്നു വെണം: %s."
+
+#: pyanaconda/bootloader.py:433
+#, python-format
+msgid "%s cannot be of type %s."
+msgstr "%s %s-ന്റെ അതേ തരം ആവാന്‍ പാടില്ല."
+
+#: pyanaconda/bootloader.py:439
+#, python-format
+msgid "%s must be mounted on one of %s."
+msgstr "%s, %s-ല്‍ ഒന്നില്‍ മൌണ്ട് ചെയ്തിരിയ്ക്കണം."
+
+#: pyanaconda/bootloader.py:451
+#, python-format
+msgid "%s must be between %d and %d MB in size"
+msgstr "%s-നു %d MBയുടെയും  %d MBയുടെയും ഇടയിലായിരിക്കണം വലിപ്പം"
+
+#: pyanaconda/bootloader.py:456
+#, python-format
+msgid "%s must not be smaller than %dMB."
+msgstr "%s %d MBയെക്കാളും ചെറുതാവാന്‍ പാടില്ല."
+
+#: pyanaconda/bootloader.py:465
+#, python-format
+msgid "%s must not be larger than %dMB."
+msgstr "%s %d MBയെക്കാളും വലുതാവാന്‍ പാടില്ല."
+
+#: pyanaconda/bootloader.py:483
+#, python-format
+msgid "%s must be within the first %dMB of the disk."
+msgstr "%s ഡിസ്ക്കിന്റെ ആദ്യത്തെ %d MBക്കകത്തായിരിക്കണം."
+
+#: pyanaconda/bootloader.py:493
+#, python-format
+msgid "%s must be on a primary partition."
+msgstr "%s ഒരു പ്രൈമറി പാര്‍ട്ടീഷനായിരിയ്ക്കണം."
+
+#: pyanaconda/bootloader.py:627 pyanaconda/bootloader.py:717
+#, python-format
+msgid "%s cannot be on an encrypted block device."
+msgstr "%s ഒരു എന്‍ക്രിപ്റ്റ് ചെയ്ത ബ്ലോക്ക് ഡിവൈസിനുമേല്‍ ആവാന്‍ പറ്റില്ല. "
+
+#: pyanaconda/bootloader.py:675
+#, python-format
+msgid "%s cannot be of type %s"
+msgstr "%s %s-ന്റെ അതേ തരം ആവാന്‍ പാടില്ല."
+
+#: pyanaconda/bootloader.py:1598
+#, python-format
+msgid ""
+"%(deviceName)s may not have enough space for grub2 to embed core.img when "
+"using the %(fsType)s filesystem on %(deviceType)s"
+msgstr ""
+"core.img എംബഡ് ചെയ്യുന്നതിനായി grub2-വിനുള്ള %(deviceName)s-നു് മതിയായ സ്ഥലം ലഭ്യമല്ല. "
+"%(fsType)s ഫയല്‍സിസ്റ്റം ഉപയോഗിയ്ക്കുന്നു, %(deviceType)s-ല്‍."
+
+#: pyanaconda/constants.py:59
+msgid ""
+"An unhandled exception has occurred.  This is most likely a bug.  Please "
+"save a copy of the detailed exception and file a bug report"
+msgstr ""
+"കൈകാര്യം ചെയ്യുവാന്‍ കഴിയാത്ത ഒരു എക്സപ്ഷന്‍ സംഭവിച്ചിരിക്കുന്നു.  ഇതു് ഒരു ബഗ് ആയതിനാല്‍, ദയവായി "
+"ഈ എക്സെപ്ഷന്റെ ഒരു പകര്‍പ്പ് സൂക്ഷിച്ച് ബഗ് രേഖപ്പെടുത്തുക. "
+
+#: pyanaconda/constants.py:65
+msgid " with the provider of this software."
+msgstr " ഈ സോഫ്റ്റ്‌വെയര്‍ ലഭ്യമാക്കുന്നതിനൊപ്പം"
+
+#: pyanaconda/constants.py:69
+#, python-format
+msgid " against anaconda at %s"
+msgstr " %s-ല്‍ അനക്കോഡയ്ക്ക് എതിരെ"
+
+#: pyanaconda/constants.py:95
+msgid "Start VNC"
+msgstr "VNC ആരംഭിക്കുക"
+
+#: pyanaconda/constants.py:96
+msgid "Use text mode"
+msgstr "ടെക്സ്റ്റ് മോഡ് ഉപയോഗിക്കുക"
+
+#: pyanaconda/install.py:65
+msgid "Configuring installed system"
+msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്ത സിസ്റ്റം ക്രമീകരിയ്ക്കുന്നു"
+
+#: pyanaconda/install.py:77
+msgid "Writing network configuration"
+msgstr "നെറ്റ്‌വര്‍ക്ക് ക്രമീകരണം സൂക്ഷിയ്ക്കുന്നു"
+
+#: pyanaconda/install.py:81
+msgid "Creating users"
+msgstr "ഉപയോക്താക്കളെ തയ്യാറാക്കുന്നു"
+
+#: pyanaconda/install.py:88
+msgid "Configuring addons"
+msgstr "ആഡ്ഓണുകള്‍ ക്രമീകരിയ്ക്കുന്നു"
+
+#: pyanaconda/install.py:93
+#, python-format
+msgid "Joining realm: %s"
+msgstr ""
+
+#: pyanaconda/install.py:96
+msgid "Running post-installation scripts"
+msgstr "പോസ്റ്റ്-ഇന്‍സ്റ്റലേഷന്‍ സ്ക്ക്രിപ്റ്റുകള്‍ പ്രവര്‍ത്തിക്കുന്നു"
+
+#: pyanaconda/install.py:128
+#, python-format
+msgid "Waiting for %s threads to finish"
+msgstr ""
+
+#: pyanaconda/install.py:132
+msgid "Setting up the installation environment"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ എന്‍വയണ്മെന്റ് സജ്ജമാക്കുന്നു"
+
+#: pyanaconda/install.py:149
+msgid "Discovering realm to join"
+msgstr ""
+
+#: pyanaconda/install.py:165 pyanaconda/packaging/livepayload.py:144
+#: pyanaconda/packaging/yumpayload.py:1562
+msgid "Performing post-installation setup tasks"
+msgstr "ഇന്‍സ്റ്റലേഷനു് ശേഷമുള്ള സജ്ജീകരണ ജോലികള്‍ നടപ്പിലാക്കുന്നു"
+
+#: pyanaconda/install.py:170
+msgid "Installing bootloader"
+msgstr "ബൂട്ട് ലോഡര്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നു"
+
+#: pyanaconda/installinterfacebase.py:49
+msgid "Error Setting Up Repository"
+msgstr "സംഭരണിയില്‍ ക്രമീരിക്കുന്നതില്‍ പിശക്"
+
+#: pyanaconda/installinterfacebase.py:50
+#, python-format
+msgid ""
+"The following error occurred while setting up the installation repository:\n"
+"\n"
+"%(e)s\n"
+"\n"
+"Installation can not continue."
+msgstr ""
+"ഇന്‍സ്റ്റലേഷന്‍ റിപ്പോസിറ്ററി സജ്ജമാക്കുമ്പോള്‍ ഈ പിശകുണ്ടായിരിയ്ക്കുന്നു:\n"
+"\n"
+"%(e)s\n"
+"\n"
+"ഇന്‍സ്റ്റലേഷന്‍ തുടരുവാന്‍ സാധ്യമല്ല."
+
+#: pyanaconda/installinterfacebase.py:56
+msgid "Exit installer"
+msgstr "ഇന്‍സ്റ്റോളറില്‍ നിന്നും പുറത്ത് കടക്കുക"
+
+#: pyanaconda/installinterfacebase.py:60
+#, python-format
+msgid ""
+"The installation was stopped due to what seems to be a problem with your "
+"hardware. The exact error message is:\n"
+"\n"
+"%s.\n"
+"\n"
+" The installer will now terminate."
+msgstr ""
+"ഹാര്‍ഡ്‌വെയറിലുള്ള എന്തോ പ്രശ്നം കാരണം ഇന്‍സ്റ്റലേഷന്‍ നിര്‍ത്തിയിരിയ്ക്കുന്നു. പിശക് സന്ദേശം:\n"
+"\n"
+"%s.\n"
+"\n"
+" ഇന്‍സ്റ്റോളര്‍ ഉടന്‍ നിര്‍ത്തുന്നു."
+
+#: pyanaconda/installinterfacebase.py:63
+msgid "Hardware Error Encountered"
+msgstr "ഹാര്‍ഡ്‌വെയര്‍ പിശകുണ്ടായിരിയ്ക്കുന്നു"
+
+#: pyanaconda/installinterfacebase.py:67
+msgid "_Exit installer"
+msgstr "ഇന്‍സ്റ്റോളറില്‍ നിന്നും പുറത്ത് കടക്കുക (_E)"
+
+#: pyanaconda/iutil.py:315
+msgid "the device containing /boot"
+msgstr "/boot അടങ്ങുന്ന ഡിവൈസ്"
+
+#: pyanaconda/iutil.py:317
+#, python-format
+msgid ""
+"After shutdown, please perform a manual IPL from %s to continue installation."
+msgstr ""
+"അടച്ചുപൂട്ടിയ ശേഷം, ഇന്‍സ്റ്റലേഷന്‍ തുടരുന്നതിനായി, %s-ല്‍ നിന്നും സ്വയമായി ഐപിഎല്‍ നടപ്പിലാക്കുക."
+
+#: pyanaconda/kickstart.py:149
+#, python-format
+msgid "Escrow certificate %s requires the network."
+msgstr "എസ്ക്രോ സര്‍ട്ടിഫിക്കേറ്റ് %s-നു് നെറ്റ്‌വര്‍ക്ക് ആവശ്യമുണ്ടു്."
+
+#: pyanaconda/kickstart.py:157
+#, python-format
+msgid ""
+"The following error was encountered while downloading the escrow "
+"certificate:\n"
+"\n"
+"%s"
+msgstr ""
+"എസ്ക്രോ സമ്മതപത്രം ഡൌണ്‍ലോഡ് ചെയ്യുമ്പോള്‍ ഈ പിശകുണ്ടായിരിയ്ക്കുന്നു:\n"
+"\n"
+"%s"
+
+#: pyanaconda/kickstart.py:525
+#, python-format
+msgid "%s is missing. Cannot setup firewall."
+msgstr "%s ലഭ്യമല്ല. ഫയര്‍വോള്‍ സജ്ജമാക്കുവാന്‍ സാധ്യമല്ല."
+
+#: pyanaconda/kickstart.py:1625
+msgid "Running pre-installation scripts"
+msgstr "പ്രീ-ഇന്‍സ്റ്റലേഷന്‍ സ്ക്രി്‍സ്ക്ക്രിപ്റ്റുകള്‍ പ്രവര്‍ത്തിക്കുന്നു"
+
+#: pyanaconda/network.py:91
+msgid "Hostname cannot be None or an empty string."
+msgstr "ഹോസ്റ്റ്നാമം കാലിയാകുവാന്‍ പാടില്ല."
+
+#: pyanaconda/network.py:94
+msgid "Hostname must be 255 or fewer characters in length."
+msgstr "ഹോസ്റ്റിന്റെ നാമത്തില്‍ 255 അല്ലെങ്കില്‍ അതില്‍ കുറഞ്ഞ അക്കങ്ങളോ അക്ഷരങ്ങളോ പാടുളളൂ."
+
+#: pyanaconda/network.py:100
+msgid ""
+"Hostname must start with a valid character in the ranges 'a-z', 'A-Z', or "
+"'0-9'"
+msgstr ""
+"ഹോസ്റ്റനെയിം തുടങ്ങുന്നതു് 'a-z', 'A-Z' അല്ലെങ്കില്‍ '0-9' എന്ന പരിധിയിലുളള "
+"അക്ഷരത്തിലായിരിക്കണം"
+
+#: pyanaconda/network.py:108
+msgid ""
+"Hostnames can only contain the characters 'a-z', 'A-Z', '0-9', '-', or '.', "
+"parts between periods must contain something and cannot start or end with "
+"'-'."
+msgstr ""
+"ഹോസ്റ്റനാമങ്ങളില്‍ 'a-z', 'A-Z', '0-9', '-', അല്ലെങ്കില്‍ '.' മാത്രമേ പാടുള്ളൂ, "
+"പീരിയഡിന്റെ ഇടയ്ക്കുള്ള ഭാഗങ്ങളില്‍ എന്തെങ്കിലുമുണ്ടായിരിയ്ക്കണം, കൂടാതെ '-' "
+"ഉപയോഗിച്ചു്ആരംഭിയ്ക്കുകയോ അവസാനിയ്ക്കുകയോ പാടില്ല."
+
+#: pyanaconda/product.py:53
+#, python-format
+msgid "%(productName)s %(productVersion)s INSTALLATION"
+msgstr "%(productName)s %(productVersion)s ഇന്‍സ്റ്റലേഷന്‍"
+
+#: pyanaconda/rescue.py:179 pyanaconda/rescue.py:317 pyanaconda/rescue.py:402
+#, python-format
+msgid "Run %s to unmount the system when you are finished."
+msgstr "പൂര്‍ത്തിയാകുമ്പോള്‍ സിസ്റ്റം അണ്‍മൌണ്ട് ചെയ്യുന്നതിനായി %s നടപ്പിലാക്കുക."
+
+#: pyanaconda/rescue.py:182
+msgid "When finished please exit from the shell and your system will reboot."
+msgstr ""
+"എല്ലാം കഴിഞ്ഞതിന് ശേഷം ഷെല്ലില്‍ നിന്നും പുറത്ത് പോവുക, അപ്പോള്‍ നിങ്ങളുടെ കംപ്യൂട്ടര്‍ റീബൂട്ട് "
+"ചെയ്യും."
+
+#: pyanaconda/rescue.py:196
+msgid "Unable to find /bin/sh to execute!  Not starting shell"
+msgstr "പ്രവര്‍ത്തനത്തിനായി /bin/sh ലഭ്യമാക്കുവാന്‍ സാധ്യമായില്ല!  അതിനാല്‍ ഷെല്‍ ആരംഭിക്കുന്നതല്ല"
+
+#: pyanaconda/rescue.py:251 pyanaconda/rescue.py:324 pyanaconda/rescue.py:334
+#: pyanaconda/rescue.py:405 pyanaconda/rescue.py:436
+msgid "Rescue"
+msgstr "രക്ഷപ്പെടുത്തുക(റെസ്ക്യൂ)"
+
+#: pyanaconda/rescue.py:252
+#, python-format
+msgid ""
+"The rescue environment will now attempt to find your Linux installation and "
+"mount it under the directory %s.  You can then make any changes required to "
+"your system.  If you want to proceed with this step choose 'Continue'.  You "
+"can also choose to mount your file systems read-only instead of read-write "
+"by choosing 'Read-Only'.  \n"
+"\n"
+"If for some reason this process fails you can choose 'Skip' and this step "
+"will be skipped and you will go directly to a command shell.\n"
+"\n"
+msgstr ""
+"റസ്ക്യൂ സാഹചര്യം നിങ്ങളുടെ ലിനക്സ് ഇന്‍സ്റ്റലേഷന്‍ കണ്ടുപിടിയ്ക്കുവാന്‍ ശ്രമിച്ചു്, %s ഡയറക്ടറിയില്‍ "
+"മൌണ്ട് ചെയ്യുന്നു.  ശേഷം നിങ്ങളുടെസിസ്റ്റത്തിനാവശ്യമായ മാറ്റങ്ങള്‍ വരുത്താം. ഇതുമായി മുമ്പോട്ടു് "
+"തുടരുന്നതിനായി 'തുടരുക' തെരഞ്ഞെടുക്കുക.  'റീഡ്-ഒണ്‍ലി' ആയിതെരഞ്ഞെടുത്തു് റീഡ്-റൈറ്റ് ആക്കുന്നതിനു് "
+"പകരം നിങ്ങളുടെ ഫയല്‍ സിസ്റ്റങ്ങള്‍ റീഡ് ഒണ്‍ലി ആയി മൌണ്ട് ചെയ്യാം.  \n"
+"\n"
+"എന്തെങ്കിലും കാരണങ്ങള്‍കൊണ്ടു് ഈ പ്രക്രിയ പരാജയപ്പെട്ടാല്‍,  നിങ്ങള്‍ക്കു് 'ഉപേക്ഷിയ്ക്കുക' "
+"തെരഞ്ഞെടുക്കാം. ഇതു് നടപടികള്‍ഒഴിവാക്കി  നിങ്ങള്‍ നേരിട്ട് കമാന്‍ഡ് ഷെല്ലിലേക്കു് പോകുന്നു.\n"
+"\n"
+
+#: pyanaconda/rescue.py:262
+msgid "Continue"
+msgstr "മുന്നോട്ട് പോവുക"
+
+#: pyanaconda/rescue.py:262 pyanaconda/rescue.py:268
+msgid "Read-Only"
+msgstr "റീഡ്-ഒണ്‍ലി"
+
+#: pyanaconda/rescue.py:262 pyanaconda/rescue.py:264
+msgid "Skip"
+msgstr "വിട്ടുകളയുക"
+
+#: pyanaconda/rescue.py:292
+msgid "System to Rescue"
+msgstr "കംപ്യൂട്ടര്‍ രക്ഷപ്പെടുത്തുക"
+
+#: pyanaconda/rescue.py:293
+msgid "Which device holds the root partition of your installation?"
+msgstr "നിങ്ങളുടെ ഇന്‍സ്റ്റലേഷന്റെ റൂട്ട് പാര്‍ട്ടീഷന്‍ ഏത് പാര്‍ട്ടീഷനിലാണ്?"
+
+#: pyanaconda/rescue.py:295 pyanaconda/rescue.py:299
+msgid "Exit"
+msgstr "പുറത്ത് പോവുക"
+
+#: pyanaconda/rescue.py:314 pyanaconda/rescue.py:399
+msgid "The system will reboot automatically when you exit from the shell."
+msgstr "ഷെല്ലില്‍ നിന്നും പുറത്തു് പോകുമ്പോള്‍ സിസ്റ്റം ഓട്ടോമാറ്റിക്കായി റീബൂട്ട് ചെയ്യപ്പെടുന്നു."
+
+#: pyanaconda/rescue.py:325
+#, python-format
+msgid ""
+"Your system had dirty file systems which you chose not to mount.  Press "
+"return to get a shell from which you can fsck and mount your partitions. %s"
+msgstr ""
+"താങ്കളുടെ സിസ്റ്റത്തില്‍ മൌണ്ട് ചെയ്യേണ്ട എന്ന തീരുമാനിച്ച കേടായ ഫയല്‍സിസ്റ്റങ്ങള്‍ ഉണ്ട്. "
+"ഫയല്‍സിസ്റ്റം പരിശോധിച്ച് മൌണ്ട് ചെയ്യാന്‍ ഒരു ഷെല്‍ വേണമെങ്കില്‍ എന്റെര്‍ കീ അമര്‍ത്തുക. %s"
+
+#: pyanaconda/rescue.py:335
+#, python-format
+msgid ""
+"Your system has been mounted under %(rootPath)s.\n"
+"\n"
+"Press <return> to get a shell. If you would like to make your system the "
+"root environment, run the command:\n"
+"\n"
+"\tchroot %(rootPath)s\n"
+"\n"
+"%(msg)s"
+msgstr ""
+"സിസ്റ്റ %(rootPath)s-ല്‍ മൌണ്ട് ചെയ്തിരിയ്ക്കുന്നു.\n"
+"\n"
+"ഷെല്ലിനായി <return> അമര്‍ത്തുക. സിസ്റ്റം റൂട്ട് രീതിയിലാക്കണമെങ്കില്‍, ഈ കമാന്‍ഡ് "
+"നടപ്പിലാക്കുക:\n"
+"\n"
+"\tchroot %(rootPath)s\n"
+"\n"
+"%(msg)s"
+
+#: pyanaconda/rescue.py:406
+#, python-format
+msgid ""
+"An error occurred trying to mount some or all of your system. Some of it may "
+"be mounted under %s.\n"
+"\n"
+"Press <return> to get a shell."
+msgstr ""
+"നിങ്ങളുടെ സിസ്റ്റം മൌണ്ട് ചെയ്യുമ്പോള്‍ ഒരു പിശകുണ്ടായിരിയ്ക്കുന്നു. ചിലതു് %s-ല്‍ മൌണ്ട് "
+"ചെയ്തിരിയ്ക്കുന്നു.\n"
+"\n"
+"ഒരു ഷെല്ലിനായി <return> അമര്‍ത്തുക"
+
+#: pyanaconda/rescue.py:414
+msgid "You don't have any Linux partitions.  Rebooting.\n"
+msgstr "നിങ്ങള്‍ക്ക് ലിനക്സ് പാര്‍ട്ടീഷനുകള്‍ ലഭ്യമല്ല.  അതിനാല്‍ റീബൂട്ട് ചെയ്യുന്നു.\n"
+
+#: pyanaconda/rescue.py:418
+msgid " The system will reboot automatically when you exit from the shell."
+msgstr "ഷെല്ലില്‍ നിന്നും പുറത്തു് കടക്കുമ്പോള്‍ സിസ്റ്റം സ്വയമായി വീണ്ടും ബൂട്ട് ചെയ്യപ്പെടുന്നു."
+
+#: pyanaconda/rescue.py:422
+msgid "Rescue Mode"
+msgstr "റെസ്ക്യൂ മോഡ്"
+
+#: pyanaconda/rescue.py:423
+#, python-format
+msgid "You don't have any Linux partitions. Press return to get a shell.%s"
+msgstr "നിങ്ങള്‍ക്ക് ലിനക്സ് പാര്‍ട്ടീഷനുകള്‍ ലഭ്യമല്ല. ഷെല്‍ ലഭിയ്ക്കുന്നതിനായി തിരികെ പോകുക. %s"
+
+#: pyanaconda/rescue.py:435
+#, python-format
+msgid "Your system is mounted under the %s directory."
+msgstr "നിങ്ങളുടെ സിസ്റ്റം %s എന്ന ഡയറക്ടറിയില്‍ മൌണ്ട് ചെയ്തിരിക്കുന്നു."
+
+#: pyanaconda/vnc.py:58
+#, python-format
+msgid "%(productName)s %(productVersion)s installation"
+msgstr "%(productName)s %(productVersion)s ഇന്‍സ്റ്റലേഷന്‍"
+
+#: pyanaconda/vnc.py:116
+#, python-format
+msgid "%(productName)s %(productVersion)s installation on host %(name)s"
+msgstr "%(productName)s %(productVersion)s ഇന്‍സ്റ്റലേഷന്‍, %(name)s ഹോസ്റ്റില്‍"
+
+#: pyanaconda/vnc.py:135
+#, python-format
+msgid "Attempting to connect to vnc client on host %s..."
+msgstr "ഹോസ്റ്റ %s ലുളള vnc ക്ലൈന്റിലേക്കു് കണക്ഷന് ശ്രമിക്കുന്നു..."
+
+#: pyanaconda/vnc.py:149
+msgid "Connected!"
+msgstr "കണക്ഷന്‍ ഇപ്പോള്‍ ലഭ്യമാണ്!"
+
+#: pyanaconda/vnc.py:152
+msgid "Will try to connect again in 15 seconds..."
+msgstr "15 നിമിഷത്തിനുള്ളില്‍ വീണ്ടും കണക്ഷന് വേണ്ടി ശ്രമിക്കും..."
+
+#: pyanaconda/vnc.py:158
+#, python-format
+msgid "Giving up attempting to connect after %d try!\n"
+msgid_plural "Giving up attempting to connect after %d tries!\n"
+msgstr[0] "%d-നു് ശ്രമത്തിനു് ശേഷം കണക്ട് ചെയ്യുവാനുള്ള ശ്രമം ഉപേക്ഷിച്ചു!\n"
+msgstr[1] "%d-നു് ശ്രമങ്ങള്‍ക്കു് ശേഷം കണക്ട് ചെയ്യുവാനുള്ള ശ്രമം ഉപേക്ഷിച്ചു!\n"
+
+#: pyanaconda/vnc.py:169
+#, python-format
+msgid "Please manually connect your vnc client to %s to begin the install."
+msgstr ""
+"ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതിനു വേണ്ടി ദയവായി നിങ്ങള്‍ തന്നെ vnc ക്ലൈന്റിനെ %s മായി കണക്ട് ചെയ്യുക."
+
+#: pyanaconda/vnc.py:171
+#, python-format
+msgid ""
+"Please manually connect your vnc client to <IP ADDRESS>:%s to begin the "
+"install. Switch to the shell (Ctrl-B 2) and run 'ip addr' to find the <IP "
+"ADDRESS>."
+msgstr ""
+"ഇന്‍സ്റ്റോള്‍ ആരംഭിയ്ക്കുന്നതിനായി നിങ്ങള്‍ സ്വയമായി വിഎന്‍സി ക്ലയന്റിനെ <IP ADDRESS>:%s-ലേക്കു് "
+"കണക്ട് ചെയ്യുക. ഷെല്ലിലേക്കു് മാറി (Ctrl-B 2) <IP ADDRESS> കണ്ടുപിടിയ്ക്കുന്നതിനായി 'ip "
+"addr' നടപ്പിലാക്കുക."
+
+#: pyanaconda/vnc.py:176
+msgid "Starting VNC..."
+msgstr "VNC ആരംഭിക്കുന്നു കാത്തിരിക്കുക..."
+
+#: pyanaconda/vnc.py:218
+msgid "The VNC server is now running."
+msgstr "VNC സര്‍വര്‍ ഇപ്പോള്‍ പ്രവര്‍ത്തനത്തിലാണു്."
+
+#: pyanaconda/vnc.py:222
+msgid ""
+"\n"
+"\n"
+"You chose to connect to a listening vncviewer. \n"
+"This does not require a password to be set.  If you \n"
+"set a password, it will be used in case the connection \n"
+"to the vncviewer is unsuccessful\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"നിങ്ങള്‍ ലഭ്യമാകുന്ന vncviewer-ലേക്ക് കണക്ട് ചെയ്യുന്നതിനായി\n"
+"തിരഞ്ഞെടുത്തിരിക്കുന്നു. ഇതിന് പാസ്‌വേര്‍ഡ് ക്രമീകരിക്കേണ്ടതില്ല.\n"
+"നിങ്ങള്‍ ഒരു പാസ്‌വേര്‍ഡ് ക്രമീകരിച്ചാല്‍, vncviewer-ലേക്കുള്ള\n"
+"കണക്ഷന്‍ ശരിയായില്ല എങ്കില്‍ അത് ഉപയോഗിക്കുന്നതാണ്.\n"
+"\n"
+
+#: pyanaconda/vnc.py:227
+msgid ""
+"\n"
+"\n"
+"WARNING!!! VNC server running with NO PASSWORD!\n"
+"You can use the vncpassword=<password> boot option\n"
+"if you would like to secure the server.\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"മുന്നറിയിപ്പ്!!! VNC സര്‍വര്‍ അടയാളവാക്കിലാതെ പ്രവര്‍ത്തിക്കുന്നു!\n"
+"നിങ്ങള്‍ക്ക് സര്‍വര്‍ സുരക്ഷിതമാക്കണമെങ്കില്‍\n"
+"self.password=<password> എന്ന ബൂട്ട് ഉപാധി ഉപയോഗിക്കാം.\n"
+"\n"
+
+#: pyanaconda/vnc.py:231
+msgid ""
+"\n"
+"\n"
+"You chose to execute vnc with a password. \n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"നിങ്ങള്‍ ഒരു പാസ്‌വേര്‍ഡ് ഉപയോഗിച്ച് vnc പ്രവര്‍ത്തിപ്പിക്കുവാന്‍ തിരഞ്ഞെടുത്തിരിക്കുന്നു \n"
+"\n"
+
+#: pyanaconda/vnc.py:233
+msgid ""
+"\n"
+"\n"
+"Unknown Error.  Aborting. \n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"അപരിചിതമായ തെററ്.  നിര്‍ത്തുന്നു. \n"
+"\n"
+
+#: pyanaconda/vnc.py:253
+msgid ""
+"VNC password provided was not at least 6 characters long.\n"
+"Please enter a new one.  Leave blank for no password."
+msgstr ""
+"നല്‍കിയ വിഎന്‍സി രഹസ്യവാക്ക് 6 അക്ഷരങ്ങളേക്കാള്‍ കുറവു്.\n"
+"ദയവായി പുതിയൊരെണ്ണം നല്‍കുക. രഹസ്യവാക്കില്ലെങ്കില്‍ കാലിയായി ഉപേക്ഷിയ്ക്കുക."
+
+#: pyanaconda/installclasses/fedora.py:32
+msgid "_Fedora"
+msgstr "_Fedora"
+
+#: pyanaconda/installclasses/rhel.py:28
+msgid "Red Hat Enterprise Linux"
+msgstr "Red Hat Enterprise Linux"
+
+#: pyanaconda/packaging/livepayload.py:81
+#: pyanaconda/packaging/livepayload.py:104
+msgid "Installing software"
+msgstr "സോഫ്റ്റ്‌വെയര്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നു."
+
+#: pyanaconda/packaging/livepayload.py:191
+#: pyanaconda/packaging/livepayload.py:200
+#, python-format
+msgid "Downloading %(url)s (%(pct)d%%)"
+msgstr ""
+
+#: pyanaconda/packaging/livepayload.py:286
+msgid "Checking image checksum"
+msgstr ""
+
+#: pyanaconda/packaging/yumpayload.py:1479
+msgid "Starting package installation process"
+msgstr "പാക്കേജ് ഇന്‍സ്റ്റലേഷന്‍ പ്രക്രിയ ആരംഭിക്കുന്നു"
+
+#: pyanaconda/packaging/yumpayload.py:1542
+msgid "You need more space on the following file systems:\n"
+msgstr "താഴെ കാണിക്കുന്ന ഫൈല്‍ സിസ്റ്റമുകളില്‍ നിങ്ങള്‍ക്ക് ഇനിയും സ്ഥലം ആവശ്യമുണ്ട്:\n"
+
+#: pyanaconda/packaging/yumpayload.py:1560
+msgid "Preparing transaction from installation source"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ സോഴ്സില്‍ നിന്നും ട്രാന്‍സാക്ക്ഷനായി തയ്യാറാകുന്നു"
+
+#: pyanaconda/packaging/yumpayload.py:1561
+msgid "Installing"
+msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നു"
+
+#: pyanaconda/ui/lib/space.py:36
+#, python-format
+msgid ""
+"Not enough space in filesystems for the current software selection. An "
+"additional %s is needed."
+msgstr ""
+"നിലവിലുള്ള സോഫ്റ്റ്‌വെയര്‍ തെരഞ്ഞെടുത്തിലുള്ള ഫയല്‍സിസ്റ്റങ്ങള്‍ക്കു് മതിയായ സ്ഥലം ലഭ്യമല്ല. കൂടുതലായ %s "
+"ആവശ്യമുണ്ടു്."
+
+#: pyanaconda/ui/tui/hubs/progress.py:36
+msgid "Progress"
+msgstr "പുരോഗമനം"
+
+#: pyanaconda/ui/tui/hubs/progress.py:128
+msgid "\tInstallation complete.  Press return to quit"
+msgstr "\tഇന്‍സ്റ്റലേഷന്‍ പൂര്‍ത്തിയായി. പുറത്തു് കടക്കുന്നതിനായി return അമര്‍ത്തുക."
+
+#: pyanaconda/ui/tui/hubs/summary.py:30
+msgid "Installation"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍"
+
+#: pyanaconda/ui/tui/hubs/summary.py:38
+msgid "Starting automated install"
+msgstr "ഓട്ടോമേറ്റ് ഇന്‍സ്റ്റോള്‍ ആരംഭിയ്ക്കുന്നു"
+
+#: pyanaconda/ui/tui/hubs/summary.py:59
+msgid "Can't have a question in command line mode!"
+msgstr "കമാന്‍ഡ് ലൈന്‍ മോഡില്‍ ചോദ്യം പാടില്ല!"
+
+#: pyanaconda/ui/tui/hubs/__init__.py:42
+msgid "Default HUB title"
+msgstr "സ്വതവേയുള്ള ഹബ് തലക്കെട്ട്"
+
+#: pyanaconda/ui/tui/hubs/__init__.py:108
+#: pyanaconda/ui/tui/simpleline/base.py:456
+msgid "c"
+msgstr "c"
+
+#: pyanaconda/ui/tui/hubs/__init__.py:111
+msgid "Please complete all spokes before continuing"
+msgstr "തുടരുന്നതിനു് മുമ്പു് എല്ലാം ദയവായി പൂര്‍ത്തിയാക്കുക"
+
+#: pyanaconda/ui/tui/tuiobject.py:29
+msgid "Error"
+msgstr "പിശക്"
+
+#: pyanaconda/ui/tui/tuiobject.py:49
+msgid "Press enter to exit."
+msgstr "പുറത്തേക്ക് പോകുന്നതിനായി enter അമര്‍ത്തുക."
+
+#: pyanaconda/ui/tui/tuiobject.py:58
+msgid "Question"
+msgstr "ചോദ്യം"
+
+#: pyanaconda/ui/tui/tuiobject.py:81
+msgid "Please respond 'yes' or 'no': "
+msgstr "ദയവായി മറുപടി നല്‍കുക, 'yes' അല്ലെങ്കില്‍ 'no': "
+
+#: pyanaconda/ui/tui/tuiobject.py:84
+msgid "yes"
+msgstr "ഉവ്വ്"
+
+#: pyanaconda/ui/tui/tuiobject.py:89
+msgid "no"
+msgstr "വിവരം"
+
+#: pyanaconda/ui/tui/simpleline/base.py:86
+msgid "Do you really want to quit?"
+msgstr "പുറത്തു് കടക്കണമെന്നുറപ്പാണോ?"
+
+#: pyanaconda/ui/tui/simpleline/base.py:451
+msgid "r"
+msgstr ""
+
+#: pyanaconda/ui/tui/simpleline/base.py:461
+msgid "q"
+msgstr "q"
+
+#: pyanaconda/ui/tui/simpleline/base.py:570
+msgid ""
+"  Please make your choice from above ['q' to quit | 'c' to continue |\n"
+"  'r' to refresh]: "
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/askvnc.py:29
+msgid "VNC"
+msgstr "വിഎന്‍സി"
+
+#: pyanaconda/ui/tui/spokes/askvnc.py:40
+msgid ""
+"X was unable to start on your machine.  Would you like to start VNC to "
+"connect to this computer from another computer and perform a graphical "
+"installation or continue with a text mode installation?"
+msgstr ""
+"നിങ്ങളുടെ സിസ്റ്റത്തില്‍ എക്സ് ആരംഭിയ്ക്കുവാന്‍ സാധ്യമായില്ല. മറ്റൊരു കമ്പ്യൂട്ടറില്‍ നിന്നും നിങ്ങളുടെ "
+"കമ്പ്യൂട്ടറിലേക്കു് കണക്ട് ചെയ്തു് ഒരു ഗ്രാഫിക്കല്‍ ഇന്‍സ്റ്റലേഷന്‍ നടപ്പിലാക്കുന്നതിനായി വിഎന്‍സി "
+"ആരംഭിയ്ക്കണമോ അതോ ടെക്സ്റ്റ് മോ‍ഡ് ഇന്‍സ്റ്റലേഷനുമായി തുടരണമോ?"
+
+#: pyanaconda/ui/tui/spokes/askvnc.py:92
+msgid "VNC Password"
+msgstr "വിഎന്‍സി രഹസ്യവാക്ക്"
+
+#: pyanaconda/ui/tui/spokes/askvnc.py:101
+msgid ""
+"Please provide VNC password. You will have to type it twice. \n"
+"Leave blank for no password"
+msgstr ""
+"ദയവായി വിഎന്‍സി രഹസ്യവാക്ക് നല്‍കുക. രണ്ടു് തവണ ടൈപ്പ് ചെയ്യണം.\n"
+"രഹസ്യവാക്കില്ലെങ്കില്‍ കാലിയായി ഉപേക്ഷിയ്ക്കുക"
+
+#: pyanaconda/ui/tui/spokes/askvnc.py:120
+msgid "Password: "
+msgstr "രഹസ്യവാക്ക്:"
+
+#: pyanaconda/ui/tui/spokes/askvnc.py:121
+msgid "Password (confirm): "
+msgstr "രഹസ്യവാക്ക് (ഉറപ്പാക്കുക):"
+
+#: pyanaconda/ui/tui/spokes/askvnc.py:124
+msgid "Passwords do not match!"
+msgstr "രഹസ്യവാക്കുകള്‍ തമ്മില്‍ ചേരുന്നില്ല!"
+
+#: pyanaconda/ui/tui/spokes/askvnc.py:127
+msgid "The password must be at least six characters long."
+msgstr "പാസ്‌വേര്‍ഡില്‍ കുറ‍ഞ്ഞത് ആറ് അക്ഷരങ്ങളോ അക്കങ്ങളോ ഉണ്ടാവണം."
+
+#: pyanaconda/ui/tui/spokes/password.py:30
+msgid "Set root password"
+msgstr "റൂട്ടിനുള്ള രഹസ്യവാക്ക് സജ്ജമാക്കുക"
+
+#: pyanaconda/ui/tui/spokes/password.py:49
+msgid "Password is set."
+msgstr "രഹസ്യവാക്ക് സജ്ജമാക്കിയിരിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/tui/spokes/password.py:51
+msgid "Root account is disabled."
+msgstr "റൂട്ട് അക്കൌണ്ട് പ്രവര്‍ത്തന രഹിതമാക്കിയിരിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/tui/spokes/password.py:53
+msgid "Password is not set."
+msgstr "രഹസ്യവാക്ക് സജ്ജമാക്കിയിട്ടില്ല."
+
+#: pyanaconda/ui/tui/spokes/password.py:58
+msgid "Please select new root password. You will have to type it twice."
+msgstr "ദയവായി റൂട്ടിനുള്ള പുതിയ രഹസ്യവാക്ക് തെരഞ്ഞെടുക്കുക. ഇതു് രണ്ടു് തവണ ടൈപ്പ് ചെയ്യണം."
+
+#: pyanaconda/ui/tui/spokes/password.py:64
+msgid "Password"
+msgstr "രഹസ്യവാക്ക്"
+
+#: pyanaconda/ui/tui/spokes/storage.py:45
+msgid "Use All Space"
+msgstr "പൂര്‍ണ്ണ സ്ഥലവും ഉപയോഗിയ്ക്കുക"
+
+#: pyanaconda/ui/tui/spokes/storage.py:46
+msgid "Replace Existing Linux system(s)"
+msgstr "നിലവിലുള്ള ലിനക്സ് സിസ്റ്റങ്ങള്‍ മാറ്റുക"
+
+#: pyanaconda/ui/tui/spokes/storage.py:47
+msgid "Use Free Space"
+msgstr "ഉപയോഗിയ്ക്കാത്ത സ്ഥലം ഉപയോഗിയ്ക്കുക"
+
+#: pyanaconda/ui/tui/spokes/storage.py:57
+msgid "Install Destination"
+msgstr "ലക്ഷ്യസ്ഥാനം ഇന്‍സ്റ്റോള്‍ ചെയ്യുക"
+
+#: pyanaconda/ui/tui/spokes/storage.py:99
+#: pyanaconda/ui/gui/spokes/storage.py:440
+msgid "No disks selected"
+msgstr "ഡിസ്കുകള്‍ തെരഞ്ഞെടുത്തിട്ടില്ല"
+
+#: pyanaconda/ui/tui/spokes/storage.py:104
+#: pyanaconda/ui/gui/spokes/storage.py:445
+msgid "No bootloader configured"
+msgstr "ബൂട്ട്‌ലോഡര്‍ ക്രമീകരിച്ചിട്ടില്ല"
+
+#: pyanaconda/ui/tui/spokes/storage.py:111
+#: pyanaconda/ui/gui/spokes/storage.py:452
+msgid "Error checking storage configuration"
+msgstr "സംഭരണ ക്രമീകരണം പരിശോധിയ്ക്കുന്നതില്‍ പിശക്"
+
+#: pyanaconda/ui/tui/spokes/storage.py:113
+#: pyanaconda/ui/gui/spokes/storage.py:454
+msgid "Warning checking storage configuration"
+msgstr "സംഭരണ ക്രമീകരണം പരിശോധിയ്ക്കുന്നതിനുള്ള മുന്നറിയിപ്പു്"
+
+#: pyanaconda/ui/tui/spokes/storage.py:116
+#: pyanaconda/ui/gui/spokes/storage.py:456
+msgid "Automatic partitioning selected"
+msgstr "ഓട്ടോമാറ്റിക്ക് പാര്‍ട്ടീഷനിങ് തെരഞ്ഞടുത്തിരിയ്ക്കുന്നു"
+
+#: pyanaconda/ui/tui/spokes/storage.py:118
+#: pyanaconda/ui/gui/spokes/storage.py:458
+msgid "Custom partitioning selected"
+msgstr "യഥേഷ്ടമുള്ള പാര്‍ട്ടീഷനിങ് തെരഞ്ഞെടുത്തു"
+
+#: pyanaconda/ui/tui/spokes/storage.py:154
+#: pyanaconda/ui/gui/spokes/storage.py:686
+msgid ""
+"No disks detected.  Please shut down the computer, connect at least one "
+"disk, and restart to complete installation."
+msgstr ""
+"ഒരു ഡിസ്കും തെരഞ്ഞെടുത്തിട്ടില്ല. കമ്പ്യൂട്ടര്‍ ദയവായി അടച്ചു്പൂട്ടി, കുറഞ്ഞതു് ഒരു ഡിസ്കിലേക്കു് കണക്ട് "
+"ചെയ്തു്, ഇന്‍സ്റ്റലേഷന്‍ പൂര്‍ത്തിയാക്കുന്നതിനായി വീണ്ടും ആരംഭിയ്ക്കുക."
+
+#: pyanaconda/ui/tui/spokes/storage.py:156
+#: pyanaconda/ui/gui/spokes/storage.py:688
+msgid "No disks selected; please select at least one disk to install to."
+msgstr ""
+"ഒരു ഡിസ്കും തെരഞ്ഞെടുത്തിട്ടില്ല; ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതിനായി കുറഞ്ഞതു് ഒരു ഡിസ്കെങ്കിലും "
+"തെരഞ്ഞെടുക്കുക."
+
+#: pyanaconda/ui/tui/spokes/storage.py:171
+#: pyanaconda/ui/gui/spokes/source.py:553
+#: pyanaconda/ui/gui/spokes/storage.py:646
+msgid "Probing storage..."
+msgstr "സംഭരണത്തിനായി തെരയുന്നു..."
+
+#: pyanaconda/ui/tui/spokes/storage.py:251
+msgid "Generating updated storage configuration"
+msgstr "പരിഷ്കരിച്ച സംഭരണ ക്രമീകരണം ലഭ്യമാക്കുന്നു"
+
+#: pyanaconda/ui/tui/spokes/storage.py:256
+#, python-format
+msgid "storage configuration failed: %s"
+msgstr "സംഭരണ ക്രമീകരണം പരാജയപ്പെട്ടു: %s"
+
+#: pyanaconda/ui/tui/spokes/storage.py:265
+#: pyanaconda/ui/gui/spokes/storage.py:299
+msgid "Checking storage configuration..."
+msgstr "സംഭരണ ക്രമീകരണം പരിശോധിയ്ക്കുന്നു.."
+
+#: pyanaconda/ui/tui/spokes/storage.py:300
+msgid "Autopartitioning Options"
+msgstr "ഓട്ടോപാര്‍ട്ടീഷനിങ് ഐച്ഛികങ്ങള്‍"
+
+#: pyanaconda/ui/tui/spokes/storage.py:331
+msgid ""
+"Installation requires partitioning of your hard drive. Select what space to "
+"use for the install target."
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/storage.py:364
+msgid "Partition Scheme Options"
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/storage.py:389
+msgid "Select a partition scheme configuration."
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/time.py:29
+msgid "Timezone settings"
+msgstr "സമയ മേഘല സജ്ജീകരണങ്ങള്‍"
+
+#: pyanaconda/ui/tui/spokes/time.py:56
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:399
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:403
+#, python-format
+msgid "%s timezone"
+msgstr "%s സമയമേഘല"
+
+#: pyanaconda/ui/tui/spokes/time.py:58
+msgid "Timezone is not set."
+msgstr "സമയമേഘല സജ്ജമല്ല."
+
+#: pyanaconda/ui/tui/spokes/time.py:66
+#, python-format
+msgid "Available timezones in region %s"
+msgstr "%s സ്ഥലത്തിലുള്ള ലഭ്യമായ സമയമേഘലകള്‍"
+
+#: pyanaconda/ui/tui/spokes/time.py:69
+msgid "Available regions"
+msgstr "ലഭ്യമായ സ്ഥലങ്ങള്‍"
+
+#: pyanaconda/ui/tui/spokes/time.py:132
+msgid ""
+"Please select the timezone.\n"
+"Use numbers or type names directly [b to region list, q to quit]: "
+msgstr ""
+"ദയവായി സമയമേഘല തെരഞ്ഞെടുക്കുക.\n"
+"അക്കങ്ങള്‍ അല്ലെങ്കില്‍ നേരിട്ട് പേരു് തരങ്ങള്‍ ഉപയോഗിയ്ക്കുക [സ്ഥലത്തിന്റെ പട്ടികയ്ക്കായി b, പുറത്തു് "
+"കടക്കുന്നതിനായി  q]:"
+
+#: pyanaconda/ui/tui/spokes/source.py:44
+msgid "Installation source"
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/source.py:47 pyanaconda/ui/tui/spokes/source.py:86
+#: pyanaconda/ui/gui/spokes/source.py:498
+msgid "Closest mirror"
+msgstr "ഏറ്റവും അടുത്തുള്ള മിറര്‍"
+
+#: pyanaconda/ui/tui/spokes/source.py:84
+#: pyanaconda/ui/gui/spokes/source.py:492
+msgid "CD/DVD drive"
+msgstr "സിഡി/ഡിവിഡി ഡ്രൈവ്"
+
+#: pyanaconda/ui/tui/spokes/source.py:88
+#: pyanaconda/ui/tui/spokes/software.py:98
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:405
+#: pyanaconda/ui/gui/spokes/software.py:180
+#: pyanaconda/ui/gui/spokes/source.py:464
+#: pyanaconda/ui/gui/spokes/source.py:500
+msgid "Nothing selected"
+msgstr "ഒന്നും തെരഞ്ഞെടുത്തിട്ടില്ല"
+
+#: pyanaconda/ui/tui/spokes/source.py:93
+#: pyanaconda/ui/gui/spokes/source.py:486
+#: pyanaconda/ui/gui/spokes/source.py:495
+msgid "Error setting up software source"
+msgstr "സോഫ്റ്റ്‌വെയര്‍ ശ്രോതസ്സ് സജ്ജമാക്കുന്നതില്‍ പിശക്"
+
+#: pyanaconda/ui/tui/spokes/source.py:95
+#: pyanaconda/ui/tui/spokes/software.py:80
+msgid "Processing..."
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/source.py:101
+#, python-format
+msgid "Repo URL set to: %s"
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/source.py:120
+msgid "CD/DVD"
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/source.py:120
+msgid "Network"
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/source.py:124
+msgid "Choose an installation source type."
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/source.py:183
+#: pyanaconda/ui/gui/spokes/source.py:423
+msgid "Failed to set up installation source"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ ശ്രോതസ്സ് സജ്ജമാക്കുന്നതില്‍ പരാജയം"
+
+#: pyanaconda/ui/tui/spokes/source.py:188
+msgid "Error downloading package metadata"
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/source.py:194
+#: pyanaconda/ui/tui/spokes/software.py:68
+#: pyanaconda/ui/gui/spokes/software.py:211
+#: pyanaconda/ui/gui/spokes/software.py:235
+#: pyanaconda/ui/gui/spokes/source.py:449
+msgid "No installation source available"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ ശ്രോതസ്സ് ലഭ്യമല്ല"
+
+#: pyanaconda/ui/tui/spokes/source.py:211
+msgid "Specify Repo Options"
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/source.py:215
+msgid "Repo URL"
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/software.py:37
+msgid "Software selection"
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/software.py:78
+#: pyanaconda/ui/gui/spokes/software.py:164
+msgid "Error checking software selection"
+msgstr "സോഫ്റ്റ്‌വെയര്‍ തെരഞ്ഞെടുത്തതു് പരിശോധിയ്ക്കുന്നതില്‍ പിശക്"
+
+#: pyanaconda/ui/tui/spokes/software.py:82
+#: pyanaconda/ui/gui/spokes/software.py:170
+msgid "Source changed - please verify"
+msgstr "ശ്രോതസ്സ് മാറ്റിയിരിയ്ക്കുന്നു - ദയവായി ഉറപ്പാക്കുക"
+
+#: pyanaconda/ui/tui/spokes/software.py:97
+#: pyanaconda/ui/gui/spokes/software.py:178
+msgid "Custom software selected"
+msgstr "യഥേഷ്ടമുള്ള സോഫ്റ്റ്‌വെയര്‍ തെരഞ്ഞെടുത്തിരിയ്ക്കുന്നു"
+
+#: pyanaconda/ui/tui/spokes/software.py:124
+msgid "Choose a desktop environment."
+msgstr ""
+
+#: pyanaconda/ui/tui/spokes/__init__.py:46
+msgid "Default spoke title"
+msgstr "സ്വതവേയുള്ള സ്പോക്ക് തലക്കെട്ട്"
+
+#: pyanaconda/ui/tui/spokes/__init__.py:56
+msgid "testing status..."
+msgstr "അവസ്ഥ പരിശോധിയ്ക്കുന്നു..."
+
+#: pyanaconda/ui/tui/spokes/__init__.py:96
+msgid "New value"
+msgstr "പുതിയ മൂല്ല്യം"
+
+#: pyanaconda/ui/tui/spokes/__init__.py:110
+#, python-format
+msgid "%s: "
+msgstr "%s: "
+
+#: pyanaconda/ui/tui/spokes/__init__.py:111
+#, python-format
+msgid "%s (confirm): "
+msgstr "%s (ഉറപ്പാക്കുക):"
+
+#: pyanaconda/ui/tui/spokes/__init__.py:121
+#, python-format
+msgid "You have provided a weak password: %s. "
+msgstr "നിങ്ങള്‍ ശക്തമല്ലാത്തൊരു രഹസ്യവാക്ക് നല്‍കിയിരിയ്ക്കുന്നു: %s. "
+
+#: pyanaconda/ui/tui/spokes/__init__.py:122
+msgid ""
+"\n"
+"Would you like to use it anyway?"
+msgstr ""
+"\n"
+"എങ്ങനെയാണെങ്കിലും നിങ്ങള്‍ക്കുപയോഗിയ്ക്കണമോ?"
+
+#: pyanaconda/ui/tui/spokes/__init__.py:131
+#, python-format
+msgid "Enter new value for '%s' and press enter\n"
+msgstr "'%s'-നുള്ള മൂല്ല്യം നല്‍കി enter അമര്‍ത്തുക\n"
+
+#: pyanaconda/ui/gui/__init__.py:395
+msgid "_Exit Installer"
+msgstr "ഇന്‍സ്റ്റോളറില്‍ നിന്നും പുറത്ത് _കടക്കുക"
+
+#: pyanaconda/ui/gui/__init__.py:404 pyanaconda/ui/gui/spokes/software.py:410
+#: pyanaconda/ui/gui/spokes/storage.py:896
+#: pyanaconda/ui/gui/hubs/summary.glade:76 widgets/src/StandaloneWindow.c:54
+msgid "_Quit"
+msgstr "പു_റത്തു് കടക്കുക"
+
+#: pyanaconda/ui/gui/__init__.py:420
+msgid "_No"
+msgstr "_ഇല്ല"
+
+#: pyanaconda/ui/gui/__init__.py:420
+msgid "_Yes"
+msgstr "_ഉവ്വു്"
+
+#: pyanaconda/ui/gui/categories/__init__.py:43
+msgid "DEFAULT TITLE"
+msgstr "സ്വതവേയുള്ള തലക്കെട്ട്"
+
+#: pyanaconda/ui/gui/categories/customization.py:31
+msgid "CUSTOMIZATION"
+msgstr "യഥേഷ്ടമാക്കുക"
+
+#: pyanaconda/ui/gui/categories/localization.py:30
+msgid "LOCALIZATION"
+msgstr "പ്രാദേശികവത്കരണം"
+
+#: pyanaconda/ui/gui/categories/software.py:30
+msgid "SOFTWARE"
+msgstr "സോഫ്റ്റ്‌വെയര്‍"
+
+#: pyanaconda/ui/gui/categories/storage.py:31
+msgid "STORAGE"
+msgstr "സംഭരണം"
+
+#: pyanaconda/ui/gui/categories/user_settings.py:31
+msgid "USER SETTINGS"
+msgstr "ഉപയോക്താവിനുള്ള സജ്ജീകരണങ്ങള്‍"
+
+#: pyanaconda/ui/gui/hubs/__init__.py:282
+msgid ""
+"Please complete items marked with this icon before continuing to the next "
+"step."
+msgstr "അടുത്ത നടപടിയ്ക്കു് മുമ്പു് ഈ ചിഹ്നവുമായി അടയാളപ്പെടുത്തിയ വസ്തുക്കള്‍ ദയവായി പൂര്‍ത്തിയാക്കുക."
+
+#: pyanaconda/ui/gui/hubs/progress.py:178
+#, python-format
+msgid ""
+"%s is now successfully installed on your system and ready for you to use!  "
+"When you are ready, reboot your system to start using it!"
+msgstr ""
+"%s വിജയകരമായി നിങ്ങളുടെ സിസ്റ്റത്തില്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്തിരിയ്ക്കുന്നു, ഇപ്പോള്‍ ഉപയോഗത്തിനു് തയ്യാര്‍! "
+"നിങ്ങള്‍ തയ്യാറാകുമ്പോള്‍, ഉപയോഗിയ്ക്കുന്നതിനായി നിങ്ങളുടെ സിസ്റ്റം റീബൂട്ട് ചെയ്യുക!"
+
+#: pyanaconda/ui/gui/hubs/progress.py:254
+msgid "Complete!"
+msgstr "പൂര്‍ത്തിയാക്കി!"
+
+#: pyanaconda/ui/gui/spokes/custom.py:94
+#, python-format
+msgid "New %s %s Installation"
+msgstr "പുതിയ %s %s ഇന്‍സ്റ്റലേഷന്‍"
+
+#: pyanaconda/ui/gui/spokes/custom.py:95
+#, python-format
+msgid "Create a new %(container_type)s ..."
+msgstr "ഒരു പുതിയ %(container_type)s തയ്യാറാക്കുക ..."
+
+#: pyanaconda/ui/gui/spokes/custom.py:96
+#, python-format
+msgid "CONFIGURE %(container_type)s"
+msgstr "%(container_type)s ക്രമീകരിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/custom.py:97
+#, python-format
+msgid ""
+"Please create a name for this %(container_type)s and select at least one "
+"disk below."
+msgstr ""
+"ഈ %(container_type)s-നു് ഒരു നാമം തയ്യാറാക്കി, താഴെ പറഞ്ഞിരിയ്ക്കുന്നതില്‍ നിന്നും ഒരു ഡിസ്ക് "
+"തെരഞ്ഞെടുക്കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:99
+msgid "Volume Group"
+msgstr "വോള്യം ഗ്രൂപ്പ്"
+
+#: pyanaconda/ui/gui/spokes/custom.py:100
+msgid "Volume"
+msgstr "വോള്യം"
+
+#: pyanaconda/ui/gui/spokes/custom.py:101
+msgid ""
+"Storage configuration reset due to unrecoverable error. Click for details."
+msgstr ""
+"ഒരു പിശകു് കാരണം സംഭരണ ക്രമീകരണം വീണ്ടും സജ്ജമാക്കിയിരിയ്ക്കുന്നു. വിവരങ്ങള്‍ക്കായി ക്ലിക്ക് "
+"ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:103
+msgid "Device reconfiguration failed. Click for details."
+msgstr "ഡിവൈസിന്റെ ക്രമീകരണം പരാജയപ്പെട്ടു. വിവരങ്ങള്‍ക്കായി ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:106
+msgid "Please enter a valid mountpoint."
+msgstr "ദയവായി ശരിയായൊരു മൌണ്ട് പോയിന്റ് നല്‍കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:107
+msgid "That mount point is invalid. Try something else?"
+msgstr "ഈ മൌണ്ട് പോയിന്റ് ശരിയല്ല. മറ്റേതെങ്കിലും ശ്രമിയ്ക്കണമോ?"
+
+#: pyanaconda/ui/gui/spokes/custom.py:108
+msgid "That mount point is already in use. Try something else?"
+msgstr "ആ മൌണ്ട് പോയിന്റ് നിലവില്‍ ഉപയോഗത്തില്‍. മറ്റെന്തങ്കിലും ശ്രമിയ്ക്കണമോ?"
+
+#: pyanaconda/ui/gui/spokes/custom.py:110
+#, python-format
+msgid ""
+"The RAID level you have selected (%s) requires more disks (%d) than you "
+"currently have selected (%d)."
+msgstr ""
+"നിങ്ങള്‍ തെരഞ്ഞെടുത്ത റെയിഡ് ലവലിനു് (%s) കൂടുതല്‍ ഡിസ്കുകള്‍ (%d) ആവശ്യമുണ്ടു്, നിങ്ങള്‍ നിലവില്‍ "
+"തെരഞ്ഞെടുത്തുന്നതിനേക്കാള്‍ (%d)."
+
+#: pyanaconda/ui/gui/spokes/custom.py:113
+#: pyanaconda/ui/gui/spokes/custom.glade:617
+msgid "Please enter a valid name."
+msgstr "ദയവായി ശരിയായൊരു നാമം നല്‍കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:114
+msgid "That name is invalid. Try something else?"
+msgstr "ആ പേരു് ശരിയല്ല. മറ്റെന്തെങ്കിലും ശ്രമിയ്ക്കണമോ?"
+
+#: pyanaconda/ui/gui/spokes/custom.py:129
+msgid "LVM"
+msgstr "എല്‍വിഎം"
+
+#: pyanaconda/ui/gui/spokes/custom.py:130
+msgid "RAID"
+msgstr "റെയിഡ്"
+
+#: pyanaconda/ui/gui/spokes/custom.py:131
+msgid "Standard Partition"
+msgstr "സാധാരണ പാര്‍ട്ടീഷന്‍"
+
+#: pyanaconda/ui/gui/spokes/custom.py:132
+msgid "BTRFS"
+msgstr "BTRFS"
+
+#: pyanaconda/ui/gui/spokes/custom.py:133
+#: pyanaconda/ui/gui/spokes/custom.glade:478
+#: pyanaconda/ui/gui/spokes/custom.glade:2018
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:147
+msgid "Disk"
+msgstr "ഡിസ്ക്"
+
+#: pyanaconda/ui/gui/spokes/custom.py:386
+msgid "container"
+msgstr "കണ്ടെയിനര്‍"
+
+#: pyanaconda/ui/gui/spokes/custom.py:544
+#: pyanaconda/ui/gui/spokes/custom.py:560
+#: pyanaconda/ui/gui/spokes/network.py:1078 widgets/src/SpokeSelector.c:55
+msgid "None"
+msgstr "ഒന്നുമില്ല"
+
+#: pyanaconda/ui/gui/spokes/custom.py:595
+#: pyanaconda/ui/gui/spokes/custom.glade:714
+msgid "MANUAL PARTITIONING"
+msgstr "മാനുവല്‍ പാര്‍ട്ടീഷനിങ്"
+
+#: pyanaconda/ui/gui/spokes/custom.py:793
+#: pyanaconda/ui/gui/spokes/filter.py:504
+#, python-format
+msgid "%d _storage device selected"
+msgid_plural "%d _storage devices selected"
+msgstr[0] "%d _സംഭരണ ഡിവൈസ് തെരഞ്ഞുടുത്തു"
+msgstr[1] "%d _സംഭരണ ഡിവൈസുകള്‍ തെരഞ്ഞുടുത്തു"
+
+#: pyanaconda/ui/gui/spokes/custom.py:949
+#: pyanaconda/ui/gui/spokes/network.py:665
+#: pyanaconda/ui/gui/spokes/network.py:1315
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:59
+msgid "Unknown"
+msgstr "അപരിചിതം"
+
+#: pyanaconda/ui/gui/spokes/custom.py:972
+msgid ""
+"The 'swap' area on your computer is used by the operating\n"
+"system when running low on memory."
+msgstr ""
+"നിങ്ങളുടെ കമ്പ്യൂട്ടറിലുള്ള 'സ്വാപ്പ്' എന്ന സ്ഥലം മെമ്മറി കുറയുമ്പോള്‍\n"
+"ഓപ്പറേറ്റിങ് സിസ്റ്റം ഉപയോഗിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/custom.py:975
+msgid ""
+"The 'boot' area on your computer is where files needed\n"
+"to start the operating system are stored."
+msgstr ""
+"നിങ്ങളുടെ കമ്പ്യൂട്ടറിലുള്ള 'ബൂട്ട്' എന്ന സ്ഥലത്തില്‍ ഓപ്പറേറ്റിങ് സിസ്റ്റം ആരംഭിയ്ക്കുവാനുള്ള\n"
+"ഫയലുകള്‍ സൂക്ഷിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/custom.py:978
+msgid ""
+"The 'root' area on your computer is where core system\n"
+"files and applications are stored."
+msgstr ""
+"നിങ്ങളുടെ കമ്പ്യൂട്ടറിലുള്ള 'റൂട്ട്' എന്ന സ്ഥലത്തില്‍ നിങ്ങളുടെ\n"
+"കോര്‍ സിസ്റ്റം ഫയലുകളും പ്രയോഗങ്ങളും സൂക്ഷിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/custom.py:981
+msgid ""
+"The 'home' area on your computer is where all your personal\n"
+"data is stored."
+msgstr ""
+"നിങ്ങളുടെ കമ്പ്യൂട്ടറിലുള്ള 'ആസ്ഥാനം' എന്ന സ്ഥലത്തില്‍ നിങ്ങളുടെ\n"
+"സ്വകാര്യ ഡേറ്റാ സൂക്ഷിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/custom.py:984
+msgid ""
+"The BIOS boot partition is required to enable booting\n"
+"from GPT-partitioned disks on BIOS hardware."
+msgstr ""
+"ബയോസ് ഹാര്‍ഡ്‌വെയറില്‍ ജിപിറ്റി-പാര്‍ട്ടീഷന്‍ ചെയ്ത ഡിസ്കുകളില്‍\n"
+"നിന്നും ബൂട്ടിങ് പ്രവര്‍ത്തന സജ്ജമാക്കുന്നതിനായി ബയോസ് ബൂട്ട് പാര്‍ട്ടീഷന്‍ ആവശ്യമുണ്ടു്."
+
+#: pyanaconda/ui/gui/spokes/custom.py:987
+msgid ""
+"The PReP boot partition is required as part of the\n"
+"bootloader configuration on some PPC platforms."
+msgstr ""
+"PReP ബൂട്ട് പാര്‍ട്ടീഷന്‍, ചില പിപിസി പ്ലാറ്റ്ഫോമുകളിലുള്ള ബൂട്ട് ലോഡര്‍ ക്രമീകരണത്തിന്റെ\n"
+"ഭാഗമായി ആവശ്യമുണ്ടു്."
+
+#: pyanaconda/ui/gui/spokes/custom.py:1181
+#, python-format
+msgid "/boot/efi must be on a device of type %s"
+msgstr "/boot/efi %s തരത്തിലുള്ള ഡിവൈസിലായിരിയ്ക്കണം"
+
+#: pyanaconda/ui/gui/spokes/custom.py:1185
+#, python-format
+msgid "%s must be on a device of type %s"
+msgstr "%s, %s തരത്തിലുള്ളൊരു ഡിവൈസിലായിരിയ്ക്കണം"
+
+#: pyanaconda/ui/gui/spokes/custom.py:1188
+#: pyanaconda/ui/gui/spokes/custom.py:1190
+#, python-format
+msgid "%s cannot be encrypted"
+msgstr "%s എന്‍ക്രിപ്റ്റ് ചെയ്യുവാന്‍ സാധ്യമല്ല"
+
+#: pyanaconda/ui/gui/spokes/custom.py:1192
+msgid "You must create a new filesystem on the root device."
+msgstr "റൂട്ട് ഡിവൈസില്‍ പുതിയൊരു ഫയല്‍സിസ്റ്റം തയ്യാറാക്കണം."
+
+#: pyanaconda/ui/gui/spokes/custom.py:1194
+#, python-format
+msgid "Devices of type %s require a valid RAID level selection."
+msgstr "%s തരത്തിലുള്ള ഡിവൈസിനു് ഒരു ശരിയായ റെയിഡ് ലവല്‍ തെരഞ്ഞെടുക്കല്‍ ആവശ്യമുണ്ടു്."
+
+#: pyanaconda/ui/gui/spokes/custom.py:1404
+msgid "Device resize request failed. Click for details."
+msgstr ""
+"ഡിവൈസിന്റെ വ്യാപ്തി മാറ്റുന്നതിനുള്ള ആവശ്യം പരാജയപ്പെട്ടു. വിവരങ്ങള്‍ക്കായി ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:1475
+msgid "Device reformat request failed. Click for details."
+msgstr "ഡിവൈസ് റിഫോര്‍മാറ്റ് ആവശ്യം പരാജയപ്പെട്ടു. വിവരങ്ങള്‍ക്കായി ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:1528
+#, python-format
+msgid "Specified name %s already in use."
+msgstr "നിഷ്കര്‍ഷിച്ച നാമം %s നിലവില്‍ ഉപയോഗത്തില്‍."
+
+#: pyanaconda/ui/gui/spokes/custom.py:1657
+msgid "This file system does not support labels."
+msgstr "ഫയല്‍ സിസ്റ്റം ലേബലുകള്‍ പിന്തുണയ്ക്കുന്നില്ല."
+
+#: pyanaconda/ui/gui/spokes/custom.py:1819
+msgid ""
+"The space available to this mountpoint can be changed by modifying the "
+"volume below."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/custom.py:1821
+msgid "This file system may not be resized."
+msgstr "ഈ ഫയല്‍ സിസ്റ്റത്തിന്റെ വ്യാപ്തി മാറ്റുവാന്‍ സാധ്യമല്ല."
+
+#: pyanaconda/ui/gui/spokes/custom.py:1987
+#, python-format
+msgid "Added new %s to existing container %s."
+msgstr "പുതിയ %s നിലവിലുള്ള കണ്ടെയിനര്‍ %s-ലേക്കു് ചേര്‍ത്തിരിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/custom.py:1999
+msgid "Failed to add new device. Click for details."
+msgstr "പുതിയ ഡിവൈസ് ചേര്‍ക്കുന്നതില്‍ പരാജയപ്പെട്ടു. വിവരങ്ങള്‍ക്കായി ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:2005
+msgid "Invalid partition size set. Use a valid integer."
+msgstr "തെറ്റായ പാര്‍ട്ടീഷന്‍ വ്യാപ്തി. ശരിയായൊരു ഇന്റിജര്‍ ഉപയോഗിയ്ക്കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:2028
+msgid "Device removal request failed. Click for details."
+msgstr "ഡിവൈസ് നീക്കം ചെയ്യുന്നതിനുള്ള ആവശ്യം പരാജയപ്പെട്ടു. വിവരങ്ങള്‍ക്കായി ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:2257
+#, python-format
+msgid "Volume Group name %s is already in use. Not saving changes."
+msgstr "വോള്യം ഗ്രൂപ്പ് നാമം %s നിലവില്‍ ഉപയോഗത്തില്‍. മാറ്റങ്ങള്‍ സൂക്ഷിയ്ക്കുന്നില്ല."
+
+#: pyanaconda/ui/gui/spokes/custom.py:2393
+#, python-format
+msgid ""
+"This Software RAID array is missing %(missingMembers)d of %(totalMembers)d "
+"member partitions. You can remove it or select a different device."
+msgstr ""
+"ഈ സോഫ്റ്റ്‌വെയര്‍ റെയിഡ് അറേയില്‍ %(missingMembers)d / %(totalMembers)d അംഗം "
+"പാര്‍ട്ടീഷനുകള്‍ ലഭ്യമല്ല. നിങ്ങള്‍ക്കിതു് നീക്കം ചെയ്യാം അല്ലെങ്കില്‍ മറ്റൊരു ഡിവൈസ് തെരഞ്ഞെടുക്കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:2399
+#, python-format
+msgid ""
+"This LVM Volume Group is missing %(missingPVs)d of %(totalPVs)d physical "
+"volumes. You can remove it or select a different device."
+msgstr ""
+"ഈ എല്‍വിഎം വോള്യം ഗ്രൂപ്പില്‍ %(missingPVs)d / %(totalPVs)d ഫിസിക്കല്‍ വോള്യങ്ങള്‍ ലഭ്യമല്ല. "
+"നിങ്ങള്‍ക്കിതു് നീക്കം ചെയ്യാം അല്ലെങ്കില്‍ മറ്റൊരു ഡിവൈസ് തെരഞ്ഞെടുക്കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:2468
+msgid "No disks selected."
+msgstr "ഡിസ്കുകള്‍ തെരഞ്ഞെടുത്തിട്ടില്ല."
+
+#: pyanaconda/ui/gui/spokes/custom.py:2474
+msgid "Not enough free space on selected disks."
+msgstr "തെരഞ്ഞെടുത്ത ഡിസ്കുകളില്‍ ആവശ്യത്തിനുള്ള സ്ഥലം ലഭ്യമല്ല."
+
+#: pyanaconda/ui/gui/spokes/custom.py:2480
+msgid "Automatic partitioning failed. Click for details."
+msgstr "ഓട്ടോമാറ്റിക് പാര്‍ട്ടീഷനിങ് പരാജയപ്പെട്ടു. വിവരങ്ങള്‍ക്കായി ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:2776
+msgid "Failed to unlock encrypted block device. Click for details"
+msgstr "എന്‍ക്രിപ്റ്റ് ചെയ്ത ബ്ലോക്ക് ഡിവൈസ് തുറക്കുന്നതില്‍ പരാജയം. വിവരങ്ങള്‍ക്കായി ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/custom.py:2802
+#, python-format
+msgid ""
+"You have chosen to manually set up the filesystems for your new "
+"%(productName)s installation. Before you begin, you might want to take a "
+"minute to learn the lay of the land. Quite a bit has changed.\n"
+"\n"
+"The most important change is that creation of new filesystems has been "
+"streamlined. You no longer have to build complex devices like LVM logical "
+"volumes in stages (physical volume, then volume group, then logical volume) "
+"-- now you just create a logical volume and we'll handle the legwork of "
+"setting up the physical volumes and volume group to contain it. We'll also "
+"handle adjusting the volume group as you add, remove, and resize logical "
+"volumes so you don't have to worry about the mundane details.\n"
+"\n"
+"\n"
+"Screen Layout\n"
+"\n"
+"The left-hand side of the screen shows the OS installations we were able to "
+"find on this computer. The new %(productName)s installation is at the top of "
+"the list. You can click on the names of the installations to see what "
+"filesystems they contain.\n"
+"\n"
+"Below the various installations and mountpoints on the left-hand side there "
+"are buttons to add a new filesystem, remove the selected filesystem, or "
+"configure the selected filesystem.\n"
+"\n"
+"The right-hand side of the screen is where you can customize the currently-"
+"selected mountpoint.\n"
+"\n"
+"On the bottom-left you will see a summary of the disks you have chosen to "
+"use for the installation. You can click on the blue text to see more "
+"detailed information about your selected disks.\n"
+"\n"
+"\n"
+"How to create a new filesystem on a new device\n"
+"\n"
+"1. Click on the + button.\n"
+"2. Enter the mountpoint and size. (Hint: Hover the mouse pointer over either "
+"of the text entry areas for help.)\n"
+"3. Select the new mountpoint under \"New %(productName)s Installation\" on "
+"the left-hand side of the screen and customize it to suit your needs.\n"
+"\n"
+"\n"
+"How to reformat a device/filesystem that already exists on your disk\n"
+"\n"
+"1. Select the filesystem from the left-hand side of the screen.\n"
+"2. Click on the \"Customize\" expander in the mountpoint customization area "
+"on the right-hand side of the screen.\n"
+"3. Activate the \"Reformat\" checkbutton, select a filesystem type and, if "
+"applicable, enter a mountpoint above in the \"Mountpoint\" text entry area.\n"
+"4. Click on \"Apply changes\"\n"
+"\n"
+"\n"
+"How to set a mountpoint for a filesystem that already exists on your disk\n"
+"\n"
+"1. Select the filesystem from the left-hand side of the screen.\n"
+"2. Enter a mountpoint in the \"Mountpoint\" text entry area in the "
+"mountpoint customization area.\n"
+"3. Click on \"Apply changes\"\n"
+"\n"
+"\n"
+"How to remove a filesystem that already exists on your disk\n"
+"\n"
+"1. Select the filesystem you wish to remove on the left-hand side of the "
+"screen.\n"
+"2. Click the - button.\n"
+"\n"
+"Hint: Removing a device that already exists on your disk from the \"New "
+"%(productName)s Installation\" does not remove it from the disk. It only "
+"resets that device to its original state. To remove a device that already "
+"exists on your disk, you must select it from under any of the other detected "
+"installations (or \"Unknown\") and hit the - button.\n"
+"\n"
+"\n"
+"Tips and hints\n"
+"\n"
+"You can enter sizes for new filesystems that are greater than the total "
+"available free space. The installer will come as close as possible to the "
+"size you request.\n"
+"\n"
+"By default, new devices use any/all of your selected disks.\n"
+"\n"
+"You can change which disks a new device may be allocated from by clicking "
+"the configure button (the one with a tools graphic) while that device is "
+"selected.\n"
+"\n"
+"When adding a new mountpoint by clicking the + button, leave the size entry "
+"blank to make the new device use all available free space.\n"
+"\n"
+"When you remove the last device from a container device like an LVM volume "
+"group, we will automatically remove that container device to make room for "
+"new devices.\n"
+"\n"
+"When the last partition is removed from a disk, that disk may be "
+"reinitialized with a new partition table if we think there is a more "
+"appropriate type for that disk.\n"
+msgstr ""
+"നിങ്ങളുടെ പുതിയ %(productName)s ഇന്‍സ്റ്റലേഷനു് വേണ്ടി  ഫയല്‍ സിസ്റ്റങ്ങള്‍ സ്വയമായി "
+"സജ്ജമാക്കുവാന്‍ തെരഞ്ഞെടുത്തിരിയ്ക്കുന്നു. ആരംഭിയ്ക്കുന്നതിനു് മുമ്പു്,  കൂടുതല്‍ അറിയുക.\n"
+"\n"
+"The most important change is that creation of new filesystems has been "
+"streamlined. You no longer have to build complex devices like LVM logical "
+"volumes in stages (physical volume, then volume group, then logical volume) "
+"-- now you just create a logical volume and we'll handle the legwork of "
+"setting up the physical volumes and volume group to contain it. We'll also "
+"handle adjusting the volume group as you add, remove, and resize logical "
+"volumes so you don't have to worry about the mundane details.\n"
+"\n"
+"\n"
+"സ്ക്രീന്‍ ശൈലി\n"
+"\n"
+"The left-hand side of the screen shows the OS installations we were able to "
+"find on this computer. The new %(productName)s installation is at the top of "
+"the list. You can click on the names of the installations to see what "
+"filesystems they contain.\n"
+"\n"
+"Below the various installations and mountpoints on the left-hand side there "
+"are buttons to add a new filesystem, remove the selected filesystem, or "
+"configure the selected filesystem.\n"
+"\n"
+"The right-hand side of the screen is where you can customize the currently-"
+"selected mountpoint.\n"
+"\n"
+"On the bottom-left you will see a summary of the disks you have chosen to "
+"use for the installation. You can click on the blue text to see more "
+"detailed information about your selected disks.\n"
+"\n"
+"\n"
+"How to create a new filesystem on a new device\n"
+"\n"
+"1. Click on the + button.\n"
+"2. Enter the mountpoint and size. (Hint: Hover the mouse pointer over either "
+"of the text entry areas for help.)\n"
+"3. Select the new mountpoint under \"New %(productName)s Installation\" on "
+"the left-hand side of the screen and customize it to suit your needs.\n"
+"\n"
+"\n"
+"How to reformat a device/filesystem that already exists on your disk\n"
+"\n"
+"1. Select the filesystem from the left-hand side of the screen.\n"
+"2. Click on the \"Customize\" expander in the mountpoint customization area "
+"on the right-hand side of the screen.\n"
+"3. Activate the \"Reformat\" checkbutton, select a filesystem type and, if "
+"applicable, enter a mountpoint above in the \"Mountpoint\" text entry area.\n"
+"4. Click on \"Apply changes\"\n"
+"\n"
+"\n"
+"How to set a mountpoint for a filesystem that already exists on your disk\n"
+"\n"
+"1. Select the filesystem from the left-hand side of the screen.\n"
+"2. Enter a mountpoint in the \"Mountpoint\" text entry area in the "
+"mountpoint customization area.\n"
+"3. Click on \"Apply changes\"\n"
+"\n"
+"\n"
+"How to remove a filesystem that already exists on your disk\n"
+"\n"
+"1. Select the filesystem you wish to remove on the left-hand side of the "
+"screen.\n"
+"2. Click the - button.\n"
+"\n"
+"Hint: Removing a device that already exists on your disk from the \"New "
+"%(productName)s Installation\" does not remove it from the disk. It only "
+"resets that device to its original state. To remove a device that already "
+"exists on your disk, you must select it from under any of the other detected "
+"installations (or \"Unknown\") and hit the - button.\n"
+"\n"
+"\n"
+"Tips and hints\n"
+"\n"
+"You can enter sizes for new filesystems that are greater than the total "
+"available free space. The installer will come as close as possible to the "
+"size you request.\n"
+"\n"
+"By default, new devices use any/all of your selected disks.\n"
+"\n"
+"You can change which disks a new device may be allocated from by clicking "
+"the configure button (the one with a tools graphic) while that device is "
+"selected.\n"
+"\n"
+"When adding a new mountpoint by clicking the + button, leave the size entry "
+"blank to make the new device use all available free space.\n"
+"\n"
+"When you remove the last device from a container device like an LVM volume "
+"group, we will automatically remove that container device to make room for "
+"new devices.\n"
+"\n"
+"When the last partition is removed from a disk, that disk may be "
+"reinitialized with a new partition table if we think there is a more "
+"appropriate type for that disk.\n"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:58
+msgid "Note: pool servers may not be available all the time"
+msgstr "കുറിപ്പു്: എല്ലാ സമയത്തും പൂള്‍ സര്‍വറുകള്‍ ലഭ്യമല്ല"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:299
+msgid "DATE & _TIME"
+msgstr "_സമയവും തീയതിയും"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:390
+msgid "Restoring hardware time..."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:401
+msgid "Invalid timezone"
+msgstr "തെറ്റായ സമയമേഘല"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:904
+msgid "You need to set up networking first if you want to use NTP"
+msgstr "നിങ്ങള്‍ക്കു് എന്‍ടിപി ഉപയോഗിയ്ക്കണമെങ്കില്‍, ആദ്യം നെറ്റ്‌വര്‍ക്കിങ് സജ്ജമാക്കണം."
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.py:909
+msgid "You have no working NTP server configured"
+msgstr "പ്രവര്‍ത്തനത്തിലുള്ളൊരു എന്‍ടിപി സര്‍വറും ക്രമീകരിച്ചിട്ടില്ല,"
+
+#: pyanaconda/ui/gui/spokes/filter.py:408
+msgid "_INSTALLATION DESTINATION"
+msgstr "_ഇന്‍സ്റ്റലേഷന്‍ ലക്ഷ്യം"
+
+#: pyanaconda/ui/gui/spokes/keyboard.py:40
+#, python-format
+msgid "%s to switch layouts."
+msgstr "ശൈലികള്‍ മാറുന്നതിനായി %s."
+
+#: pyanaconda/ui/gui/spokes/keyboard.py:262
+msgid "_KEYBOARD"
+msgstr "_കീബോര്‍ഡ്"
+
+#: pyanaconda/ui/gui/spokes/keyboard.py:322
+msgid "Testing layouts configuration not available."
+msgstr "ശൈലികളുടെ ക്രമീകരണം പരീക്ഷണം ലഭ്യമല്ല."
+
+#: pyanaconda/ui/gui/spokes/keyboard.py:379
+msgid "Layout switching not configured."
+msgstr "ശൈലി മാറ്റുന്നതു് ക്രമീകരിച്ചിട്ടില്ല."
+
+#: pyanaconda/ui/gui/spokes/langsupport.py:50
+msgid "_LANGUAGE SUPPORT"
+msgstr "_ഭാഷയ്ക്കുള്ള പിന്തുണ"
+
+#: pyanaconda/ui/gui/spokes/network.py:89
+msgid "Status unknown (missing)"
+msgstr "അവസ്ഥ അപരിചിതം (ലഭ്യമല്ല)"
+
+#: pyanaconda/ui/gui/spokes/network.py:92
+msgid "Status unknown"
+msgstr "അവസ്ഥ അപരിചിതം"
+
+#: pyanaconda/ui/gui/spokes/network.py:94
+msgid "Unmanaged"
+msgstr "കൈകാര്യം ചെയ്യാത്ത"
+
+#: pyanaconda/ui/gui/spokes/network.py:97
+msgid "Firmware missing"
+msgstr "ഫേംവെയര്‍ ലഭ്യമല്ല"
+
+#: pyanaconda/ui/gui/spokes/network.py:100
+msgid "Cable unplugged"
+msgstr "കേബല്‍ പ്ലഗ് ചെയ്തിട്ടില്ല"
+
+#: pyanaconda/ui/gui/spokes/network.py:102
+msgid "Unavailable"
+msgstr "ലഭ്യമല്ല"
+
+#: pyanaconda/ui/gui/spokes/network.py:104
+msgid "Disconnected"
+msgstr "വിഛേദിച്ചിരിയ്ക്കുന്നു"
+
+#: pyanaconda/ui/gui/spokes/network.py:109
+msgid "Connecting"
+msgstr "കണക്ട് ചെയ്യുന്നു "
+
+#: pyanaconda/ui/gui/spokes/network.py:111
+msgid "Authentication required"
+msgstr "ആധികാരികത ഉറപ്പാക്കേണ്ടതുണ്ടു്"
+
+#: pyanaconda/ui/gui/spokes/network.py:113
+msgid "Connected"
+msgstr "കണക്ട് ചെയ്തിരിയ്ക്കുന്നു"
+
+#: pyanaconda/ui/gui/spokes/network.py:115
+msgid "Disconnecting"
+msgstr "വിഛേദിയ്ക്കുന്നു"
+
+#: pyanaconda/ui/gui/spokes/network.py:117
+msgid "Connection failed"
+msgstr "കണക്ഷന്‍ പരാജയപ്പെട്ടു"
+
+#: pyanaconda/ui/gui/spokes/network.py:654
+msgid "unplugged"
+msgstr "പ്ലഗ് ചെയ്യാത്തതു്"
+
+#: pyanaconda/ui/gui/spokes/network.py:667
+msgid "Ethernet"
+msgstr "ഇഥര്‍നെറ്റ്"
+
+#: pyanaconda/ui/gui/spokes/network.py:669
+msgid "Wireless"
+msgstr "വയര്‍ലെസ്സ് "
+
+#: pyanaconda/ui/gui/spokes/network.py:671
+msgid "Bond"
+msgstr "ബോണ്ട്"
+
+#: pyanaconda/ui/gui/spokes/network.py:673
+msgid "Vlan"
+msgstr "Vlan"
+
+#: pyanaconda/ui/gui/spokes/network.py:773
+#: pyanaconda/ui/gui/spokes/network.glade:627
+#: pyanaconda/ui/gui/spokes/network.glade:955
+msgid "IPv4 Address"
+msgstr "IPv4 വിലാസം"
+
+#: pyanaconda/ui/gui/spokes/network.py:774
+#: pyanaconda/ui/gui/spokes/network.glade:599
+#: pyanaconda/ui/gui/spokes/network.glade:969
+#: pyanaconda/ui/gui/spokes/network.glade:1588
+msgid "IPv6 Address"
+msgstr "IPv6 വിലാസം"
+
+#: pyanaconda/ui/gui/spokes/network.py:776
+#: pyanaconda/ui/gui/spokes/network.py:778
+#: pyanaconda/ui/gui/spokes/network.glade:1574
+msgid "IP Address"
+msgstr "ഐപി വിലാസം"
+
+#: pyanaconda/ui/gui/spokes/network.py:863
+#, python-format
+msgid "%d Mb/s"
+msgstr "%d Mb/s"
+
+#: pyanaconda/ui/gui/spokes/network.py:1063
+msgid "WEP"
+msgstr "WEP"
+
+#: pyanaconda/ui/gui/spokes/network.py:1066
+msgid "WPA"
+msgstr "WPA"
+
+#: pyanaconda/ui/gui/spokes/network.py:1069
+msgid "WPA2"
+msgstr "WPA2"
+
+#: pyanaconda/ui/gui/spokes/network.py:1073
+msgid "Enterprise"
+msgstr "എന്റര്‍പ്രൈസ്"
+
+#: pyanaconda/ui/gui/spokes/network.py:1205
+msgid "Authentication required by wireless network"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/network.py:1206
+#, python-format
+msgid ""
+"Passwords or encryption keys are required to access\n"
+"the wireless network '%(network_id)s'."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/network.py:1219
+msgid "_Password:"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/network.py:1227
+msgid "_Key:"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/network.py:1282
+msgid "_NETWORK CONFIGURATION"
+msgstr "_നെറ്റ്‌വര്‍ക്ക് ക്രമീകരണം"
+
+#: pyanaconda/ui/gui/spokes/network.py:1319
+msgid "Connecting..."
+msgstr "കണക്ട് ചെയ്യുന്നു..."
+
+#: pyanaconda/ui/gui/spokes/network.py:1321
+msgid "Disconnecting..."
+msgstr "വിഛേദിയ്ക്കുന്നു..."
+
+#: pyanaconda/ui/gui/spokes/network.py:1338
+#, python-format
+msgid "Wired (%(interface_name)s) connected"
+msgstr "വയര്‍ഡ് (%(interface_name)s) കണക്ട് ചെയ്തിരിയ്ക്കുന്നു"
+
+#: pyanaconda/ui/gui/spokes/network.py:1341
+#, python-format
+msgid "Wireless connected to %(access_point)s"
+msgstr "വയര്‍ലെസ്സ് %(access_point)s-ലേക്കു് കണക്ട് ചെയ്തിരിയ്ക്കുന്നു"
+
+#: pyanaconda/ui/gui/spokes/network.py:1344
+#, python-format
+msgid "Bond %(interface_name)s (%(list_of_slaves)s) connected"
+msgstr "ബോണ്ട് %(interface_name)s (%(list_of_slaves)s) കണക്ട് ചെയ്തിരിയ്ക്കുന്നു"
+
+#: pyanaconda/ui/gui/spokes/network.py:1347
+#, python-format
+msgid "Vlan %(interface_name)s (%(parent_device)s, ID %(vlanid)s) connected"
+msgstr ""
+"Vlan %(interface_name)s (%(parent_device)s, ഐഡി %(vlanid)s) കണക്ട് ചെയ്തിരിയ്ക്കുന്നു"
+
+#: pyanaconda/ui/gui/spokes/network.py:1360
+#, python-format
+msgid "Connected: %(list_of_interface_names)s"
+msgstr "കണക്ട് ചെയ്തിരിയ്ക്കുന്നു: %(list_of_interface_names)s"
+
+#: pyanaconda/ui/gui/spokes/network.py:1363
+msgid "Not connected"
+msgstr "കണക്ട് ചെയ്തിട്ടില്ല"
+
+#: pyanaconda/ui/gui/spokes/network.py:1366
+#: pyanaconda/ui/gui/spokes/network.glade:2338
+msgid "No network devices available"
+msgstr "നെറ്റ്‌വര്‍ക്ക് ഡിവൈസുകള്‍ ലഭ്യമല്ല"
+
+#: pyanaconda/ui/gui/spokes/network.py:1413
+#: pyanaconda/ui/gui/spokes/network.py:1482
+#, python-format
+msgid "Hostname is not valid: %s"
+msgstr "ഹോസ്റ്റ്നാമം ശരിയല്ല: %s"
+
+#: pyanaconda/ui/gui/spokes/password.py:47
+msgid "_ROOT PASSWORD"
+msgstr "_റൂട്ടിനുള്ള രഹസ്യവാക്ക്"
+
+#: pyanaconda/ui/gui/spokes/password.py:64
+#: pyanaconda/ui/gui/spokes/password.py:65
+msgid "The password is set."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/password.py:81
+msgid "Error setting root password"
+msgstr "റൂട്ടിനുള്ള രഹസ്യവാക്ക് സജ്ജമാക്കുന്നതില്‍ പിഴവ്"
+
+#: pyanaconda/ui/gui/spokes/password.py:83
+msgid "Root password is set"
+msgstr "റൂട്ടിനുള്ള രഹസ്യവാക്ക് സജ്ജം"
+
+#: pyanaconda/ui/gui/spokes/password.py:85
+msgid "Root account is disabled"
+msgstr "റൂട്ട് അക്കൌണ്ട് പ്രവര്‍ത്തന രഹിതം"
+
+#: pyanaconda/ui/gui/spokes/password.py:87
+msgid "Root password is not set"
+msgstr "റൂട്ടിനുള്ള രഹസ്യവാക്ക് സജ്ജമല്ല"
+
+#: pyanaconda/ui/gui/spokes/password.py:127
+#: pyanaconda/ui/gui/spokes/user.py:347
+#: pyanaconda/ui/gui/spokes/lib/passphrase.py:102
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:173
+msgid "Weak"
+msgstr "അശക്തം"
+
+#: pyanaconda/ui/gui/spokes/password.py:128
+#: pyanaconda/ui/gui/spokes/user.py:348
+msgid "The password you have provided is weak"
+msgstr "നിങ്ങള്‍ നല്‍കിയ രഹസ്യവാക്ക് ശക്തമായതല്ല"
+
+#: pyanaconda/ui/gui/spokes/password.py:133
+#: pyanaconda/ui/gui/spokes/user.py:353
+msgid "You will have to press Done twice to confirm it."
+msgstr "ഉറപ്പാക്കുന്നതിനായി പൂര്‍ത്തിയായി രണ്ടു് തവണ അമര്‍ത്തണം."
+
+#: pyanaconda/ui/gui/spokes/password.py:136
+#: pyanaconda/ui/gui/spokes/user.py:356
+#: pyanaconda/ui/gui/spokes/lib/passphrase.py:105
+msgid "Fair"
+msgstr "കുഴപ്പമില്ല"
+
+#: pyanaconda/ui/gui/spokes/password.py:140
+#: pyanaconda/ui/gui/spokes/user.py:360
+#: pyanaconda/ui/gui/spokes/lib/passphrase.py:108
+msgid "Good"
+msgstr "നല്ലതു്"
+
+#: pyanaconda/ui/gui/spokes/password.py:144
+#: pyanaconda/ui/gui/spokes/user.py:364
+#: pyanaconda/ui/gui/spokes/lib/passphrase.py:111
+msgid "Strong"
+msgstr "ശക്തം"
+
+#: pyanaconda/ui/gui/spokes/password.py:149
+#: pyanaconda/ui/gui/spokes/user.py:369
+msgid "Empty"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/password.py:150
+#: pyanaconda/ui/gui/spokes/user.py:370
+msgid "The password is empty."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/password.py:152
+#: pyanaconda/ui/gui/spokes/user.py:372
+msgid "The passwords do not match."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/password.py:174
+#: pyanaconda/ui/gui/spokes/user.py:406
+msgid "You must provide and confirm a password."
+msgstr "ഒരു രഹസ്യവാക്ക് ഉറപ്പാക്കേണ്ടതുണ്ടു്."
+
+#: pyanaconda/ui/gui/spokes/password.py:184
+#: pyanaconda/ui/gui/spokes/user.py:416
+#, python-format
+msgid "You have provided a weak password: %s.  Press Done again to use anyway."
+msgstr ""
+"നിങ്ങള്‍ ശക്തമല്ലാത്തൊരു രഹസ്യവാക്ക് നല്‍കിയിരിയ്ക്കുന്നു: %s.  വീണ്ടും ഉപയോഗിയ്ക്കുന്നതിനായി "
+"പൂര്‍ത്തിയായി അമര്‍ത്തുക."
+
+#: pyanaconda/ui/gui/spokes/software.py:51
+msgid "_SOFTWARE SELECTION"
+msgstr "_സോഫ്റ്റ്‌വെയര്‍ തെരഞ്ഞെടുക്കല്‍"
+
+#: pyanaconda/ui/gui/spokes/software.py:102
+#: pyanaconda/ui/gui/spokes/source.py:482
+msgid "Checking software dependencies..."
+msgstr "സോഫ്റ്റ്‌വെയര്‍ ഡിപന്‍ഡന്‍സികള്‍ പരിശോധിയ്ക്കുന്നു..."
+
+#: pyanaconda/ui/gui/spokes/software.py:107
+msgid "Error checking software dependencies"
+msgstr "സോഫ്റ്റ്‌വെയര്‍ ഡിപന്‍ഡന്‍സികള്‍ പരിശോധിയ്ക്കുന്നതില്‍ പിശക്"
+
+#: pyanaconda/ui/gui/spokes/software.py:167
+msgid "Installation source not set up"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ ശ്രോതസ്സ് സജ്ജമല്ല"
+
+#: pyanaconda/ui/gui/spokes/software.py:190
+#: pyanaconda/ui/gui/spokes/source.py:52
+msgid "Downloading package metadata..."
+msgstr "പാക്കേജ് മെറ്റാഡേറ്റാ ഡൌണ്‍ലോഡ് ചെയ്യുന്നു..."
+
+#: pyanaconda/ui/gui/spokes/software.py:194
+msgid "Downloading group metadata..."
+msgstr "ഗ്രൂപ്പ് മെറ്റാഡേറ്റാ ഡൌണ്‍ലോഡ് ചെയ്യുന്നു..."
+
+#: pyanaconda/ui/gui/spokes/software.py:311
+msgid "Error checking software dependencies.  Click for details."
+msgstr "സോഫ്റ്റ്‌വെയര്‍ ഡിപന്‍ഡന്‍സികള്‍ പരിശോധിയ്ക്കുന്നതില്‍ പിശക്. വിവരങ്ങള്‍ക്കായി ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/software.py:407
+msgid ""
+"The following software marked for installation has errors.  This is likely "
+"caused by an error with\n"
+"your installation source.  You can change your installation source or quit "
+"the installer."
+msgstr ""
+"ഇന്‍സ്റ്റലേഷനു് വേണ്ടി അടയാളപ്പെടുത്തിയ ഈ സോഫ്റ്റ്‌വെയറില്‍ പിശകുകളുണ്ടു്. നിങ്ങളുടെ ഇന്‍സ്റ്റലേഷന്‍\n"
+"ശ്രോതസ്സിലുള്ള പിശകു് കാരണമാകാം. നിങ്ങളുടെ ഇന്‍സ്റ്റലേഷന്‍ ശ്രോതസ്സില്‍ മാറ്റം വരുത്താം അല്ലെങ്കില്‍ "
+"ഇന്‍സ്റ്റോളറില്‍ നിന്നും പുറത്തു് കടക്കുക."
+
+#: pyanaconda/ui/gui/spokes/software.py:410
+#: pyanaconda/ui/gui/spokes/storage.glade:580
+#: pyanaconda/ui/gui/spokes/source.glade:236
+#: pyanaconda/ui/gui/spokes/custom.glade:22
+#: pyanaconda/ui/gui/spokes/custom.glade:284
+#: pyanaconda/ui/gui/spokes/custom.glade:344
+#: pyanaconda/ui/gui/spokes/custom.glade:1923
+msgid "_Cancel"
+msgstr "_റദ്ദാക്കുക"
+
+#: pyanaconda/ui/gui/spokes/software.py:411
+msgid "_Modify Software Source"
+msgstr "സോഫ്റ്റ്‌വെയര്‍ ശ്രോതസ്സില്‍ _മാറ്റം വരുത്തുക"
+
+#: pyanaconda/ui/gui/spokes/source.py:51
+msgid "Setting up installation source..."
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ ശ്രോതസ്സ് സജ്ജമാക്കുന്നു..."
+
+#: pyanaconda/ui/gui/spokes/source.py:53
+msgid "Error downloading package metadata..."
+msgstr "പാക്കേജ് മെറ്റാഡേറ്റാ ഡൌണ്‍ലോഡ് ചെയ്യുന്നതില്‍ പിശക്..."
+
+#: pyanaconda/ui/gui/spokes/source.py:158
+msgid "This media is good to install from."
+msgstr "ഈ മീഡിയാ ഇവിടെ നിന്നും ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതാണു് ഉത്തമം."
+
+#: pyanaconda/ui/gui/spokes/source.py:160
+msgid "This media is not good to install from."
+msgstr "ഈ മീഡിയാ ഇവിടെ നിന്നും ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതിനു് ഉത്തമമല്ല."
+
+#: pyanaconda/ui/gui/spokes/source.py:271
+msgid "_INSTALLATION SOURCE"
+msgstr "_ഇന്‍സ്റ്റലേഷന്‍ ശ്രോതസ്സ്"
+
+#: pyanaconda/ui/gui/spokes/source.py:384
+#: pyanaconda/ui/gui/spokes/source.py:425
+#: pyanaconda/ui/gui/spokes/source.py:437
+msgid "Failed to set up installation source; check the repo url"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ ശ്രോതസ്സ് സജ്ജമാക്കുന്നതില്‍ പരാജയം; റിപ്പോ യുആര്‍എല്‍ പരിശോധിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/source.py:427
+msgid ""
+"Failed to set up installation source; check the repo url and proxy settings"
+msgstr ""
+"ഇന്‍സ്റ്റലേഷന്‍ ശ്രോതസ്സ് സജ്ജമാക്കുന്നതില്‍ പരാജയം; റിപ്പോ യുആര്‍എല്ലും പ്രോക്സി സജ്ജീകരണങ്ങളും "
+"പരിശോധിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/source.py:490
+#, python-format
+msgid "NFS server %s"
+msgstr "NFS സര്‍വര്‍ %s"
+
+#: pyanaconda/ui/gui/spokes/source.py:580
+#, python-format
+msgid "Device: %s"
+msgstr "ഡിവൈസ്: %s"
+
+#: pyanaconda/ui/gui/spokes/source.py:581
+#, python-format
+msgid "Label: %s"
+msgstr "ലേബല്‍: %s"
+
+#: pyanaconda/ui/gui/spokes/storage.py:116
+#, python-format
+msgid ""
+"You have <b>%(freeSpace)s</b> of free space, which is enough to install "
+"%(productName)s.  What would you like to do?"
+msgstr ""
+"നിങ്ങള്‍ക്കു് <b>%(freeSpace)s</b> ഉപയോഗത്തിലില്ലാത്ത സ്ഥലമുണ്ടു്. ഇതു് %(productName)s "
+"ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതിനു് മതിയാകുന്നു.  നിങ്ങള്‍ക്കെന്തു് ചെയ്യണം?"
+
+#: pyanaconda/ui/gui/spokes/storage.py:122
+#, python-format
+msgid ""
+"<span font-desc=\"Cantarell 11\">A_utomatically configure my %(productName)s "
+"installation to the disk(s) I selected and return me to the main menu.</span>"
+msgstr ""
+"<span font-desc=\"Cantarell 11\">തെരഞ്ഞെടുത്ത ഡിസ്കിലേക്കു് %(productName)s "
+"ഇന്‍സ്റ്റലേഷന്‍ സ്വ_യമായി ക്രമീകരിച്ചു് പ്രധാന മെനുവിലേക്കു് തിരികെ പോകുക.</span>"
+
+#: pyanaconda/ui/gui/spokes/storage.py:132
+#, python-format
+msgid ""
+"<span font-desc=\"Cantarell 11\">I want more space. _Guide me through "
+"shrinking and/or removing partitions so I can have more space for "
+"%(productName)s.</span>"
+msgstr ""
+"<span font-desc=\"Cantarell 11\">കൂടുതല്‍ സ്ഥലം ആവശ്യമുണ്ടു്. %(productName)s-നു് കൂടുതല്‍ "
+"സ്ഥലം ലഭ്യമാക്കുന്നതിനായി പാര്‍ട്ടീഷനുകള്‍ ചെറുതാക്കുവാന്‍ അല്ലെങ്കില്‍ വലുതാക്കുവാന്‍ _സഹായിയ്ക്കുക.</"
+"span>"
+
+#: pyanaconda/ui/gui/spokes/storage.py:141
+msgid ""
+"<span font-desc=\"Cantarell 11\">I want to review/_modify my disk partitions "
+"before continuing.</span>"
+msgstr ""
+"<span font-desc=\"Cantarell 11\">തുടരുന്നതിനു് മുമ്പു് ഡിസ്ക് പാര്‍ട്ടീഷനുകള്‍ പരിശോധിയ്ക്കണം/"
+"_മാറ്റം വരുത്തണം.</span>"
+
+#: pyanaconda/ui/gui/spokes/storage.py:172
+#, python-format
+msgid ""
+"Your current <a href=\"\"><b>%(product)s</b> software selection</a> requires "
+"<b>%(total)s</b> of available space, including <b>%(software)s</b> for "
+"software and <b>%(swap)s</b> for swap space."
+msgstr ""
+"നിങ്ങളുടെ നിലവിലുള്ള <a href=\"\"><b>%(product)s</b> സോഫ്റ്റ്‌വെയര്‍ തെരഞ്ഞെടുക്കലിനു്</a> "
+"ലഭ്യമായ സ്ഥലത്തിന്റെ‌ <b>%(total)s</b>, സോഫ്റ്റ്‌വെയറിനു് <b>%(software)s</b>, സ്വാപ്പ് "
+"സ്ഥലത്തിനു് <b>%(swap)s</b> എന്നിവ ആവശ്യമുണ്ടു്."
+
+#: pyanaconda/ui/gui/spokes/storage.py:229
+#, python-format
+msgid "%s The disks you've selected have the following amounts of free space:"
+msgstr "%s നിങ്ങള്‍ തെരഞ്ഞെടുത്ത ഡിസ്കുകളില്‍ ഉപയോഗത്തിലില്ലാത്ത ഈ സ്ഥലമുണ്ടു്:"
+
+#: pyanaconda/ui/gui/spokes/storage.py:233
+#: pyanaconda/ui/gui/spokes/storage.py:265
+msgid "Please wait... software metadata still loading."
+msgstr "ദയവായി കാത്തിരിയ്ക്കുക... സോഫ്റ്റ്‌വെയര്‍ മെറ്റാഡേറ്റാ ഇപ്പോഴും ലഭ്യമാക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/storage.py:240
+#, python-format
+msgid ""
+"<b>You don't have enough space available to install %s</b>.  You can shrink "
+"or remove existing partitions via our guided reclaim space tool, or you can "
+"adjust your partitions on your own in the custom partitioning interface."
+msgstr ""
+"<b>%s ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതിനു് നിങ്ങള്‍ക്കു് മതിയായ സ്ഥലം ലഭ്യമല്ല</b>.  സഹായത്തിനുള്ള "
+"വീണ്ടെടുക്കല്‍ സ്പെയിസ് പ്രയോഗം മുഖേന നിങ്ങള്‍ക്കു് നിലവിലുള്ള പാര്‍ട്ടീഷനുകള്‍ ചെറുതാക്കാം അല്ലെങ്കില്‍ "
+"നീക്കം ചെയ്യാം, അല്ലെങ്കില്‍ യഥേഷ്ടമുള്ള പാര്‍ട്ടീഷനിങ് ഇന്റര്‍ഫെയിസിലൂടെ നിങ്ങള്‍ക്കു് പാര്‍ട്ടീഷന്‍ "
+"തയ്യാറാക്കാം."
+
+#: pyanaconda/ui/gui/spokes/storage.py:259
+#, python-format
+msgid ""
+"%(sw_text)s You don't have enough space available to install <b>%(product)s</"
+"b>, even if you used all of the free space available on the selected disks."
+msgstr ""
+"%(sw_text)s നിങ്ങള്‍ക്കു് <b>%(product)s</b> ഇന്‍സ്റ്റോള്‍ ചെയ്യുവാന്‍ മതിയായ സ്ഥലം ലഭ്യമല്ല, "
+"തെരഞ്ഞെടുത്ത ഡിസ്കുകളിലുള്ള മൊത്തം മതിയായ സ്ഥലം ഉപയോഗിയ്ക്കുന്നെങ്കിലും കാര്യമില്ല."
+
+#: pyanaconda/ui/gui/spokes/storage.py:272
+#, python-format
+msgid ""
+"<b>You don't have enough space available to install %s</b>, even if you used "
+"all of the free space available on the selected disks.  You could add more "
+"disks for additional space, modify your software selection to install a "
+"smaller version of <b>%s</b>, or quit the installer."
+msgstr ""
+"തെരഞ്ഞെടുത്ത ഡിസ്കുകളിലുള്ള മൊത്തം സ്ഥലം ഉപയോഗിച്ചാലും <b> നിങ്ങള്‍ക്കു് %s ഇന്‍സ്റ്റോള്‍ "
+"ചെയ്യുന്നതിനായി മതിയായ സ്ഥലം ലഭ്യമല്ല</b>. അധികമായ സ്ഥലത്തിനു് നിങ്ങള്‍ക്കു് കൂടുതല്‍ ഡിസ്കുകള്‍ "
+"ചേര്‍ക്കാം, <b>%s</b>-ന്റെ ചെറിയ പതിപ്പു് ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതിനായി സോഫ്റ്റ്‌വെയര്‍ "
+"തെരഞ്ഞെടുക്കലില്‍ മാറ്റം വരുത്താം, അല്ലെങ്കില്‍ ഇന്‍സ്റ്റോളറില്‍ നിന്നും പുറത്തു് കടക്കുക."
+
+#: pyanaconda/ui/gui/spokes/storage.py:317
+msgid "INSTALLATION _DESTINATION"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ _ലക്ഷ്യം"
+
+#: pyanaconda/ui/gui/spokes/storage.py:391
+msgid "Saving storage configuration..."
+msgstr "സംഭരണ ക്രമീകരണം സൂക്ഷിയ്ക്കുന്നു..."
+
+#: pyanaconda/ui/gui/spokes/storage.py:397
+msgid "Failed to save storage configuration..."
+msgstr "സംഭരണ ക്രമീകരണം സൂക്ഷിയ്ക്കുന്നതില്‍ പരാജയം..."
+
+#: pyanaconda/ui/gui/spokes/storage.py:575
+msgid "Error checking storage configuration.  Click for details."
+msgstr "സംഭരണ ക്രമീകരണം പരിശോധിയ്ക്കുന്നതില്‍ പിശക്. വിവരങ്ങള്‍ക്കായി ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/storage.py:577
+msgid "Warning checking storage configuration.  Click for details."
+msgstr "സംഭരണ ക്രമീകരണം പരിശോധിയ്ക്കുന്നതിനുള്ള മുന്നറിയിപ്പു്. വിവരങ്ങള്‍ക്കായി ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/storage.py:630
+#, python-format
+msgid "%s free"
+msgstr "%s ഉപയോഗത്തിലില്ല"
+
+#: pyanaconda/ui/gui/spokes/storage.py:675
+#, python-format
+msgid "%d disk selected; %s capacity; %s free"
+msgid_plural "%d disks selected; %s capacity; %s free"
+msgstr[0] "%d ഡിസ്ക് തെരഞ്ഞെടുത്തു; %s വ്യാപ്തി; %s ഉപയോഗത്തിലില്ല"
+msgstr[1] "%d ഡിസ്കുകള്‍ തെരഞ്ഞെടുത്തു; %s വ്യാപ്തി; %s ഉപയോഗത്തിലില്ല"
+
+#: pyanaconda/ui/gui/spokes/storage.py:728
+msgid ""
+"You have chosen to skip bootloader installation.  Your system may not be "
+"bootable."
+msgstr ""
+"ബൂട്ട് ലോഡര്‍ ഇന്‍സ്റ്റലേഷന്‍ ഉപേക്ഷിയ്ക്കുവാന്‍ തെരഞ്ഞെടുത്തിരിയ്ക്കുന്നു. നിങ്ങളുെട സിസ്റ്റം ബൂട്ട് "
+"ചെയ്യുവാന്‍ ഒരു പക്ഷേ സാധ്യമാവില്ല."
+
+#: pyanaconda/ui/gui/spokes/storage.py:892
+msgid ""
+"The following errors were encountered when checking your storage "
+"configuration.  You can modify your storage layout or quit the installer."
+msgstr ""
+"നിങ്ങളുടെ സംഭരണ ക്രമീകരണം പരിശോധിയ്ക്കുമ്പോള്‍ ഈ പിശകുകളുണ്ടായിരിയ്ക്കുന്നു. നിങ്ങളുടെ സംഭരണ "
+"ശൈലിയില്‍ മാറ്റം വരുത്താം അല്ലെങ്കില്‍ ഇന്‍സ്റ്റോളറില്‍ നിന്നും പുറത്തു് കടക്കാം."
+
+#: pyanaconda/ui/gui/spokes/storage.py:896
+msgid "_Modify Storage Layout"
+msgstr "സംഭരണ ശൈലിയില്‍ മാറ്റം _വരുത്തുക"
+
+#: pyanaconda/ui/gui/spokes/storage.py:908
+msgid ""
+"The following warnings were encountered when checking your storage "
+"configuration.  These are not fatal, but you may wish to make changes to "
+"your storage layout."
+msgstr ""
+"നിങ്ങളുടെ സംഭരണ ക്രമീകരണം പരിശോധിയ്ക്കുമ്പോള്‍ ഈ മുന്നറിയിപ്പുകള്‍ ഉണ്ടായിരിയ്ക്കുന്നു. നിങ്ങളുടെ "
+"സംഭരണ ശൈലിയിലേക്കു് ആവശ്യമായ മാറ്റങ്ങള്‍ വരുത്താം."
+
+#: pyanaconda/ui/gui/spokes/storage.py:912
+msgid "_OK"
+msgstr "_ശരി"
+
+#: pyanaconda/ui/gui/spokes/user.py:148
+msgid "_USER CREATION"
+msgstr "_ഉപയോക്തൃ തയ്യാറെടുക്കല്‍"
+
+#: pyanaconda/ui/gui/spokes/user.py:211 pyanaconda/ui/gui/spokes/user.py:212
+msgid "The password was set by kickstart."
+msgstr "കിക്ക്സ്റ്റാര്‍ട്ട് രഹസ്യവാക്ക് സജ്ജമാക്കിയിരിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/user.py:239
+#, python-format
+msgid "Error creating user account: %s"
+msgstr "ഉപയോക്താവിനുള്ള അക്കൌണ്ട് തയ്യാറാക്കുന്നതില്‍ പിശക്: %s"
+
+#: pyanaconda/ui/gui/spokes/user.py:241
+msgid "No user will be created"
+msgstr "ഒരു ഉപയോക്താവും തയ്യാറാക്കിയിട്ടില്ല"
+
+#: pyanaconda/ui/gui/spokes/user.py:243
+#, python-format
+msgid "Administrator %s will be created"
+msgstr "അഡ്മിനിസ്ട്രേറ്റര്‍ %s തയ്യാറാക്കപ്പെടുന്നു"
+
+#: pyanaconda/ui/gui/spokes/user.py:245
+#, python-format
+msgid "User %s will be created"
+msgstr "%s ഉപയോക്താവു് തയ്യാറാക്കപ്പെടുന്നു"
+
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:157
+msgid "DATA"
+msgstr "ഡേറ്റാ"
+
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:162
+msgid "SYSTEM"
+msgstr "സിസ്റ്റം"
+
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:257
+#, python-format
+msgid ""
+"You haven't created any mount points for your %s %s installation yet.  You "
+"can:"
+msgstr ""
+"നിങ്ങളുടെ %s %s ഇന്‍സ്റ്റലേഷനു് ഇതു് വരെ ഒരു മൌണ്ട് പോയിന്റുകളും തയ്യാറാക്കിയിട്ടില്ല. ചെയ്യുവാന്‍ "
+"സാധിയ്ക്കുന്നതു്:"
+
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:266
+msgid "_Click here to create them automatically."
+msgstr "അവയെ സ്വയമായി തയ്യാറാക്കുന്നതിനു് ക്ലിക്ക് ചെയ്യു_ക."
+
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:283
+msgid "Create new mount points by clicking the '+' button."
+msgstr "'+' ബട്ടണ്‍ ക്ലിക്ക് ചെയ്തു് പുതിയ മൌണ്ട് പോയിന്റുകള്‍ തയ്യാറാക്കുക."
+
+#: pyanaconda/ui/gui/spokes/lib/accordion.py:294
+msgid ""
+"Or, assign new mount points to existing partitions after selecting them "
+"below."
+msgstr ""
+"അല്ലെങ്കില്‍, നിലവിലിലുള്ള പാര്‍ട്ടീഷനുകള്‍ താഴെ തെരഞ്ഞെടുത്തു്, അവയ്ക്കു് പുതിയ മൌണ്ട് പോയിന്റുകള്‍ "
+"നല്‍കുക."
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:128
+#, python-format
+msgid ""
+"<b>%d disk; %s capacity; %s free space</b> (unpartitioned and in filesystems)"
+msgid_plural ""
+"<b>%d disks; %s capacity; %s free space</b> (unpartitioned and in "
+"filesystems)"
+msgstr[0] ""
+"<b>%d ഡിസ്ക്; %s വ്യാപ്തി; %s ഉപയോഗിയ്ക്കാത്ത സ്ഥലം</b> (പാര്‍ട്ടീഷന്‍ ചെയ്തിട്ടില്ല, ഫയല്‍ "
+"സിസ്റ്റങ്ങളിലുണ്ടു്)"
+msgstr[1] ""
+"<b>%d ഡിസ്കുകള്‍; %s വ്യാപ്തി; %s ഉപയോഗിയ്ക്കാത്ത സ്ഥലം</b> (പാര്‍ട്ടീഷന്‍ ചെയ്തിട്ടില്ല, ഫയല്‍ "
+"സിസ്റ്റങ്ങളിലുണ്ടു്)"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:184
+msgid "_Do not install bootloader"
+msgstr "ബൂട്ട് ലോഡര്‍ _ഇന്‍സ്റ്റോള്‍ ചെയ്യരുതു്"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.py:186
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:184
+msgid "_Set as Boot Device"
+msgstr "ബൂട്ട് ഡിവൈസായി _സജ്ജമാക്കുക"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.py:34
+#, python-format
+msgid "You have provided a weak passphrase: %s"
+msgstr "അശക്തമായൊരു പാസ്‌ഫ്രെയിസ് നിങ്ങള്‍ നല്‍കിയിരിയ്ക്കുന്നു: %s"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.py:35
+msgid "Passphrases do not match."
+msgstr "പാസ്‌ഫ്രെയിസുകള്‍ തമ്മില്‍ ചേരുന്നില്ല"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:43
+msgid "Preserve"
+msgstr "കരുതുക"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:44
+msgid "Shrink"
+msgstr "ചെറുതാക്കുക"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:45
+msgid "Delete"
+msgstr "വെട്ടി നീക്കുക "
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:98
+msgid "This device contains the installation source."
+msgstr "ഈ ഡിവൈസില്‍ ഇന്‍സ്റ്റലേഷന്‍ ശ്രോതസ്സ് അടങ്ങുന്നു."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:143
+#, python-format
+msgid "%(freeSize)s of %(devSize)s"
+msgstr "%(freeSize)s / %(devSize)s"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:149
+msgid "Not resizeable"
+msgstr "വ്യാപ്തി മാറ്റുവാന്‍ സാധ്യമല്ല"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:168
+msgid "<span foreground='grey' style='italic'>Free space</span>"
+msgstr "<span foreground='grey' style='italic'>ഉപയോഗിയ്ക്കാത്ത സ്ഥലം</span>"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:187
+msgid ""
+"You can remove existing filesystems you no longer need to free up space for "
+"this installation.  Removing a filesystem will permanently delete all of the "
+"data it contains."
+msgstr ""
+"ഈ ഇന്‍സ്റ്റലേഷനു് സ്ഥലം ലഭ്യമാക്കുന്നതിനായി നിങ്ങള്‍ക്കു് നിലവിലുള്ള ഫയല്‍സിസ്റ്റങ്ങള്‍ നീക്കം ചെയ്യാം. "
+"ഒരു ഫയല്‍സിസ്റ്റം എന്നേക്കുമായി വെട്ടിനീക്കിയാല്‍ ഡേറ്റാ മുഴുവനായും നഷ്ടമാകുന്നു."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:193
+msgid ""
+"There is also free space available in pre-existing filesystems.  While it's "
+"risky and we recommend you back up your data first, you can recover that "
+"free disk space and make it available for this installation below."
+msgstr ""
+"നിലവിലുള്ള ഫയല്‍സിസ്റ്റങ്ങളില്‍ ഉപയോഗത്തിലില്ലാത്ത സ്ഥലമുണ്ടു്. നിങ്ങളുടെ ഡേറ്റാ ആദ്യം "
+"ബാക്കപ്പെടുക്കുന്നതാണു് ഉത്തമം. നിങ്ങള്‍ക്കു് ഈ ഉപയോഗത്തിലില്ലാത്ത സ്ഥലം കണ്ടുപിടിച്ചു്, താഴെ "
+"പറഞ്ഞിരിയ്ക്കുന്ന ഇന്‍സ്റ്റലേഷനു് ലഭ്യമാക്കാം."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:202
+#, python-format
+msgid "<b>%s disk; %s reclaimable space</b> (in filesystems)"
+msgid_plural "<b>%s disks; %s reclaimable space</b> (in filesystems)"
+msgstr[0] "<b>%s disk; %s വീണ്ടെടുക്കുന്ന സ്ഥലം</b> (ഫയല്‍സിസ്റ്റങ്ങളില്‍)"
+msgstr[1] "<b>%s disks; %s വീണ്ടെടുക്കുന്ന സ്ഥലം</b> (ഫയല്‍സിസ്റ്റങ്ങളില്‍)"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.py:208
+#, python-format
+msgid "Total selected space to reclaim: <b>%s</b>"
+msgstr "വീണ്ടെടുക്കുവാനുള്ള തെരഞ്ഞെടുത്ത മൊത്തം സ്ഥലം: <b>%s</b>"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:34
+msgid "_Save Changes"
+msgstr "മാറ്റങ്ങള്‍ സൂക്ഷിയ്ക്കു_ക"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:65
+msgid "ADVANCED USER CONFIGURATION"
+msgstr "അധികമായ ഉപയോക്തൃ ക്രമീകരണം"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:84
+msgid "Home Directory"
+msgstr "ആസ്ഥാന ഡയറക്ടറി"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:103
+msgid "Create a _home directory for this user."
+msgstr "ഈ ഉപയോക്താവിനു് ഒരു _ആസ്ഥാന ഡയറക്ടറി തയ്യാറാക്കുക."
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:130
+msgid "Home _directory:"
+msgstr "ആസ്ഥാന _ഡയറക്ടറി:"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:174
+msgid "User and Group IDs"
+msgstr "ഉപയോക്താവും ഗ്രൂപ്പ് ഐഡികളും"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:193
+msgid "Specify a _user ID manually:"
+msgstr "ഒരു ഉപയോക്തൃ _ഐഡി സ്വയമായി നല്‍കുക:"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:211
+msgid "Specify a _group ID manually:"
+msgstr "ഒരു ഗ്രൂപ്പ് _ഐഡി സ്വയമായി നല്‍കുക:"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:275
+msgid "Group Membership"
+msgstr "ഗ്രൂപ്പ് അംഗത്വം"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:298
+msgid "_Add user to the following groups:"
+msgstr "ഈ ഗ്രൂപ്പുകളിലേക്കു് ഉപയോക്താവിനെ ചേര്‍ക്കു_ക:"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:332
+msgid "wheel, my-team (1245), project-x (29935)"
+msgstr "wheel, my-team (1245), project-x (29935)"
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:349
+msgid ""
+"You may input a comma-separated list of group names and group IDs here.\n"
+"Groups that do not already exist will be created; specify their GID in "
+"parentheses. "
+msgstr ""
+"കോമാ ഉപയോഗിച്ചു് വേര്‍പെടുത്തിയ ഗ്രൂപ്പ് നാമങ്ങളും ഗ്രൂപ്പ് ഐഡികളും ഇവിടെ നല്‍കാം.\n"
+"നിലവിലില്ലാത്ത ഗ്രൂപ്പുകള്‍ തയ്യാറാക്കപ്പെടുന്നു; അവയുടെ ജിഐഡി പരാന്‍ഥസിസുകളില്‍ നല്‍കുക."
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:365
+msgid "Example:"
+msgstr "ഉദാഹരണം: "
+
+#: pyanaconda/ui/gui/spokes/advanced_user.glade:384
+msgid "Tip:"
+msgstr "സൂചന:"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:45
+msgid "DATE & TIME"
+msgstr "സമയവും തീയതിയും"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:92
+msgid "_Region:"
+msgstr "_സ്ഥലം:"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:134
+msgid "_City:"
+msgstr "_സിറ്റി:"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:187
+msgid "_Network Time"
+msgstr "_നെറ്റ്‌വര്‍ക്ക് സമയം"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:278
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:310
+msgid "00"
+msgstr "00"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:294
+msgid ":"
+msgstr ":"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:416
+msgid " "
+msgstr " "
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:432
+msgid "PM"
+msgstr "വൈകു"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:476
+msgid "24-_hour"
+msgstr "24-_മണിക്കൂര്‍"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:494
+msgid "_AM/PM"
+msgstr "_രാ/വൈകു"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:676
+msgid "Add and mark for usage NTP servers"
+msgstr "എന്‍റ്റിപി സര്‍വറുകള്‍ക്കായി ചേര്‍ത്തു് അടയാളപ്പെടുത്തുക"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:745
+msgid "Hostname"
+msgstr "ഹോസ്റ്റ്നെയിം"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:760
+msgid "Working"
+msgstr "പ്രവര്‍ത്തിയ്ക്കുന്നു"
+
+#: pyanaconda/ui/gui/spokes/datetime_spoke.glade:768
+msgid "Use"
+msgstr "ഉപയോഗിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:47
+#: pyanaconda/ui/gui/spokes/storage.glade:772
+msgid "INSTALLATION DESTINATION"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ ലക്ഷ്യസ്ഥാനം"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:111
+msgid "Search Results:"
+msgstr "ഫലങ്ങള്‍ കാണിയ്ക്കുക:"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:125
+msgid "Search _By:"
+msgstr "തെ_രയേണ്ടതു്:"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:183
+msgid "_Port:"
+msgstr "_പോര്‍ട്ട്:"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:210
+msgid "_Target:"
+msgstr "_ലക്ഷ്യം:"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:236
+msgid "_LUN:"
+msgstr "_എല്‍യുഎന്‍:"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:276
+msgid "_WWID:"
+msgstr "ഡബ്ല്യൂഡബ്ല്യൂ_ഐഡി:"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:350
+#: pyanaconda/ui/gui/spokes/filter.glade:735
+msgid "WWID"
+msgstr "ഡബ്ല്യൂഡബ്ല്യൂഐഡി"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:366
+#: pyanaconda/ui/gui/spokes/filter.glade:749
+#: pyanaconda/ui/gui/spokes/filter.glade:1098
+#: pyanaconda/ui/gui/spokes/filter.glade:1373
+#: pyanaconda/ui/gui/spokes/custom.glade:491
+#: pyanaconda/ui/gui/spokes/custom.glade:2031
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:146
+msgid "Capacity"
+msgstr "വ്യാപ്തി"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:380
+#: pyanaconda/ui/gui/spokes/filter.glade:778
+#: pyanaconda/ui/gui/spokes/filter.glade:1127
+msgid "Interconnect"
+msgstr "ഇന്റര്‍കണക്ട്"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:394
+msgid "Model"
+msgstr "മാതൃക"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:408
+#: pyanaconda/ui/gui/spokes/filter.glade:1401
+msgid "LUN"
+msgstr "എല്‍യുഎന്‍"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:422
+msgid "Port"
+msgstr "പോര്‍ട്ട്"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:436
+msgid "Target"
+msgstr "ലക്ഷ്യം (ടാര്‍ഗറ്റ്)"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:450
+#: pyanaconda/ui/gui/spokes/filter.glade:763
+#: pyanaconda/ui/gui/spokes/filter.glade:1112
+msgid "Vendor"
+msgstr "കച്ചവടക്കാരന്‍"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:508
+msgid "_Search"
+msgstr "തെ_രയുക"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:529
+#: pyanaconda/ui/gui/spokes/filter.glade:875
+#: pyanaconda/ui/gui/spokes/filter.glade:1232
+msgid "_Filter By:"
+msgstr "_തെരയേണ്ടതു്:"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:587
+#: pyanaconda/ui/gui/spokes/filter.glade:933
+msgid "_Show Only Devices From:"
+msgstr "ഇവിടെ നിന്നുള്ള ഡിവൈസുകള്‍ മാത്രം _കാണിയ്ക്കുക:"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:627
+#: pyanaconda/ui/gui/spokes/filter.glade:973
+msgid "_Show Only Devices With:"
+msgstr "ഇവയുള്ള ഡിവൈസുകള്‍ മാത്രം _കാണിയ്ക്കുക:"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:667
+#: pyanaconda/ui/gui/spokes/filter.glade:1013
+msgid "_Show Only Devices Containing:"
+msgstr "ഇവ മാത്രമുള്ള ഡിവൈസുകള്‍ കാണിയ്ക്കു_ക:"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:792
+msgid "Paths"
+msgstr "പാഥുകള്‍"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:853
+msgid "_Multipath Devices"
+msgstr "_മള്‍ട്ടിപാഫ് ഡിവൈസുകള്‍"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1084
+msgid "Identifier"
+msgstr "ഐഡന്റിഫയര്‍"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1188
+msgid "_Other SAN Devices"
+msgstr "_മറ്റു് എസ്എഎന്‍ ഡിവൈസുകള്‍"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1200
+msgid "Nothing here yet."
+msgstr "ഇതു് വരെ ഒന്നുമില്ല."
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1210
+msgid "Firmware _RAID"
+msgstr "ഫേംവെയര്‍ _റെയിഡ്"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1248
+msgid "label"
+msgstr "ലേബല്‍"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1261
+msgid "_Go"
+msgstr "പോകു_ക"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1345
+msgid "CCW"
+msgstr "സിസിഡബ്ല്യൂ"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1359
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:150
+msgid "Type"
+msgstr "ടൈപ്പ്"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1387
+msgid "WWPN"
+msgstr "വിവിപിഎന്‍"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1430
+msgid "_zSeries Devices"
+msgstr "_zSeries ഡിവൈസുകള്‍"
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1453
+msgid "Add _ZFCP LUN..."
+msgstr "_ZFCP LUN ചേര്‍ക്കുക..."
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1468
+msgid "Add _iSCSI Target..."
+msgstr "_iSCSI ലക്ഷ്യം ചേര്‍ക്കുക..."
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1483
+msgid "Add FCo_E SAN..."
+msgstr "FCo_E SAN ചേര്‍ക്കുക..."
+
+#: pyanaconda/ui/gui/spokes/filter.glade:1505
+#: pyanaconda/ui/gui/spokes/storage.glade:1048
+#: pyanaconda/ui/gui/spokes/custom.glade:1851
+msgid "summary"
+msgstr "ചുരുക്കം"
+
+#: pyanaconda/ui/gui/spokes/network.glade:8
+msgid "Add device"
+msgstr "ഡിവൈസ് ചേര്‍ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/network.glade:65
+msgid "_Select the type of device you wish to add"
+msgstr "നിങ്ങള്‍ക്കു് ചേര്‍ക്കുവാനുള്ള ഡിവൈസ് രീതി തെ_രഞ്ഞെടുക്കുക"
+
+#: pyanaconda/ui/gui/spokes/network.glade:158
+#: pyanaconda/ui/gui/spokes/network.glade:231
+msgid "NETWORK CONFIGURATION"
+msgstr "നെറ്റ്‍വര്‍ക്ക് ക്രമീകരണം"
+
+#: pyanaconda/ui/gui/spokes/network.glade:200
+msgid ""
+"We'll need network access to fetch information about your location and to "
+"make software\n"
+"updates available for you."
+msgstr ""
+"നിങ്ങളുടെ സ്ഥലം കണ്ടുപിടിച്ചു് ആവശ്യമായ സോഫ്റ്റ്‌വെയര്‍ പരിഷ്കരണങ്ങള്‍ ലഭ്യമാക്കുന്നതിനായി\n"
+"നെറ്റ്‌വര്‍ക്ക് ആവശ്യമുണ്ടു്."
+
+#: pyanaconda/ui/gui/spokes/network.glade:270
+msgid ""
+"Please use the live desktop environment's tools for customizing your network "
+"configuration.  You can set the hostname here."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/network.glade:485
+msgid "Slaves"
+msgstr "സ്ലേവുകള്‍"
+
+#: pyanaconda/ui/gui/spokes/network.glade:513
+#: pyanaconda/ui/gui/spokes/network.glade:998
+#: pyanaconda/ui/gui/spokes/network.glade:1617
+msgid "DNS"
+msgstr "ഡിഎന്‍എസ്"
+
+#: pyanaconda/ui/gui/spokes/network.glade:543
+#: pyanaconda/ui/gui/spokes/network.glade:983
+#: pyanaconda/ui/gui/spokes/network.glade:1602
+msgid "Default Route"
+msgstr "സ്വതവേയുള്ള റൂട്ട്"
+
+#: pyanaconda/ui/gui/spokes/network.glade:571
+msgid "Subnet Mask"
+msgstr "സബ്‌നെറ്റ് മാസ്ക്"
+
+#: pyanaconda/ui/gui/spokes/network.glade:655
+#: pyanaconda/ui/gui/spokes/network.glade:941
+#: pyanaconda/ui/gui/spokes/network.glade:1429
+msgid "Speed"
+msgstr "വേഗത"
+
+#: pyanaconda/ui/gui/spokes/network.glade:683
+#: pyanaconda/ui/gui/spokes/network.glade:927
+msgid "Hardware Address"
+msgstr "ഹാര്‍ഡ്‌വെയര്‍ വിലാസം"
+
+#: pyanaconda/ui/gui/spokes/network.glade:711
+msgid "Parent"
+msgstr "പേരന്റ്"
+
+#: pyanaconda/ui/gui/spokes/network.glade:725
+msgid "Vlan ID"
+msgstr "Vlan ഐഡി"
+
+#: pyanaconda/ui/gui/spokes/network.glade:806
+msgid "C_onfigure..."
+msgstr "ക്രമീകരിയ്ക്കുക..."
+
+#: pyanaconda/ui/gui/spokes/network.glade:1120
+msgid "Security"
+msgstr "സുരക്ഷ"
+
+#: pyanaconda/ui/gui/spokes/network.glade:1134
+msgid "_Network Name"
+msgstr "നെറ്റ്‌വര്‍ക്ക് _നാമം"
+
+#: pyanaconda/ui/gui/spokes/network.glade:1150
+msgid "Network Name"
+msgstr "നെറ്റ്‌വര്‍ക്കിന്റെ പേരു്"
+
+#: pyanaconda/ui/gui/spokes/network.glade:1164
+msgid "Security Key"
+msgstr "സുരക്ഷ കീ"
+
+#: pyanaconda/ui/gui/spokes/network.glade:1254
+msgid "_Use as Hotspot..."
+msgstr "ഹോട്ട്സ്പോട്ടായി _ഉപയോഗിയ്ക്കുക..."
+
+#: pyanaconda/ui/gui/spokes/network.glade:1273
+msgid "_Stop Hotspot..."
+msgstr "ഹോട്ട്സ്പോട്ട് നിര്‍ത്തു_ക..."
+
+#: pyanaconda/ui/gui/spokes/network.glade:1292
+#: pyanaconda/ui/gui/spokes/network.glade:1644
+#: pyanaconda/ui/gui/spokes/network.glade:1929
+msgid "_Configure..."
+msgstr "ക്രമീകരിയ്ക്കു_ക..."
+
+#: pyanaconda/ui/gui/spokes/network.glade:1415
+msgid "IMEI"
+msgstr "ഐഎംഇഐ"
+
+#: pyanaconda/ui/gui/spokes/network.glade:1443
+msgid "Provider"
+msgstr "പ്രവൈഡര്‍"
+
+#: pyanaconda/ui/gui/spokes/network.glade:1757
+msgid "VPN Type"
+msgstr "വിപിഎന്‍ തരം"
+
+#: pyanaconda/ui/gui/spokes/network.glade:1771
+msgid "Gateway"
+msgstr "ഗേറ്റ്‌വേ"
+
+#: pyanaconda/ui/gui/spokes/network.glade:1785
+msgid "Group Name"
+msgstr "ഗ്രൂപ്പ് നാമം"
+
+#: pyanaconda/ui/gui/spokes/network.glade:1799
+msgid "Group Password"
+msgstr "ഗ്രൂപ്പിനുള്ള രഹസ്യവാക്ക്"
+
+#: pyanaconda/ui/gui/spokes/network.glade:1813
+msgid "Username"
+msgstr "ഉപയോക്തൃനാമം"
+
+#: pyanaconda/ui/gui/spokes/network.glade:2056
+msgid "_Method"
+msgstr "_രീതി"
+
+#: pyanaconda/ui/gui/spokes/network.glade:2084
+msgid "_Configuration URL"
+msgstr "ക്രമീ_കരണ യുആര്‍എല്‍"
+
+#: pyanaconda/ui/gui/spokes/network.glade:2114
+msgid "_HTTP Proxy"
+msgstr "എച്_ടിടിപി പ്രോക്സി"
+
+#: pyanaconda/ui/gui/spokes/network.glade:2130
+msgid "H_TTPS Proxy"
+msgstr "എച്_ടിടിപിഎസ് പ്രോക്സി"
+
+#: pyanaconda/ui/gui/spokes/network.glade:2146
+msgid "_FTP Proxy"
+msgstr "_എഫ്‌ടിപി പ്രോക്സി"
+
+#: pyanaconda/ui/gui/spokes/network.glade:2162
+msgid "_Socks Host"
+msgstr "_സോക്ക്സ് ഹോസ്റ്റ്"
+
+#: pyanaconda/ui/gui/spokes/network.glade:2406
+msgid "Unloc_k"
+msgstr "പൂട്ടു് തുറക്കു_ക"
+
+#: pyanaconda/ui/gui/spokes/network.glade:2427
+msgid "Air_plane Mode"
+msgstr "എയര്‍പ്ലെ_യിന്‍ മോഡ്"
+
+#: pyanaconda/ui/gui/spokes/network.glade:2461
+msgid "_Hostname:"
+msgstr "ഹോസ്റ്റ്_നാമം:"
+
+#: pyanaconda/ui/gui/spokes/network.glade:2513
+msgid "Authentication"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/network.glade:2597
+msgid "<b>Authentication required by wireless network</b>"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/network.glade:2614
+msgid ""
+"Passwords or encryption keys are required to access\n"
+"the wireless network"
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/software.glade:33
+msgid "SOFTWARE SELECTION"
+msgstr "സോഫ്റ്റ്‌വെയര്‍ തെരഞ്ഞെടുക്കല്‍"
+
+#: pyanaconda/ui/gui/spokes/software.glade:89
+msgid "Base Environment"
+msgstr "അടിസ്ഥാന സാഹചര്യം"
+
+#: pyanaconda/ui/gui/spokes/software.glade:109
+msgid "Add-Ons for Selected Environment"
+msgstr "തെരഞ്ഞെടുത്ത സാഹചര്യത്തിനുള്ള ആഡ്-ഓണുകള്‍"
+
+#: pyanaconda/ui/gui/spokes/software.glade:163
+#: pyanaconda/ui/gui/spokes/software.glade:214
+#: pyanaconda/ui/gui/spokes/software.glade:229
+#: pyanaconda/ui/gui/spokes/langsupport.glade:113
+#: pyanaconda/ui/gui/spokes/langsupport.glade:129
+#: pyanaconda/ui/gui/spokes/langsupport.glade:143
+msgid "column"
+msgstr "നിര"
+
+#: pyanaconda/ui/gui/spokes/software.glade:263
+msgid "_Add custom add-on..."
+msgstr "യഥേഷ്ടമുള്ള ആഡ്-ഓണ്‍ ചേര്‍ക്കു_ക..."
+
+#: pyanaconda/ui/gui/spokes/storage.glade:33
+#: pyanaconda/ui/gui/spokes/storage.glade:264
+msgid "Cancel & _add more disks"
+msgstr "കൂടുതല്‍ ഡിസ്കുകള്‍ റദ്ദാക്കുകയും ചേര്‍ക്കു_കയും ചെയ്യുക"
+
+#: pyanaconda/ui/gui/spokes/storage.glade:50 widgets/src/StandaloneWindow.c:55
+msgid "_Continue"
+msgstr "തുടരുക (_C)"
+
+#: pyanaconda/ui/gui/spokes/storage.glade:84
+#: pyanaconda/ui/gui/spokes/storage.glade:331
+#: pyanaconda/ui/gui/spokes/storage.glade:615
+msgid "INSTALLATION OPTIONS"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ ഐച്ഛികങ്ങള്‍"
+
+#: pyanaconda/ui/gui/spokes/storage.glade:176
+#: pyanaconda/ui/gui/spokes/storage.glade:475
+msgid "<b>Partition scheme:</b>"
+msgstr "<b>പാര്‍ട്ടീഷന്‍ സജ്ജീകരണം:</b>"
+
+#: pyanaconda/ui/gui/spokes/storage.glade:212
+#: pyanaconda/ui/gui/spokes/storage.glade:511
+msgid "_Encrypt my data. I'll set a passphrase later."
+msgstr "ഡേറ്റാ _എന്‍ക്രിപ്റ്റ് ചെയ്യുക. പിന്നീടു് പാസ്‌ഫ്രെയിസ് സജ്ജമാക്കുക."
+
+#: pyanaconda/ui/gui/spokes/storage.glade:280
+msgid "_Custom partitioning"
+msgstr "പാര്‍ട്ടീഷനിങ് _യഥേഷ്ടമാക്കുക"
+
+#: pyanaconda/ui/gui/spokes/storage.glade:296
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:65
+msgid "_Reclaim space"
+msgstr "സ്ഥലം _വീണ്ടെടുക്കുക"
+
+#: pyanaconda/ui/gui/spokes/storage.glade:348
+#: pyanaconda/ui/gui/spokes/storage.glade:631
+msgid ""
+"Here we'll describe how much space is needed for the current software "
+"selection."
+msgstr "നിലവിലുള്ള സോഫ്റ്റ്‌വെയര്‍ തെരഞ്ഞെടുക്കലിനു് എത്ര സ്ഥലം ആവശ്യമെന്നു് ഇവിടെ വിവരിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/storage.glade:374
+#: pyanaconda/ui/gui/spokes/storage.glade:657
+msgid "disk free"
+msgstr "ഉപയോഗത്തിലില്ലാത്ത ഡിസ്ക്"
+
+#: pyanaconda/ui/gui/spokes/storage.glade:392
+#: pyanaconda/ui/gui/spokes/storage.glade:674
+msgid "Free space available for use."
+msgstr "ഉപയോഗത്തിനു് ലഭ്യമായ കാലിയായ സ്ഥലം."
+
+#: pyanaconda/ui/gui/spokes/storage.glade:410
+#: pyanaconda/ui/gui/spokes/storage.glade:692
+msgid "fs free"
+msgstr "fs free"
+
+#: pyanaconda/ui/gui/spokes/storage.glade:428
+#: pyanaconda/ui/gui/spokes/storage.glade:710
+msgid "Free space unavailable but reclaimable from existing partitions."
+msgstr "ഉപയോഗിയ്ക്കാത്ത സ്ഥലം ലഭ്യമല്ല, പക്ഷേ നിലവിലുള്ള പാര്‍ട്ടീഷനുകളില്‍ നിന്നും ലഭ്യമാക്കാം."
+
+#: pyanaconda/ui/gui/spokes/storage.glade:453
+#: pyanaconda/ui/gui/spokes/storage.glade:735
+msgid "Here we'll describe what your options are."
+msgstr "ഇവിടെ നിങ്ങളുടെ ഐച്ഛികങ്ങള്‍ വിവരിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/storage.glade:564
+msgid "_Quit installer"
+msgstr "ഇന്‍സ്റ്റോളറില്‍ നിന്നും പു_റത്തു് കടക്കുക"
+
+#: pyanaconda/ui/gui/spokes/storage.glade:822
+msgid ""
+"Select the device(s) you'd like to install to.  They will be left untouched "
+"until you click on the main menu's \"Begin Installation\" button."
+msgstr ""
+"നിങ്ങള്‍ക്കു് ഇന്‍സ്റ്റോള്‍ ചെയ്യുവാനുള്ള ഡിവൈസ് തെരഞ്ഞെടുക്കുക. പ്രധാന മെനുവിലുള്ള 'ഇന്‍സ്റ്റലേഷന്‍ "
+"ആരംഭിയ്ക്കുക' ബട്ടണ്‍ ക്ലിക്ക് ചെയ്തില്ലെങ്കില്‍ ഇവ ഉപയോഗിയ്ക്കുന്നതല്ല."
+
+#: pyanaconda/ui/gui/spokes/storage.glade:857
+msgid "Local Standard Disks"
+msgstr "സിസ്റ്റത്തിലുള്ള സാധാരണ ഡിസ്കുകള്‍"
+
+#: pyanaconda/ui/gui/spokes/storage.glade:911
+#: pyanaconda/ui/gui/spokes/storage.glade:999
+msgid "Disks left unselected here will not be touched."
+msgstr "ഇവിടെ തൊടാത്ത ഡിസ്കുകള്‍ ഒരിക്കലും ഉപയോഗിയ്ക്കുന്നതല്ല."
+
+#: pyanaconda/ui/gui/spokes/storage.glade:928
+msgid "Specialized & Network Disks"
+msgstr "പ്രത്യേക നെറ്റ്‌വര്‍ക്ക് ഡിസ്കുകള്‍"
+
+#: pyanaconda/ui/gui/spokes/storage.glade:967
+msgid "_Add a disk..."
+msgstr "ഒരു ഡിസ്ക് ചേര്‍ക്കു_ക..."
+
+#: pyanaconda/ui/gui/spokes/storage.glade:1023
+msgid "_Full disk summary and bootloader..."
+msgstr "_പൂര്‍ണ്ണ ഡിസ്ക് ചുരുക്കവും ബൂട്ട് ലോഡറും..."
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:68
+msgid "ADD A KEYBOARD LAYOUT"
+msgstr "ഒരു കീബോര്‍ഡ് ശൈലി ചേര്‍ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:85
+msgid "You may add a keyboard layout by selecting it below:"
+msgstr "നിങ്ങള്‍ക്കു് മറ്റൊരു കീബോര്‍ഡ് ശൈലി താഴെ തെരഞ്ഞെടുത്തു് ചേര്‍ക്കാം:"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:121
+#: pyanaconda/ui/gui/spokes/source.glade:989
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:134
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:158
+msgid "Name"
+msgstr "പേരു്"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:182
+msgid "KEYBOARD LAYOUT"
+msgstr "കീബോര്‍ഡ് ശൈലി"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:224
+msgid ""
+"Which keyboard layouts would you like to use on this system?  You may move "
+"any layout to the top of the list to select it as the default."
+msgstr ""
+"ഈ സിസ്റ്റത്തില്‍ നിങ്ങള്‍ ഉപയോഗിയ്ക്കുവാന്‍ ആഗ്രഹിയ്ക്കുന്ന കീബോര്‍ഡ് ശൈലികള്‍ ഏതു്? സ്വതവേയുള്ളതായി "
+"തെരഞ്ഞെടുക്കുന്നതിനു് നിങ്ങള്‍ക്കു് ശൈലി മുകളിലേക്കു് നീക്കാം."
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:263
+msgid ""
+"Changes here will only apply to the installed system. Use the desktop's tool "
+"to configure the keyboard for the installation process."
+msgstr ""
+"ഇവിടെയുള്ള മാറ്റങ്ങള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്ത സിസ്റ്റത്തിനു് മാത്രം ബാധകമാകുന്നു. ഇന്‍സ്റ്റലേഷന്‍ "
+"പ്രക്രിയയ്ക്കുള്ള കീബോര്‍ഡ് ക്രമീകരിയ്ക്കുന്നതിനു് പണിയിടത്തിന്റെ പ്രയോഗം ഉപയോഗിയ്ക്കുക."
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:320
+msgid "name"
+msgstr "പേരു്"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:356
+msgid "Add layout"
+msgstr "ശൈലി ചേര്‍ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:371
+msgid "Remove layout"
+msgstr "ശൈലി നീക്കം ചെയ്യുക"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:386
+msgid "Move selected layout up"
+msgstr "തെരഞ്ഞെടുത്ത ശൈലി മുകളിലേക്കു് നീക്കുക"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:401
+msgid "Move selected layout down"
+msgstr "തെരഞ്ഞെടുത്ത ശൈലി താഴേക്കു് നീക്കുക"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:417
+msgid "Preview layout"
+msgstr "ശൈലി കണ്ടുനോക്കുക"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:454
+msgid "_Test the layout configuration below:"
+msgstr "താഴെ പറഞ്ഞിരിയ്ക്കുന്ന ശൈലി ക്രമീകരണം _പരീക്ഷിയ്ക്കുക: "
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:495
+msgid "Alt + Shift to switch layouts."
+msgstr "ശൈലികള്‍ മാറ്റുന്നതിനായി Alt + Shift ഉപയോഗിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:510
+msgid "_Options"
+msgstr "ഐച്ഛി_കങ്ങള്‍"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:627
+msgid "LAYOUT SWITCHING OPTIONS"
+msgstr "ശൈലി മാറ്റുന്ന രീതികള്‍"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:644
+msgid ""
+"Which combination(s) would you prefer for switching between keyboard layouts?"
+msgstr "നിങ്ങള്‍ക്കു് കീബോര്‍ഡ് ശൈലികള്‍ തമ്മില്‍ മാറ്റുന്നതിനായി ഏതു് കീകൂട്ടമാണു് താല്‍പര്യം?"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:680
+msgid "use"
+msgstr "ഉപയോഗിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/keyboard.glade:693
+msgid "description"
+msgstr "വിവരണം"
+
+#: pyanaconda/ui/gui/spokes/langsupport.glade:26
+msgid "LANGUAGE SUPPORT"
+msgstr "ഭാഷയ്ക്കുള്ള പിന്തുണ"
+
+#: pyanaconda/ui/gui/spokes/langsupport.glade:71
+msgid "Select additional language support to be installed"
+msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്യുവാനുള്ള അധികമായ ഭാഷ പിന്തുണ തെരഞ്ഞെടുക്കുക"
+
+#: pyanaconda/ui/gui/spokes/langsupport.glade:175
+#: pyanaconda/ui/gui/spokes/welcome.glade:370
+msgid "Type here to search."
+msgstr ""
+
+#: pyanaconda/ui/gui/spokes/password.glade:9
+msgid "ROOT PASSWORD"
+msgstr "റൂട്ടിനുള്ള രഹസ്യവാക്ക്"
+
+#: pyanaconda/ui/gui/spokes/password.glade:55
+msgid "_Root Password:"
+msgstr "_റൂട്ടിനുള്ള രഹസ്യവാക്ക്:"
+
+#: pyanaconda/ui/gui/spokes/password.glade:72
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:133
+msgid "_Confirm:"
+msgstr "_ഉറപ്പ് വരുത്തുക:"
+
+#: pyanaconda/ui/gui/spokes/password.glade:159
+#: pyanaconda/ui/gui/spokes/user.glade:262
+msgid "empty password"
+msgstr "കാലിയായ രഹസ്യവാക്ക്"
+
+#: pyanaconda/ui/gui/spokes/password.glade:182
+msgid ""
+"The root account is used for administering the system.  Enter a password for "
+"the root user."
+msgstr ""
+"സിസ്റ്റം കൈകാര്യം ചെയ്യുന്നതിനായിട്ടാണ് നിങ്ങള്‍ക്ക് റൂട്ട് അക്കൌണ്ട്. റൂട്ട് ഉപയോക്താവിനുള്ള പാസ്‌വേര്‍ഡ് "
+"നല്‍കുക."
+
+#: pyanaconda/ui/gui/spokes/source.glade:106 widgets/src/SpokeWindow.c:48
+msgid "_Done"
+msgstr "_പൂര്‍ത്തിയായി"
+
+#: pyanaconda/ui/gui/spokes/source.glade:139
+msgid "MEDIA VERIFICATION"
+msgstr "മീഡിയ ഉറപ്പാക്കല്‍"
+
+#: pyanaconda/ui/gui/spokes/source.glade:166
+msgid "Verifying media, please wait..."
+msgstr "മീഡിയാ ഉറപ്പാക്കുക, ദയവായി കാത്തിരിയ്ക്കുക..."
+
+#: pyanaconda/ui/gui/spokes/source.glade:251
+msgid "_Add"
+msgstr "കൂട്ടുക (_A)"
+
+#: pyanaconda/ui/gui/spokes/source.glade:279
+msgid "_Enable HTTP Proxy"
+msgstr "എച്ടിടിപി പ്രോക്സി _സജ്ജമാക്കുക"
+
+#: pyanaconda/ui/gui/spokes/source.glade:312
+msgid "<b>_Proxy URL</b>"
+msgstr "<b>പ്രോക്സി _യുആര്‍എല്‍</b>"
+
+#: pyanaconda/ui/gui/spokes/source.glade:329
+msgid "<span size=\"small\"><b>Example:</b> squid.mysite.org:3128</span>"
+msgstr "<span size=\"small\"><b>ഉദാഹരണത്തിനു്:</b> squid.mysite.org:3128</span>"
+
+#: pyanaconda/ui/gui/spokes/source.glade:365
+msgid "_Use Authentication"
+msgstr "ആധികാരികത ഉറപ്പാക്കല്‍ _ഉപയോഗിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/source.glade:392
+msgid "<b>User_name</b>"
+msgstr "<b>ഉ_പയോക്തൃനാമം</b>"
+
+#: pyanaconda/ui/gui/spokes/source.glade:409
+msgid "<b>Pass_word</b>"
+msgstr "<b>_രഹസ്യവാക്ക്</b>"
+
+#: pyanaconda/ui/gui/spokes/source.glade:490
+msgid "INSTALLATION SOURCE"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ ശ്രോതസ്സ്"
+
+#: pyanaconda/ui/gui/spokes/source.glade:533
+msgid "Which installation source would you like to use?"
+msgstr "നിങ്ങള്‍ക്കേതു് ഇന്‍സ്റ്റലേഷന്‍ ശ്രോതസ്സ് ഉപയോഗിയ്ക്കണം?"
+
+#: pyanaconda/ui/gui/spokes/source.glade:547
+msgid "_Auto-detected installation media:"
+msgstr "സ്വയം-_കണ്ടുപിടിച്ച ഇന്‍സ്റ്റലേഷന്‍ മീഡിയാ: "
+
+#: pyanaconda/ui/gui/spokes/source.glade:574
+msgid "Device:"
+msgstr "ഡിവൈസ്:"
+
+#: pyanaconda/ui/gui/spokes/source.glade:588
+msgid "Label:"
+msgstr "ലേബല്‍:"
+
+#: pyanaconda/ui/gui/spokes/source.glade:599
+#: pyanaconda/ui/gui/spokes/source.glade:696
+msgid "_Verify"
+msgstr "_ഉറപ്പു് വരുത്തുക"
+
+#: pyanaconda/ui/gui/spokes/source.glade:624
+msgid "_ISO file:"
+msgstr "_ഐഎസ്ഒ ഫയല്‍:"
+
+#: pyanaconda/ui/gui/spokes/source.glade:651
+msgid "D_evice:"
+msgstr "_ഡിവൈസ്:"
+
+#: pyanaconda/ui/gui/spokes/source.glade:681
+msgid "_Choose an ISO"
+msgstr "ഒരു ഐഎസ്ഒ തെ_രഞ്ഞെടുക്കുക"
+
+#: pyanaconda/ui/gui/spokes/source.glade:719
+msgid "On the _network:"
+msgstr "_നെറ്റ്‌വര്‍ക്കില്‍:"
+
+#: pyanaconda/ui/gui/spokes/source.glade:788
+msgid "_Proxy setup..."
+msgstr "പ്രോ_ക്സി സജ്ജീകരണം..."
+
+#: pyanaconda/ui/gui/spokes/source.glade:806
+msgid "This URL refers to a _mirror list."
+msgstr "ഈ യുആര്‍എല്‍ ഒരു മി_റര്‍ പട്ടിക സൂചിപ്പിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/source.glade:847
+msgid "NFS mount _options:"
+msgstr "എന്‍എഫ്എസ് മൌണ്ട് _പോയിന്റുകള്‍:"
+
+#: pyanaconda/ui/gui/spokes/source.glade:862
+#: pyanaconda/ui/gui/spokes/source.glade:863
+msgid "This field is optional."
+msgstr "ഈ ഫീള്‍ഡ് നിര്‍ബന്ധമല്ല."
+
+#: pyanaconda/ui/gui/spokes/source.glade:893
+msgid "Updates"
+msgstr "അപ്ഡേറ്റുകള്‍"
+
+#: pyanaconda/ui/gui/spokes/source.glade:907
+msgid ""
+"Don't install the latest available software _updates. Install the default "
+"versions provided by the install source above."
+msgstr ""
+"ലഭ്യമായ ഏറ്റവും പുതിയ സോഫ്റ്റ്‌വെയര്‍ _പരിഷ്കരണങ്ങള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യരുതു്. മുകളിലുള്ള ഇന്‍സ്റ്റോള്‍ "
+"ശ്രോതസ്സ് ലഭ്യമാക്കിയ സ്വതവേയുള്ള പതിപ്പുകള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/source.glade:929
+msgid "Additional repositories"
+msgstr "അധികമായ റിപ്പോസിറ്ററികള്‍"
+
+#: pyanaconda/ui/gui/spokes/source.glade:976
+msgid "Enabled"
+msgstr "പ്രവര്‍ത്തന സജ്ജം"
+
+#: pyanaconda/ui/gui/spokes/source.glade:1028
+#: pyanaconda/ui/gui/spokes/source.glade:1029
+msgid "Add a new repository."
+msgstr "ഒരു പുതിയ റിപ്പോസിറ്ററി ചേര്‍ക്കുക."
+
+#: pyanaconda/ui/gui/spokes/source.glade:1030
+#: pyanaconda/ui/gui/spokes/custom.glade:1625
+msgid "addButton"
+msgstr "addButton"
+
+#: pyanaconda/ui/gui/spokes/source.glade:1047
+#: pyanaconda/ui/gui/spokes/source.glade:1048
+msgid "Remove the selected repository."
+msgstr "തെരഞ്ഞെടുത്ത റിപ്പോസിറ്ററി നീക്കം ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/source.glade:1049
+#: pyanaconda/ui/gui/spokes/custom.glade:1642
+msgid "removeButton"
+msgstr "removeButton"
+
+#: pyanaconda/ui/gui/spokes/source.glade:1066
+#: pyanaconda/ui/gui/spokes/source.glade:1067
+msgid "Revert to the default list of repositories."
+msgstr "റിപ്പോസിറ്ററികളുടെ സ്വതവേയുള്ള പട്ടികയിലേക്കു് തിരികെയാക്കുക."
+
+#: pyanaconda/ui/gui/spokes/source.glade:1068
+msgid "resetButton"
+msgstr "resetButton"
+
+#: pyanaconda/ui/gui/spokes/source.glade:1096
+#: pyanaconda/ui/gui/spokes/source.glade:1097
+msgid "URL for the repository, without protocol."
+msgstr "റിപ്പോസിറ്ററിയ്ക്കുള്ള യുആര്‍എല്‍, പ്രോട്ടോക്കോള്‍ ഇല്ലാതെ."
+
+#: pyanaconda/ui/gui/spokes/source.glade:1113
+#: pyanaconda/ui/gui/spokes/source.glade:1114
+msgid "URL of proxy in the form of protocol://host:[port]"
+msgstr "പ്രോക്സിയുടെ യുആര്‍എല്‍ protocol://host:[port] എന്ന രീതിയില്‍"
+
+#: pyanaconda/ui/gui/spokes/source.glade:1130
+#: pyanaconda/ui/gui/spokes/source.glade:1131
+msgid "Optional proxy username."
+msgstr "നിര്‍ബന്ധമല്ലാത്ത പ്രോക്സി ഉപയോക്തൃനാമം."
+
+#: pyanaconda/ui/gui/spokes/source.glade:1147
+msgid "Optional proxy password."
+msgstr "നിര്‍ബന്ധമല്ലാത്ത പ്രോക്സി രഹസ്യവാക്ക്."
+
+#: pyanaconda/ui/gui/spokes/source.glade:1162
+msgid "This URL refers to a mirror list."
+msgstr "ഈ യുആര്‍എല്‍ ഒരു മിറര്‍ പട്ടിക സൂചിപ്പിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/source.glade:1184
+#: pyanaconda/ui/gui/spokes/custom.glade:423
+#: pyanaconda/ui/gui/spokes/custom.glade:947
+msgid "_Name:"
+msgstr "_പേരു്:"
+
+#: pyanaconda/ui/gui/spokes/source.glade:1202
+#: pyanaconda/ui/gui/spokes/source.glade:1203
+msgid "Protocol for the repository URL."
+msgstr "റിപ്പോസിറ്ററി യുആര്‍എലിനുള്ള പ്രോട്ടോക്കോള്‍."
+
+#: pyanaconda/ui/gui/spokes/source.glade:1226
+msgid "_Proxy URL:"
+msgstr "പ്രോക്സി _യുആര്‍എല്‍:"
+
+#: pyanaconda/ui/gui/spokes/source.glade:1245
+msgid "User_name:"
+msgstr "ഉ_പയോക്തൃനാമം:"
+
+#: pyanaconda/ui/gui/spokes/source.glade:1264
+msgid "Pass_word:"
+msgstr "ര_ഹസ്യവാക്ക്:"
+
+#: pyanaconda/ui/gui/spokes/source.glade:1282
+#: pyanaconda/ui/gui/spokes/source.glade:1283
+msgid "Name of the repository."
+msgstr "റിപ്പോസിറ്ററിയുടെ പേരു്."
+
+#: pyanaconda/ui/gui/spokes/welcome.glade:21
+msgid "_Get me out of here!"
+msgstr "_ഇവിടെ നിന്നും പുറത്തു് കടത്തുക!"
+
+#: pyanaconda/ui/gui/spokes/welcome.glade:35
+msgid "_I accept my fate."
+msgstr "_എന്റെ അവസ്ഥ സ്വീകാര്യം."
+
+#: pyanaconda/ui/gui/spokes/welcome.glade:66
+msgid "This is unstable, pre-release software."
+msgstr "ഇതു് സ്ഥിരമല്ല, റിലീസിനു് മുമ്പുള്ള സോഫ്റ്റ്‌വെയറാകുന്നു."
+
+#: pyanaconda/ui/gui/spokes/welcome.glade:99
+msgid ""
+"You wake up inside an OS installer in Timbuktu, and it's six months in the "
+"future.  But, there are bugs.  Bugs everywhere.  Bugs you must live with.  "
+"This OS of the future isn't a stable OS you can rely on.  It's for testing "
+"purposes only."
+msgstr ""
+"ടിംബക്തൂവിലുള്ളൊരു ഒഎസ് ഇന്‍സ്റ്റോളറാണിതു്. ഇനിയും പൂര്‍ത്തിയാകുന്നതിനു് ആറു് മാസം കൂടി. അനവധി ബഗുകള്‍ "
+"നിങ്ങള്‍ക്കു് കാണാം. ഇതിപ്പോള്‍ പരീക്ഷണത്തിലാകുന്നു, അതിനാല്‍ അനേകം ബഗുകള്‍ നിങ്ങള്‍ക്കു് ലഭ്യമാകുന്നു."
+
+#: pyanaconda/ui/gui/spokes/welcome.glade:253
+msgid "WELCOME TO %s %s."
+msgstr "%s %s-ലേക്കു് സ്വാഗതം."
+
+#: pyanaconda/ui/gui/spokes/welcome.glade:271
+msgid "What language would you like to use during the installation process?"
+msgstr "ഇന്‍സ്റ്റലേഷനുവേണ്ടി നിങ്ങള്‍ ആഗ്രഹിക്കുന്ന ഭാഷ ഏത്?"
+
+#: pyanaconda/ui/gui/spokes/welcome.glade:321
+msgid "nativeName"
+msgstr "nativeName"
+
+#: pyanaconda/ui/gui/spokes/welcome.glade:337
+msgid "englishName"
+msgstr "englishName"
+
+#: pyanaconda/ui/gui/spokes/welcome.glade:392
+msgid "Set _keyboard to default layout for selected language."
+msgstr "തെരഞ്ഞെടുത്ത ഭാഷയ്ക്കു് കീബോര്‍_‍ഡ് സ്വതവേയുള്ള ശൈലിയായി സജ്ജമാക്കുക."
+
+#: pyanaconda/ui/gui/spokes/user.glade:11
+msgid "CREATE USER"
+msgstr "ഉപയോക്താവിനെ തയ്യാറാക്കുക"
+
+#: pyanaconda/ui/gui/spokes/user.glade:64
+msgid "_Full name"
+msgstr "പൂര്‍ണ്ണ _നാമം"
+
+#: pyanaconda/ui/gui/spokes/user.glade:84
+msgid "_Username"
+msgstr "_ഉപയോക്തൃനാമം"
+
+#: pyanaconda/ui/gui/spokes/user.glade:135
+msgid "_Password"
+msgstr "_രഹസ്യവാക്ക്"
+
+#: pyanaconda/ui/gui/spokes/user.glade:155
+msgid "_Confirm password"
+msgstr "രഹസ്യവാക്ക് _ഉറപ്പാക്കുക"
+
+#: pyanaconda/ui/gui/spokes/user.glade:204
+msgid ""
+"<b>Tip:</b> Keep your username shorter than 32 characters and do not use "
+"spaces."
+msgstr ""
+"<b>സൂചന:</b> നിങ്ങളുടെ ഉപയോക്തൃനാമം 32 അക്ഷരങ്ങളേക്കാള്‍ ചെറുതാക്കുക, സ്പെയിസുകള്‍ "
+"ഉപയോഗിയ്ക്കുവാന്‍ പാടില്ല."
+
+#: pyanaconda/ui/gui/spokes/user.glade:216
+msgid "Require a password to use this account"
+msgstr "ഈ അക്കൌണ്ട് ഉപയോഗിയ്ക്കുന്നതിനായി ഒരു രഹസ്യവാക്ക് ആവശ്യമുണ്ടു്"
+
+#: pyanaconda/ui/gui/spokes/user.glade:283
+msgid "Make this user administrator"
+msgstr "ഇതിനെ ഉപയോക്തൃ അഡ്മിനിസ്ട്രേറ്റര്‍ ആക്കുക"
+
+#: pyanaconda/ui/gui/spokes/user.glade:303
+msgid "_Advanced..."
+msgstr "_അധികമായതു്..."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:37
+msgid "_Add mount point"
+msgstr "മൌണ്ട് പോയിന്റ് ചേര്‍ക്കു_ക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:70
+#: pyanaconda/ui/gui/spokes/custom.glade:981
+msgid "<b>_Desired Capacity:</b>"
+msgstr "<b>_ആവശ്യമുള്ള വ്യാപ്തി:</b>"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:87
+#: pyanaconda/ui/gui/spokes/custom.glade:882
+msgid "<b>Mount _Point:</b>"
+msgstr "<b>മൌണ്ട് _പോയിന്റ്:</b>"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:105
+msgid "ADD A NEW MOUNT POINT"
+msgstr "പുതിയൊരു മൌണ്ട് പോയിന്റ് ചേര്‍ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:123
+msgid ""
+"More customization options are available\n"
+"after creating the mount point below."
+msgstr ""
+"താഴെ മൌണ്ട് പോയിന്റ് തയ്യാറാക്കിയശേഷം\n"
+"യഥേഷ്ടമുള്ള കൂടുതല്‍ ഐച്ഛികങ്ങള്‍ ലഭ്യമാണു്."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:159
+msgid ""
+"That mount point is already in\n"
+"use.  Try something else?"
+msgstr "നല്‍കിയ മൌണ്ട് പോയിന്റ് നിലവില്‍ ഉപയോഗത്തിലുണ്ടു്. മറ്റൊന്നു് ശ്രമിയ്ക്കുന്നോ?"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:185
+msgid "eg: \"20 GB\", \"500mb\" (minus the quotation marks)"
+msgstr "ഉദാ: \"20 GB\", \"500mb\" "
+
+#: pyanaconda/ui/gui/spokes/custom.glade:250
+msgid "Are you sure you want to delete all of the data on %s?"
+msgstr "%s-ലുള്ള എല്ലാ ഡേറ്റയും നിങ്ങള്‍ക്കു് വെട്ടി നീക്കണമെന്നുറപ്പാണോ?"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:264
+msgid "Delete _all other filesystems in the %s root as well."
+msgstr "%s റൂട്ടിലുള്ള _എല്ലാ ഫയല്‍സിസ്റ്റങ്ങളും വെട്ടി നീക്കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:300
+msgid "_Delete It"
+msgstr "ഇതു് _വെട്ടി നീക്കുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:358
+msgid "_Save"
+msgstr "_സൂക്ഷിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:390
+msgid "CONFIGURE CONTAINER"
+msgstr "കണ്ടെയിനര്‍ ക്രമീകരിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:405
+msgid ""
+"Please create a name for this container and select at least one disk below."
+msgstr ""
+"ദയവായി ഈ കണ്ടെയിനറിനു് ഒരു പേരു നല്‍കി കുറഞ്ഞതു് താഴെ പറഞ്ഞിരിയ്ക്കുന്നതില്‍ നിന്നും ഒരു ഡിസ്ക് "
+"തെരഞ്ഞെടുക്കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:504
+#: pyanaconda/ui/gui/spokes/custom.glade:2044
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:159
+msgid "Free"
+msgstr "ഫ്രീ"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:517
+#: pyanaconda/ui/gui/spokes/custom.glade:2057
+msgid "ID"
+msgstr "ഐഡി"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:548
+msgid "RAID Level:"
+msgstr "റെയിഡ് ലവല്‍:"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:576
+msgid "Encrypt"
+msgstr "എന്‍ക്രിപ്റ്റ് ചെയ്യുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:647
+msgid "_Size policy:"
+msgstr "പോളിസിയുടെ _വ്യാപ്തി:"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:800
+msgid ""
+"When you create mount points for your %s %s installation, you'll be able to "
+"view their details here."
+msgstr ""
+"നിങ്ങളുടെ %s %s ഇന്‍സ്റ്റലേഷനായി മൌണ്ട് പോയിന്റുകള്‍ തയ്യാറാക്കുമ്പോള്‍, അതിന്റെ വിവരങ്ങള്‍ ഇവിടെ "
+"കാണാം."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:823
+#: pyanaconda/ui/gui/spokes/custom.glade:1295
+#: pyanaconda/ui/gui/spokes/custom.glade:1439
+#: pyanaconda/ui/gui/spokes/custom.glade:1526
+msgid "Selected Device"
+msgstr "തെരഞ്ഞെടുത്ത ഡിവൈസ്"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:841
+#: pyanaconda/ui/gui/spokes/custom.glade:1313
+#: pyanaconda/ui/gui/spokes/custom.glade:1457
+#: pyanaconda/ui/gui/spokes/custom.glade:1544
+msgid "Device description"
+msgstr "ഡിവൈസ് വിവരണം"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:915
+msgid "<b>_Label:</b>"
+msgstr "<b>ലേ_ബല്‍:</b>"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1020
+msgid "<b>Device _Type:</b>"
+msgstr "<b>ഡിവൈസ് _തരം:</b>"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1037
+msgid "<b>File _System:</b>"
+msgstr "<b>ഫയല്‍ _സിസ്റ്റം:</b>"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1091
+msgid "_Encrypt"
+msgstr "_എന്‍ക്രിപ്റ്റ് ചെയ്യുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1110
+msgid "Refor_mat"
+msgstr "_വീണ്ടും ഫോര്‍മാറ്റ് ചെയ്യുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1132
+msgid "_Volume Group:"
+msgstr "വോ_ള്യം ഗ്രൂപ്പ്:"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1164
+msgid "_Modify..."
+msgstr "_മാറ്റം വരുത്തുക..."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1183
+msgid "_RAID Level:"
+msgstr "_റെയിഡ് ലവല്‍:"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1237
+msgid "_Update Settings"
+msgstr "സജ്ജീകരണങ്ങള്‍ _പരിഷ്കരിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1259
+msgid ""
+"Note:  The settings you make on this screen will not be applied\n"
+"until you click on the main menu's 'Begin Installation' button."
+msgstr ""
+"കുറിപ്പു്: ഈ സ്ക്രീനില്‍ നിങ്ങള്‍ വരുത്തുന്ന മാറ്റങ്ങള്‍ പ്രധാന മെനുവിന്റെ \"ഇന്‍സ്റ്റലേഷന്‍ ആരംഭിയ്ക്കുക\" "
+"എന്ന ബട്ടണില്‍ ക്ലിക്ക് ചെയ്യാതെ സൂക്ഷിയ്ക്കുന്നതല്ല."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1347
+msgid ""
+"This device is encrypted and cannot be read without a valid passphrase. You "
+"may unlock it below."
+msgstr ""
+"ഈ ഡിവൈസ് എന്‍ക്രിപ്റ്റ് ചെയ്തിരിയ്ക്കുന്നു, കൂടാതെ ഒരു ശരിയായ പാസ്‌ഫ്രെയിസില്ലാതെ ഇതു് ലഭ്യമാക്കുവാന്‍ "
+"സാധ്യമല്ല. നിങ്ങള്‍ക്കിതു് താഴെ തുറക്കാം."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1368
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:100
+msgid "_Passphrase:"
+msgstr "_പാസ്‌ഫ്രെയിസ്:"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1396
+msgid "_Unlock"
+msgstr "പൂട്ടു് തുറക്കു_ക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1491
+msgid ""
+"This device cannot be edited directly. You can remove it or select a "
+"different device."
+msgstr ""
+"ഈ ഡിവൈസ് നേരിട്ടു് ചിട്ടപ്പെടുത്തുവാന്‍ സാധ്യമല്ല. നിങ്ങള്‍ക്കു് നീക്കം ചെയ്യാം അല്ലെങ്കില്‍ മറ്റൊരു "
+"ഡിവൈസ് തെരഞ്ഞെടുക്കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1579
+msgid ""
+"This %s device is missing %d of %d %s. You can remove it or select a "
+"different device."
+msgstr ""
+"ഈ %s ഡിവൈസില്‍ %d / %d %s ലഭ്യമല്ല. നിങ്ങള്‍ക്കിതു് നീക്കം ചെയ്യാം അല്ലെങ്കില്‍ മറ്റൊരു ഡിവൈസ് "
+"തെരഞ്ഞെടുക്കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1624
+msgid "Add a new mountpoint."
+msgstr "ഒരു പുതിയ മൌണ്ട് പോയിന്റ് ചേര്‍ക്കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1641
+msgid "Remove the selected mountpoint(s)."
+msgstr "തെരഞ്ഞെടുത്ത മൌണ്ട്പോയിന്റ് നീക്കം ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1658
+msgid "Configure selected mountpoint."
+msgstr "തെരഞ്ഞെടുത്ത മൌണ്ട്പോയിന്റ് ക്രമീകരിയ്ക്കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1659
+msgid "configureButton"
+msgstr "configureButton"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1675
+msgid "Reload storage configuration from disk."
+msgstr "ഡിസ്കില്‍ നിന്നും സംഭരണ ക്രമീകരണം വീണ്ടും ലഭ്യമാക്കുക."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1676
+msgid "Refresh"
+msgstr "പുതുക്കുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1692
+msgid "Click for help."
+msgstr "സഹായത്തിനു് ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1693
+#: pyanaconda/ui/gui/spokes/custom.glade:2098
+msgid "Help"
+msgstr "സഹായം"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1741
+msgid "<span size=\"small\" foreground=\"white\">AVAILABLE SPACE</span>"
+msgstr "<span size=\"small\" foreground=\"white\">ലഭ്യമായ സ്ഥലം</span>"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1793
+msgid "<span size=\"small\" foreground=\"white\">TOTAL SPACE</span>"
+msgstr "<span size=\"small\" foreground=\"white\">മൊത്തം സ്ഥലം</span>"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1832
+msgid "_Reset All"
+msgstr "എല്ലാം വീണ്ടും _സജ്ജമാക്കുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1938
+msgid "_Select"
+msgstr "_തിരഞ്ഞെടുക്കുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1970
+msgid "CONFIGURE MOUNT POINT"
+msgstr "മൌണ്ട് പോയിന്റ് ക്രമീകരിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/custom.glade:1985
+msgid "Select one or more disks this device may reside on."
+msgstr "ഈ ഡിവൈസിനുള്ള ഒന്നോ അതിലധികമോ ഡിസ്കുകള്‍ തെരഞ്ഞെടുക്കുക."
+
+#: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:54
+msgid ""
+"Please select the network interface which is connected to your FCoE switch."
+msgstr ""
+"നിങ്ങളുടെ FCoE സ്വിച്ചിലേക്കു് കണക്ട് ചെയ്തിരിയ്ക്കുന്ന നെറ്റ്‌വര്‍ക്ക് ഇന്റര്‍ഫെയിസ് ദയവായി "
+"തെരഞ്ഞെടുക്കുക."
+
+#: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:69
+msgid "_NIC:"
+msgstr "_എന്‍ഐസി:"
+
+#: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:97
+msgid "Use _DCB"
+msgstr "_ഡിസിബി ഉപയോഗിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:114
+msgid "Use auto _vlan"
+msgstr "ഓട്ടോ _vlan ഉപയോഗിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:151
+msgid "_Add FCoE Disk(s)"
+msgstr "FCoE ഡിസ്ക് ചേര്‍ക്കു_ക"
+
+#: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:198
+msgid "<b>Error adding FCoE SAN.</b>"
+msgstr "<b>FCoE SAN ചേര്‍ക്കുന്നതില്‍ പിശക്.</b>"
+
+#: pyanaconda/ui/gui/spokes/advstorage/fcoe.glade:228
+msgid ""
+"The following error occurred while attempting to add an FCoE SAN.  Please "
+"check your configuration and try again"
+msgstr ""
+"ഒരു FCoE SAN ചേര്‍ക്കുവാന്‍ ശ്രമിയ്ക്കുമ്പോള്‍ ഈ പിശകുണ്ടായിരിയ്ക്കുന്നു.  ദയവായി നിങ്ങളുടെ "
+"ക്രമീകരണം പരിശോധിച്ചു് വീണ്ടും ശ്രമിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:67
+msgid "ADD iSCSI STORAGE TARGET"
+msgstr "iSCSI സംഭരണ ലക്ഷ്യം ചേര്‍ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:96
+msgid ""
+"To use iSCSI disks, you must provide the address of your iSCSI target and "
+"the iSCSI initiator name you've configured for your host."
+msgstr ""
+"iSCSI ഡിസ്കുകള്‍ ഉപയോഗിയ്ക്കുന്നതിനായി, നിങ്ങളുടെ iSCSI ലക്ഷ്യത്തിന്റെ വിലാസവും ഹോസ്റ്റ് "
+"ക്രമീകരിച്ചിരിയ്ക്കുന്നു iSCSI ഇനീശ്യേറ്റര്‍ നാമവും നല്‍കുക."
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:126
+msgid "_Target IP Address:"
+msgstr "_ലക്ഷ്യമായ ഐപി വിലാസം:"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:157
+msgid "iSCSI _Initiator Name:"
+msgstr "iSCSI _ഇനീശ്യേറ്റര്‍ നാമം:"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:195
+msgid "_Discovery Authentication Type:"
+msgstr "_കണ്ടുപിടിയ്ക്കുന്നതിനുള്ള ആധികാരികത ഉറപ്പാക്കല്‍ രിതീ:"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:212
+msgid ""
+"<span size=\"small\"><b>Example:</b> iqn.2012-09.com.example:diskarrays-sn-"
+"a8675309</span>"
+msgstr ""
+"<span size=\"small\"><b>ഉദാഹരണം:</b> iqn.2012-09.com.example:diskarrays-sn-"
+"a8675309</span>"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:261
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:400
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:824
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:966
+msgid "CHAP _Username:"
+msgstr "സിഎച്എപി _ഉപയോക്തൃനാമം:"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:277
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:416
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:840
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:982
+msgid "CHAP _Password:"
+msgstr "സിഎച്എപി _രഹസ്യവാക്ക്:"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:432
+msgid "Reverse CHAP User_name:"
+msgstr "തിരിച്ചുള്ള സിഎച്എപി _ഉപയോക്തൃനാമം: "
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:448
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1014
+msgid "Reverse CHAP Pass_word:"
+msgstr "തിരിച്ചുള്ള സിഎച്എപി _രഹസ്യവാക്ക്: "
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:484
+msgid "_Start Discovery"
+msgstr "കണ്ടുപിടിയ്ക്കുവാന്‍ _ആരംഭിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:521
+msgid "Discovering iSCSI targets.  This may take a moment..."
+msgstr "iSCSI ലക്ഷ്യങ്ങള്‍ കണ്ടുപിടിയ്ക്കുന്നു. ഇതിനു് അല്‍പം സമയമെടുക്കുന്നു..."
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:563
+msgid "<b>Discovery login rejected.</b>"
+msgstr "<b>കണ്ടുപിടിയ്ക്കുന്നതിനുള്ള പ്രവേശനം നിഷേധിച്ചു.</b>"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:578
+msgid ""
+"The following error occurred discovering iSCSI targets.  Please double check "
+"your authorization information and try again."
+msgstr ""
+"iSCSI ലക്ഷ്യങ്ങള്‍ കണ്ടുപിടിയ്ക്കുമ്പോള്‍ ഈ പിശകുണ്ടായിരിയ്ക്കുന്നു. ദയവായി നിങ്ങളുടെ ആധികാരികത "
+"ഉറപ്പാക്കല്‍ വിവരങ്ങള്‍ ഉറവ്വാക്കി വീണ്ടും ശ്രമിയ്ക്കുക."
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:604
+msgid "_Retry Discovery"
+msgstr "_വീണ്ടും കണ്ടുപിടിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:647
+msgid "_Bind targets to network interfaces"
+msgstr "നെറ്റ്‌വര്‍ക്ക് ഇന്റര്‍ഫെയിസുകളിലേക്കു് ടാര്‍ഗറ്റുകള്‍ _ബൈന്‍ഡ് ചെയ്യുക"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:683
+msgid ""
+"The following nodes were discovered using the iSCSI initiator <b>"
+"%(initiatorName)s</b> using the target IP address <b>%(targetAddress)s</b>.  "
+"Please select which nodes you wish to log into:"
+msgstr ""
+"iSCSI ഇനീഷ്യേറ്റര്‍ ഉപയോഗിച്ചു് ഈ നോഡുകള്‍ കണ്ടുപിടിച്ചിരിയ്ക്കുന്നു. ഇതിനായി <b>"
+"%(initiatorName)s</b> ലക്ഷ്യമായ ഐപി വിലാസം <b>%(targetAddress)s</b> "
+"ഉപയോഗിയ്ക്കുന്നു.  നിങ്ങള്‍ക്കു് പ്രവേശിയ്ക്കേണ്ട നോഡുകള്‍ ദയവായി തെരഞ്ഞെടുക്കുക:"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:725
+msgid "Node Name"
+msgstr "നോഡ് നാമം"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:736
+msgid "Interface"
+msgstr "ഇന്റര്‍ഫെയിസ്"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:766
+msgid "_Node login authentication type:"
+msgstr "_നോഡ് പ്രവേശിയ്ക്കുന്നതിനുള്ള ആധികാരികത ഉറപ്പാക്കല്‍ രീതി:"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:998
+msgid "_Reverse CHAP Username:"
+msgstr "_തിരിച്ചുള്ള സിഎച്എപി ഉപയോക്തൃനാമം:"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1066
+msgid "_Log In"
+msgstr "പ്രവേശിയ്ക്കു_ക"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1124
+msgid "<b>Node login failed.</b>"
+msgstr "<b>നോഡ് പ്രവേശനം പരാജയപ്പെട്ടു.</b>"
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1139
+msgid ""
+"The following error occurred logging into the selected iSCSI node.  Please "
+"double check your authorization information and try again"
+msgstr ""
+"തെരഞ്ഞെടുത്ത iSCSI നോഡിലേക്കു് പ്രവേശിയ്ക്കുമ്പോള്‍ ഈ പിശകുണ്ടായിരിയ്ക്കുന്നു. ദയവായി നിങ്ങളുടെ "
+"ആധികാരികത ഉറപ്പാക്കല്‍ വിവരങ്ങള്‍ ഉറവ്വാക്കി വീണ്ടും ശ്രമിയ്ക്കുക."
+
+#: pyanaconda/ui/gui/spokes/advstorage/iscsi.glade:1165
+msgid "_Retry Log In"
+msgstr "വീണ്ടും പ്രവേശിയ്ക്കുവാന്‍ ശ്രമിയ്ക്കു_ക"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:25
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:79
+msgid "SELECTED DISKS"
+msgstr "തെരഞ്ഞെടുത്ത ഡിസ്കുകള്‍"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:43
+msgid "_Close"
+msgstr "_അടയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:107
+msgid "Boot"
+msgstr "ബൂട്ട് ചെയ്യുക"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:121
+msgid "Description"
+msgstr "വിവരണം"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:201
+msgid "_Remove"
+msgstr "_നീക്കം ചെയ്യുക"
+
+#: pyanaconda/ui/gui/spokes/lib/cart.glade:229
+msgid "Disk summary goes here"
+msgstr "ഡിസ്ക് ചുരുക്കം ഇവിടെ"
+
+#: pyanaconda/ui/gui/spokes/lib/detailederror.glade:24
+msgid "An unknown error occurred during installation.  Details are below."
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ സമയത്തു് അപരിചിത പിശകുണ്ടായിരിയ്ക്കുന്നു. വിവരണങ്ങള്‍ താഴെ."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:21
+msgid "DISK ENCRYPTION PASSPHRASE"
+msgstr "ഡിസ്ക് എന്‍ക്രിപ്ഷന്‍ പാസ്‌ഫ്രെയിസ്"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:53
+msgid "_Save Passphrase"
+msgstr "പാസ്‌ഫ്രെയിസ് സുക്ഷിയ്ക്കു_ക"
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:79
+msgid ""
+"You have chosen to encrypt some of your data. You will need to create a "
+"passphrase that you will use to access your data when you start your "
+"computer."
+msgstr ""
+"നിങ്ങളുടെ ചില ഡേറ്റാ എന്‍ക്രിപ്റ്റ് ചെയ്യുവാന്‍ തെരഞ്ഞെടുത്തിരിയ്ക്കുന്നു. നിങ്ങള്‍ കമ്പ്യൂട്ടര്‍ "
+"ആരംഭിയ്ക്കുമ്പോള്‍  ഡേറ്റയിലേക്കു് പ്രവേശിയ്ക്കുന്നതിനായി ഒരു പാസ്‌ഫ്രെയിസ് തയ്യാറാക്കേണ്ടതുണ്ടു്."
+
+#: pyanaconda/ui/gui/spokes/lib/passphrase.glade:232
+msgid ""
+"Warning: You won't be able to switch between keyboard layouts (from the "
+"default one) when you decrypt your disks after install."
+msgstr ""
+"മുന്നറിയിപ്പു്: ഇന്‍സ്റ്റോള്‍ ചെയ്തതിനു് ശേഷം ഡിസ്കുകള്‍ ഡീക്രിപ്റ്റ് ചെയ്യുമ്പോള്‍ നിങ്ങള്‍ക്കു് കീബോര്‍ഡ് "
+"ശൈലികള്‍ തമ്മില്‍ മാറുവാന്‍ സാധ്യമാകുന്നതല്ല (സ്വതവേയുള്ളതില്‍ നിന്നും)."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:7
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:70
+msgid "RESCAN DISKS"
+msgstr "ഡിസ്കുകള്‍ വീണ്ടും പരിശോധിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:86
+msgid ""
+"You can remove or insert additional disks at this time and press 'Rescan "
+"Disks' below for the changes to take effect."
+msgstr ""
+"നിങ്ങള്‍ക്കു് അധികമായ ഡിസ്കുകള്‍ നീക്കം ചെയ്യാം അല്ലെങ്കില്‍ ചേര്‍ക്കാം. എന്നിട്ടു് മാറ്റങ്ങള്‍ "
+"സൂക്ഷിയ്ക്കുന്നതിനായി 'ഡിസ്കുകള്‍ വീണ്ടും പരിശോധിയ്ക്കുക' അമര്‍ത്തുക."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:117
+msgid ""
+"<b>Warning:</b> All storage changes made using the installer will be lost "
+"when you press 'Rescan Disks'."
+msgstr ""
+"<b>മുന്നറിയിപ്പു്:</b> 'ഡിസ്കുകള്‍ വീണ്ടും പരിശോധിയ്ക്കുക' അമര്‍ത്തുമ്പോള്‍,  ഇന്‍സ്റ്റോള്‍ ഉപയോഗിച്ചു് "
+"വരുത്തിയ എല്ലാ സംഭരണ മാറ്റങ്ങളും നഷ്ടമാകുന്നു."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:141
+msgid "_Rescan Disks"
+msgstr "ഡിസ്കുകള്‍ _വീണ്ടും പരിശോധി‌യ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:155
+msgid "page 1"
+msgstr "താള്‍ 1"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:184
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:233
+msgid "Scanning disks.  This may take a moment..."
+msgstr "ഡിസ്കുകള്‍ പരിശോധിയ്ക്കുന്നു. അല്‍പം സമയമെടുക്കുന്നു..."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:201
+msgid "page 2"
+msgstr "താള്‍ 2"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:246
+msgid ""
+"You may <a href=\"\">go back to the main menu</a> to complete other\n"
+"installation options while this scan completes."
+msgstr ""
+"ഈ പരിശോധന പൂര്‍ത്തിയാകുമ്പോള്‍, മറ്റു് ഇന്‍സ്റ്റലേഷന്‍ ഐച്ഛികങ്ങള്‍ പൂര്‍ത്തിയാക്കുന്നതിനായി\n"
+"<a href=\"\">തിരികെ പ്രധാന മെനുവിലേക്കു് പോകാം</a>."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:269
+msgid "page 3"
+msgstr "താള്‍ 3"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:289
+msgid "<b>Disk rescan complete.</b>"
+msgstr "<b>ഡിസ്ക് വീണ്ടും പരിശോധിയ്ക്കുന്നതു് പൂര്‍ണ്ണം.</b>"
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:304
+msgid ""
+"Pressing 'OK' below will take you to the disk selection screen where you "
+"will need to re-select your disks."
+msgstr ""
+"താഴെ 'ശരി' അമര്‍ത്തിയാല്‍, നിങ്ങള്‍ക്കു് ഡിസ്ക് തെരഞ്ഞെടുക്കുന്ന സ്ക്രീനില്‍ പോയി ഡിസ്കുകള്‍ വീണ്ടും "
+"തെരഞ്ഞെടുക്കുവാന്‍ അനുവദിയ്ക്കുന്നു."
+
+#: pyanaconda/ui/gui/spokes/lib/refresh.glade:336
+msgid "page 4"
+msgstr "താള്‍ 4"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:99
+msgid "RECLAIM DISK SPACE"
+msgstr "വീണ്ടെടുക്കേണ്ട ഡിസ്ക് സ്ഥലം"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:116
+msgid "Description goes here."
+msgstr "വിവരണം ഇവിടെ."
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:169
+msgid "Filesystem"
+msgstr "ഫയല്‍സിസ്റ്റം"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:180
+msgid "Reclaimable Space"
+msgstr "വീണ്ടെടുക്കുവാന്‍ സാധ്യമായ സ്ഥലം"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:191
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:139
+msgid "Action"
+msgstr "പ്രവര്‍ത്തി"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:216
+msgid "_Preserve"
+msgstr "_കരുതുക"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:232
+msgid "_Delete"
+msgstr "നീക്കുക (_D)"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:248
+msgid "_Shrink to"
+msgstr "ചെറുതാക്കേണ്ട_തു്"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:293
+msgid "<b>%s disks; %s reclaimable space</b> (in filesystems)"
+msgstr "<b>%s ഡിസ്കുകള്‍; %s വീണ്ടെടുക്കേണ്ട സ്ഥലം</b> (ഫയല്‍സിസ്റ്റങ്ങളില്‍)"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:308
+msgid "Total selected space to reclaim:  <b>%s</b>"
+msgstr "വീണ്ടെടുക്കുന്നതിനുള്ള മൊത്തം തെരഞ്ഞെടുത്ത സ്ഥലം:  <b>%s</b>"
+
+#: pyanaconda/ui/gui/spokes/lib/resize.glade:323
+msgid "Installation requires a total of <b>%s</b> for system data."
+msgstr "ഇന്‍സ്റ്റലേഷനു് മൊത്തം <b>%s</b> സിസ്റ്റം ഡേറ്റാ ആവശ്യമുണ്ടു്."
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:22
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:86
+msgid "SUMMARY OF CHANGES"
+msgstr "മാറ്റങ്ങളുടെ ചുരുക്കം"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:39
+msgid "_Cancel & Return to Custom Partitioning"
+msgstr "_റദ്ദാക്കി യഥേഷ്ടമുള്ള പാര്‍ട്ടീഷനിങിലേക്കു് തിരികെ വരിക"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:54
+msgid "_Accept Changes"
+msgstr "മാറ്റങ്ങള്‍ സ്വീ_കരിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:102
+msgid ""
+"Your customizations will result in the following changes taking effect on "
+"the disks you've selected:"
+msgstr "നിങ്ങളുടെ മാറ്റങ്ങള്‍ തെരഞ്ഞെടുത്ത ഡിസ്കുകളില്‍ ലഭ്യമാക്കുന്നു:"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:128
+msgid "Order"
+msgstr "ക്രമം"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:161
+msgid "Device Name"
+msgstr "ഡിവൈസ് നാമം"
+
+#: pyanaconda/ui/gui/spokes/lib/summary.glade:172
+msgid "Mountpoint"
+msgstr "മൌണ്ട്പോയിന്റ്"
+
+#: pyanaconda/ui/gui/main.glade:78
+msgid ""
+"Are you sure you wish to quit the\n"
+"installation process?"
+msgstr ""
+"നിങ്ങള്‍ക്കു് ഇന്‍സ്റ്റലേഷന്‍ പ്രക്രിയയില്‍ നിന്നും\n"
+"പുറത്തു് കടക്കണമെന്നുറപ്പാണോ?"
+
+#: pyanaconda/ui/gui/hubs/summary.glade:11
+msgid "INSTALLATION SUMMARY"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ ചുരുക്കം"
+
+#: pyanaconda/ui/gui/hubs/summary.glade:94
+msgid "_Begin Installation"
+msgstr "ഇന്‍സ്റ്റലേഷന്‍ _ആരംഭിയ്ക്കുക"
+
+#: pyanaconda/ui/gui/hubs/summary.glade:123
+msgid "We won't touch your disks until you hit this button."
+msgstr "നിങ്ങള്‍ ഈ ബട്ടണ്‍ അമര്‍ത്തുന്നതു് വരെ ഡിസ്കുുകളില്‍ ഒന്നും ചെയ്യില്ല."
+
+#: pyanaconda/ui/gui/hubs/progress.glade:9
+msgid "CONFIGURATION"
+msgstr "ക്രമീകരണം"
+
+#: pyanaconda/ui/gui/hubs/progress.glade:83
+msgid "Preparing to install"
+msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതിനായി തയ്യാറാകുന്നു"
+
+#: pyanaconda/ui/gui/hubs/progress.glade:129
+msgid ""
+"%s is now successfully installed on your system, but some configuration "
+"still needs to be done.  Finish it and then click the Finish configuration "
+"button please."
+msgstr ""
+"%s നിലവില്‍ നിങ്ങളുടെ സിസ്റ്റത്തില്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്തിരിയ്ക്കുന്നു. പക്ഷേ ചില ക്രമീകരണങ്ങള്‍ ഇനിയും "
+"ചെയ്യേണ്ടതുണ്ടു്. ഇതു് പൂര്‍ത്തിയാക്കി, പൂര്‍ത്തിയാക്കുക ബട്ടണ്‍ ദയവായി ക്ലിക്ക് ചെയ്യുക."
+
+#: pyanaconda/ui/gui/hubs/progress.glade:141
+msgid "_Finish configuration"
+msgstr "ക്രമീകരണം പൂര്‍ത്തിയാക്കു_ക"
+
+#: pyanaconda/ui/gui/hubs/progress.glade:182
+msgid ""
+"%s is now successfully installed on your system and ready for you to use!  "
+"Go ahead and reboot to start using it!"
+msgstr ""
+"%s ഇപ്പോള്‍ നിങ്ങളുടെ സിസ്റ്റത്തില്‍ വിജയകരമായി ഇന്‍സ്റ്റോള്‍ ചെയ്തു്, ഉപയോഗിയ്ക്കുവാന്‍ തയ്യാറാണു്!  "
+"റീബൂട്ട് ചെയ്തു് ഉപയോഗിയ്ക്കുക!"
+
+#: pyanaconda/ui/gui/hubs/progress.glade:194
+msgid "_Reboot"
+msgstr "വീണ്ടും കമ്പ്യൂട്ടര്‍ ഓണ്‍ ചെയ്യുക (_R)"
+
+#: widgets/src/BaseWindow.c:86
+msgid "DISTRIBUTION INSTALLATION"
+msgstr "വിതരണ ഇന്‍സ്റ്റലേഷന്‍"
+
+#: widgets/src/BaseWindow.c:87
+msgid "SPOKE NAME"
+msgstr "സ്പോക്ക് നാമം"
+
+#: widgets/src/BaseWindow.c:88
+msgid "PRE-RELEASE / TESTING"
+msgstr "പ്രകാശനത്തിനു് മുമ്പുള്ളതു് / പരിശോധനയ്ക്കുള്ളതു്"
+
+#: widgets/src/DiskOverview.c:52
+msgid "New Device"
+msgstr "പുതിയ ഡിവൈസ്"
+
+#: widgets/src/DiskOverview.c:54 widgets/src/DiskOverview.c:55
+msgid "0 MB"
+msgstr "0 MB"
+
+#: widgets/src/MountpointSelector.c:49
+msgid "0 GB"
+msgstr "0 GB"
+
+#: widgets/src/SpokeSelector.c:56
+msgid "New Selector"
+msgstr "പുതിയ സെലക്ടര്‍"
+
+#: widgets/src/LayoutIndicator.c:31
+#, c-format
+msgid "Current layout: '%s'. Click to switch to the next layout"
+msgstr "നിലവിലുള്ള ശൈരി: '%s'. അടുത്ത ശൈലിയിലേക്കു് മാറുന്നതിനായി ക്ലിക്ക് ചെയ്യുക"
+
+#: data/liveinst/gnome/fedora-welcome:64
+msgid "Welcome to Fedora"
+msgstr "ഫെഡോറയിലേക്കു് സ്വാഗതം"
+
+#: data/liveinst/gnome/fedora-welcome:93
+msgid "Try Fedora"
+msgstr "ഫെഡോറ ഉപയോഗിച്ചു് നോക്കുക"
+
+#: data/liveinst/gnome/fedora-welcome:111
+msgid ""
+"You are currently running Fedora from live media.\n"
+"You can install Fedora now, or choose \"Install to Hard Drive\" in the "
+"Activities Overview at any later time."
+msgstr ""
+"നിങ്ങള്‍ നിലവില്‍ ലൈവ് മീഡിയയില്‍ നിന്നും ഫെഡോറ പ്രവര്‍ത്തിയ്ക്കുന്നു.\n"
+"നിങ്ങള്‍ക്കു് ഉടന്‍ ഫെഡോറ ഇന്‍സ്റ്റോള്‍ ചെയ്യാം, അല്ലെങ്കില്‍ പിന്നീടു് പ്രവര്‍ത്തനങ്ങളില്‍ നിന്നും 'ഹാര്‍ഡ് "
+"ഡ്രൈവിലേക്കു് ഇന്‍സ്റ്റോള്‍ ചെയ്യുക' തെരഞ്ഞെടുക്കുക."
+
+#: data/liveinst/gnome/fedora-welcome:129
+msgid ""
+"You can choose \"Install to Hard Drive\"\n"
+"in the Activities Overview at any later time."
+msgstr ""
+"പിന്നീടു് പ്രവര്‍ത്തനങ്ങളില്‍ നിന്നും 'ഹാര്‍ഡ് ഡ്രൈവിലേക്കു് ഇന്‍സ്റ്റോള്‍ ചെയ്യുക'\n"
+" തെരഞ്ഞെടുക്കുക."
+
+#: data/liveinst/gnome/fedora-welcome:132
+msgid "Close"
+msgstr "അടയ്ക്കുക"
+
+#: data/liveinst/liveinst.desktop.in.h:1
+msgid "Install to Hard Drive"
+msgstr "ഹാര്‍ഡ് ഡ്റൈവിലേക്ക് ഇന്‍സ്റ്റോള്‍ ചെയ്യുക"
+
+#: data/liveinst/liveinst.desktop.in.h:2
+msgid "Install"
+msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്യുക"
+
+#: data/liveinst/liveinst.desktop.in.h:3
+msgid "Install the live CD to your hard disk"
+msgstr "നിങ്ങളുടെ ഹാര്‍ഡ് ഡിസ്കിലേക്ക് ലൈവ് CD ഇന്‍സ്റ്റോള്‍ ചെയ്യുക"
+
+#: liveinst:5
+msgid "Starting Install to Hard Drive"
+msgstr "ഹാര്‍ഡ് ഡ്രൈവിലേക്കു് ഇന്‍സ്റ്റോള്‍ ചെയ്യുവാന്‍ ആരംഭിയ്ക്കുന്നു"
