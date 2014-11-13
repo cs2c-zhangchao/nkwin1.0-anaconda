@@ -190,6 +190,14 @@ class Hub(GUIObject, common.Hub):
                 # From here on, this Spoke will always exist.
                 spoke = spokeClass(self.data, self.storage, self.payload, self.instclass)
 
+                # nkwin6 add begin
+                spokeName = spoke.__class__.__name__
+                if spokeName == "StorageSpoke":
+                    storageSpokeClass = spoke
+                if spokeName == "CustomPartitioningSpoke":
+                    storageSpokeClass.hubClass = self
+                    storageSpokeClass.spokeClass = spoke
+
                 # If a spoke is not showable, it is unreachable in the UI.  We
                 # might as well get rid of it.
                 #

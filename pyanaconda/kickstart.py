@@ -1282,9 +1282,11 @@ class Timezone(commands.timezone.F18_Timezone):
         # write out timezone configuration
         if not timezone.is_valid_timezone(self.timezone):
             # this should never happen, but for pity's sake
+            ### nkwin shanghai begin
             log.warning("Timezone %s set in kickstart is not valid, falling "\
-                        "back to default (America/New_York)." % (self.timezone,))
-            self.timezone = "America/New_York"
+                        "back to default (Asia/Beijing)." % (self.timezone,))
+            self.timezone = "Asia/Beijing"
+            ### nkwin shanghai end
 
         timezone.write_timezone_config(self, ROOT_PATH)
 

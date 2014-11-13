@@ -53,7 +53,9 @@ SERVER_OK = 0
 SERVER_NOK = 1
 SERVER_QUERY = 2
 
-DEFAULT_TZ = "America/New_York"
+### nkwin shanghai begin
+DEFAULT_TZ = "Asia/Beijing"
+### nkwin shanghai end
 
 POOL_SERVERS_NOTE = N_("Note: pool servers may not be available all the time")
 

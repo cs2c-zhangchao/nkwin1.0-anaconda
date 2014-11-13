@@ -371,6 +371,10 @@ class StorageSpoke(NormalSpoke, StorageChecker):
 
         self._last_clicked_overview = None
         self._cur_clicked_overview = None
+        # nkwin7 add begin
+        self.hubClass = None
+        self.spokeClass = None
+        # nkwin7 end
 
     def _applyDiskSelection(self, use_names):
         onlyuse = use_names[:]
@@ -662,7 +666,8 @@ class StorageSpoke(NormalSpoke, StorageChecker):
         # We set the StorageSpoke to be indirect, but we still need to set 
         # the storage by this spoke befor showing CustomPartitionSpoke,
         # so we need execute some functions.
-        self._backendExecute()
+        # we should not execute this function at here.
+        #self._backendExecute()
         # nkwin7 end
 
     # nkwin7 add begin
@@ -734,6 +739,21 @@ class StorageSpoke(NormalSpoke, StorageChecker):
             self._applyDiskSelection([self.disks[0].name])
 
         self._ready = True
+
+        # we should execute this function at here.
+        # because we need wait THREAD_STORAGE and THREAD_CUSTOM_STORAGE_INIT
+        self._backendExecute()
+        
+        # we add a feature which achieves auto partition at the begining of 
+        # the installation, so we need wait THREAD_EXECUTE_STORAGE and 
+        # THREAD_CHECK_STORAGE.
+        threadMgr.wait(constants.THREAD_EXECUTE_STORAGE)
+        threadMgr.wait(constants.THREAD_CHECK_STORAGE)
+        
+        # we need update the spoke status in the hub gui.
+        self.spokeClass._ready = True
+        self.hubClass._updateCompleteness(self.spokeClass)
+
         #hubQ.send_ready(self.__class__.__name__, False)
         # nkwin7 end
 

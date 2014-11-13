@@ -638,6 +638,7 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
     # other candidates: computer-symbolic, folder-symbolic
     icon = "drive-harddisk-symbolic"
     title = N_("INSTALLATION _DESTINATION")
+
     # nkwin7 end
 
     def __init__(self, data, storage, payload, instclass):
@@ -665,7 +666,7 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
         
         # nkwin7 add begin
         # keywords: indirect and direct; default selected disks; show correctly messages
-        self._ready = True
+        self._ready = False
         self.applyOnSkip = True
         # To proper show storage configure information in the hub
         self.firstCheckStorage = False
@@ -752,14 +753,13 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
                     ("%d disks selected"),
                     len(self.data.ignoredisk.onlyuse)) % len(self.data.ignoredisk.onlyuse)
 
-            if self.errors and self.firstCheckStorage:
-                msg = _("Not enough free space on disks")
-                self.firstCheckStorage = False
-            elif self.errors and not self.secondCallStatus:
-                msg = _("Not enough free space on disks")
-                self.secondCallStatus = True
-            elif self.errors:
-                msg = _("Error checking storage configuration")
+            if self.errors:
+                for error in self.errors:
+                    if "Not enough" in error:
+                        msg = _("Not enough free space on disks")
+                        break
+                    else:
+                        msg = _("Error checking storage configuration")
             elif self.warnings:
                 msg = _("Warning checking storage configuration")
             elif self.data.autopart.autopart:
@@ -851,7 +851,12 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
         # keywords: indirect and direct; default selected disks; show correctly messages
         # we need wait THREAD_EXECUTE_STORAGE and THREAD_CHECK_STORAGE threads
         # until they have been completed.
-        self._ifCompleted()
+        # we need not this function
+        #self._ifCompleted()
+        # nkwin7 end
+        # nkwin7 add begin
+        hubQ.send_not_ready(self.__class__.__name__)
+        hubQ.send_message(self.__class__.__name__, _("Probing storage..."))
         # nkwin7 end
 
         @gtk_action_wait
