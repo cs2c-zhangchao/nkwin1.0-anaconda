@@ -18,6 +18,17 @@
 #
 # Red Hat Author(s): Chris Lumens <clumens@redhat.com>
 #
+# Modification(s):
+# No.1 
+# Author(s): Xia Lei <lei.xia@cs2c.com.cn>
+# Descriptions: - set StorageSpoke to be indirect, and set CustomPartitioningSpoke
+#                 be direct.
+#               - set default selected disks to be all disks.
+#               - show correctly the storage partitioned messages on the hub.
+# Modificated file(s):pyanaconda/ui/gui/spoke/storage.py,
+#                     pyanaconda/ui/gui/spoke/custom.py,
+#                     pyanaconda/ui/gui/hub/__init__.py
+# keywords: indirect and direct; default selected disks; show correctly messages
 
 import os
 
@@ -109,7 +120,10 @@ class Hub(GUIObject, common.Hub):
         action.refresh()
 
         action.window.set_beta(self.window.get_beta())
-        action.window.set_property("distribution", distributionText().upper())
+	#nkwin7 add by yuwan
+        #action.window.set_property("distribution", distributionText().upper())
+        action.window.set_property("distribution", distributionText())
+	#nkwin7 done
 
         action.window.set_transient_for(self.window)
         action.window.show_all()
@@ -226,6 +240,20 @@ class Hub(GUIObject, common.Hub):
             if not selectors:
                 continue
 
+            # nkwin7 add by yuwan 
+            if obj.title == "USER SETTINGS":
+                from gi.repository import Gdk
+                if Gdk.Screen.height() >= 1000:
+                    pix_gif = Gtk.Image.new_from_file("/usr/share/anaconda/pixmaps/install-big.gif")
+                elif Gdk.Screen.height() >= 900:
+                    pix_gif = Gtk.Image.new_from_file("/usr/share/anaconda/pixmaps/install-middle.gif")
+                else:
+                    pix_gif = Gtk.Image.new_from_file("/usr/share/anaconda/pixmaps/install.gif")
+                pix_gif.show()
+                grid.attach(pix_gif, 0, 1, 3, 2)
+                continue
+           # nkwin7 done
+
             label = Gtk.Label("<span font-desc=\"Sans 14\">%s</span>" % _(obj.title))
             label.set_use_markup(True)
             label.set_halign(Gtk.Align.START)
@@ -255,10 +283,45 @@ class Hub(GUIObject, common.Hub):
 
         setViewportBackground(viewport)
 
+    # nkwin7 add begin
+    # keywords: indirect and direct; default selected disks; show correctly message
+    # show correctly storage partitioned messages on the hub
+    def tips_text(self, spoke):
+        if spoke.status == (_("Not enough free space on disks")):
+            msg = _("Not enough free space on disks, please click "
+                    "custom partition page to delete used partition "
+                    "and create new partition.")
+            spoke.selector.set_tooltip_markup(msg)
+        elif spoke.status == (_("Error checking storage configuration")):
+            msg = _("Error storage partition, please click custom "
+                    "partition page to look over details.")
+            spoke.selector.set_tooltip_markup(msg)
+        elif spoke.status == (_("Warning checking storage configuration")):
+            msg = _("Warning storage partition, ignoring warning or "
+                    "please click custom partition page to look over "
+                    "details.")
+            spoke.selector.set_tooltip_markup(msg)
+        elif spoke.status == (_("Automatic partitioning selected")):
+            msg = _("Automatic partitioning for you, start to "
+                    "install or click custom partition page to look over "
+                    "details.")
+            spoke.selector.set_tooltip_markup(msg)
+        else:
+            spoke.selector.set_tooltip_markup(spoke.status)
+    # nkwin7 end
+
     def _updateCompleteness(self, spoke):
         spoke.selector.set_sensitive(spoke.ready)
         spoke.selector.set_property("status", spoke.status)
-        spoke.selector.set_tooltip_markup(spoke.status)
+        # nkwin7 add begin
+        # keywords: indirect and direct; default selected disks; show correctly message
+        # show correctly storage partitioned messages on the hub
+        spokeName = spoke.__class__.__name__
+        if spokeName == "CustomPartitioningSpoke":
+            self.tips_text(spoke)
+        else:
+            spoke.selector.set_tooltip_markup(spoke.status)
+        # nkwin7 end
         spoke.selector.set_incomplete(not spoke.completed and spoke.mandatory)
         self._handleCompleteness(spoke)
 
@@ -279,7 +342,11 @@ class Hub(GUIObject, common.Hub):
                 self.set_warning(self._checker.error_message)
                 self.window.show_all()
         else:
-            msg = _("Please complete items marked with this icon before continuing to the next step.")
+            # nkwin7 add begin
+            # keywords: indirect and direct; default selected disks; show correctly message
+            # show correctly storage partitioned messages on the hub
+            msg = _("Please look over tips upon the mouse before continuing to the next step.")
+            # nkwin7 end
 
             self.set_warning(msg)
             self.window.show_all()

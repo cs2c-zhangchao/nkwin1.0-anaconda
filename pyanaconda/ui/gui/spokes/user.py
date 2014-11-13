@@ -141,8 +141,11 @@ class UserSpoke(FirstbootSpokeMixIn, NormalSpoke):
 
     mainWidgetName = "userCreationWindow"
     uiFile = "spokes/user.glade"
-
-    category = UserSettingsCategory
+    
+    #nkwin7 add by yuwan
+    #category = UserSettingsCategory
+    category = None 
+    #nkwin7 done
 
     icon = "avatar-default-symbolic"
     title = N_("_USER CREATION")

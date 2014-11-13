@@ -18,6 +18,33 @@
 #
 # Red Hat Author(s): David Lehman <dlehman@redhat.com>
 #
+# Modification(s):
+# No.1 
+# Author(s): Xia Lei <lei.xia@cs2c.com.cn>
+# Descriptions: - set StorageSpoke to be indirect, and set CustomPartitioningSpoke
+#                 be direct.
+#               - set default selected disks to be all disks.
+#               - show correctly the storage partitioned messages on the hub.
+# Modificated file(s):pyanaconda/ui/gui/spoke/storage.py,
+#                     pyanaconda/ui/gui/spoke/custom.py,
+#                     pyanaconda/ui/gui/hub/__init__.py
+# keywords: indirect and direct; default selected disks; show correctly messages
+
+# No.2
+# Author(s): Xia Lei <lei.xia@cs2c.com.cn>
+# Descriptions: - reset default partitioning.
+#               - reset defaultFs to be ext4
+#               - reset autopart type to be AUTOPART_TYPE_PLAIN
+#               - add combo to be used to select partitioning scheme 
+#                 on the customPartitioningSpoke gui.
+#               - delete refresh button.
+# Modificated file(s):pyanaconda/installclass.py,
+#                     pyanaconda/installclasses/neokylin.py,
+#                     pyanaconda/ui/gui/spokes/storage.py,
+#                     pyanaconda/ui/gui/spokes/custom.py,
+#                     pyanaconda/ui/gui/spokes/lib/according.py
+#                     pyanaconda/ui/gui/spokes/custom.glade
+# keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
 
 """
     TODO:
@@ -295,11 +322,15 @@ class StorageChecker(object):
     def checkStorage(self):
         threadMgr.wait(constants.THREAD_EXECUTE_STORAGE)
 
-        hubQ.send_not_ready(self._mainSpokeClass)
-        hubQ.send_message(self._mainSpokeClass, _("Checking storage configuration..."))
+        # nkwin7 add begin
+        # keywords:indirect and direct; default selected disks; show correctly messages
+        # the indirect spoke need not communicate with hub.
+        #hubQ.send_not_ready(self._mainSpokeClass)
+        #hubQ.send_message(self._mainSpokeClass, _("Checking storage configuration..."))
         (StorageChecker.errors,
          StorageChecker.warnings) = self.storage.sanityCheck()
-        hubQ.send_ready(self._mainSpokeClass, True)
+        #hubQ.send_ready(self._mainSpokeClass, True)
+        # nkwin7 end
         for e in StorageChecker.errors:
             log.error(e)
         for w in StorageChecker.warnings:
@@ -387,14 +418,17 @@ class StorageSpoke(NormalSpoke, StorageChecker):
 
     def _doExecute(self):
         self._ready = False
-        hubQ.send_not_ready(self.__class__.__name__)
-        hubQ.send_message(self.__class__.__name__, _("Saving storage configuration..."))
+        # nkwin7 add begin
+        # keywords:indirect and direct; default selected disks; show correctly messages
+        # the indirect spoke need not communicate with hub.
+        #hubQ.send_not_ready(self.__class__.__name__)
+        #hubQ.send_message(self.__class__.__name__, _("Saving storage configuration..."))
         try:
             doKickstartStorage(self.storage, self.data, self.instclass)
         except StorageError as e:
             log.error("storage configuration failed: %s" % e)
             StorageChecker.errors = str(e).split("\n")
-            hubQ.send_message(self.__class__.__name__, _("Failed to save storage configuration..."))
+            #hubQ.send_message(self.__class__.__name__, _("Failed to save storage configuration..."))
             self.data.ignoredisk.drives = []
             self.data.ignoredisk.onlyuse = []
             self.storage.config.update(self.data)
@@ -410,7 +444,17 @@ class StorageSpoke(NormalSpoke, StorageChecker):
                 self.run()
         finally:
             self._ready = True
-            hubQ.send_ready(self.__class__.__name__, True)
+            #hubQ.send_ready(self.__class__.__name__, True)
+            # nkwin7 end
+
+    # nkwin7 add begin
+    # keywords:indirect and direct; default selected disks; show correctly messages
+    # we set the StorageSpoke to be indirect spoke, and
+    # set the CustomPartitioningSpoke to be direct spoke.
+    @property
+    def indirect(self):
+        return True
+    # nkwin7 end
 
     @property
     def completed(self):
@@ -537,7 +581,13 @@ class StorageSpoke(NormalSpoke, StorageChecker):
         self.autopart = self.data.autopart.autopart
         self.autoPartType = self.data.autopart.type
         if self.autoPartType is None:
-            self.autoPartType = AUTOPART_TYPE_LVM
+            # nkwin7 add begin
+            # keywords: default partitioning; defaultFS; autopart type; 
+            #           add combo; delete refresh button
+            #reset autopart type to be AUTOPART_TYPE_PLAIN
+            #self.autoPartType = AUTOPART_TYPE_LVM
+            self.autoPartType = AUTOPART_TYPE_PLAIN
+            # nkwin7 end
         self.encrypted = self.data.autopart.encrypted
         self.passphrase = self.data.autopart.passphrase
 
@@ -567,7 +617,12 @@ class StorageSpoke(NormalSpoke, StorageChecker):
         # update the selections in the ui
         for overview in self.localOverviews + self.advancedOverviews:
             name = overview.get_property("name")
-            overview.set_chosen(name in self.selected_disks)
+            # nkwin7 add begin
+            # keywords:indirect and direct; default selected disks; show correctly messages
+            #overview.set_chosen(name in self.selected_disks)
+            # we default select all disks.
+            overview.set_chosen(True)
+            # nkwin7 end
 
         self._update_summary()
 
@@ -601,6 +656,27 @@ class StorageSpoke(NormalSpoke, StorageChecker):
 
         threadMgr.add(AnacondaThread(name=constants.THREAD_STORAGE_WATCHER,
                       target=self._initialize))
+
+        # nkwin7 add begin
+        # keywords:indirect and direct; default selected disks; show correctly messages
+        # We set the StorageSpoke to be indirect, but we still need to set 
+        # the storage by this spoke befor showing CustomPartitionSpoke,
+        # so we need execute some functions.
+        self._backendExecute()
+        # nkwin7 end
+
+    # nkwin7 add begin
+    # keywords:indirect and direct; default selected disks; show correctly messages
+    # We set the StorageSpoke to be indirect, but we still need to set 
+    # the storage by this spoke befor showing CustomPartitionSpoke,
+    # so we need execute some functions.
+    def _backendExecute(self):
+        self.refresh()
+        self._update_disk_list()
+        self.apply()
+        self.execute()
+    # nkwin7 end
+        
 
     def _add_disk_overview(self, disk, box):
         if disk.removable:
@@ -643,7 +719,10 @@ class StorageSpoke(NormalSpoke, StorageChecker):
         overview.show_all()
 
     def _initialize(self):
-        hubQ.send_message(self.__class__.__name__, _("Probing storage..."))
+        # nkwin7 add begin
+        # keywords:indirect and direct; default selected disks; show correctly messages
+        # the indirect spoke need not communicate with hub.
+        #hubQ.send_message(self.__class__.__name__, _("Probing storage..."))
 
         threadMgr.wait(constants.THREAD_STORAGE)
         threadMgr.wait(constants.THREAD_CUSTOM_STORAGE_INIT)
@@ -655,7 +734,8 @@ class StorageSpoke(NormalSpoke, StorageChecker):
             self._applyDiskSelection([self.disks[0].name])
 
         self._ready = True
-        hubQ.send_ready(self.__class__.__name__, False)
+        #hubQ.send_ready(self.__class__.__name__, False)
+        # nkwin7 end
 
     def _update_summary(self):
         """ Update the summary based on the UI. """

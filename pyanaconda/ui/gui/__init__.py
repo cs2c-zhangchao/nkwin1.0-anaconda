@@ -368,12 +368,24 @@ class GraphicalUserInterface(UserInterface):
         self._currentAction.refresh()
 
         self._currentAction.window.set_beta(not self._isFinal)
-        self._currentAction.window.set_property("distribution", self._distributionText().upper())
+	#nkwin7 add by yuwan
+        #self._currentAction.window.set_property("distribution", self._distributionText().upper())
+        self._currentAction.window.set_property("distribution", self._distributionText())
+        #nkwin7 done
 
         # Set some program-wide settings.
         settings = Gtk.Settings.get_default()
         settings.set_property("gtk-font-name", "Cantarell")
         settings.set_property("gtk-icon-theme-name", "gnome")
+
+
+        # nkwin7 add by yuwan
+        # Apply the application stylesheet
+	provider = Gtk.CssProvider()
+	provider.load_from_path("/usr/share/anaconda/anaconda-gtk.css")
+	Gtk.StyleContext.add_provider_for_screen(Gdk.Screen.get_default(), provider,
+	         Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
+	#nkwin7 done
 
         self._currentAction.window.show_all()
 
@@ -468,7 +480,10 @@ class GraphicalUserInterface(UserInterface):
 
         nextAction.initialize()
         nextAction.window.set_beta(self._currentAction.window.get_beta())
-        nextAction.window.set_property("distribution", self._distributionText().upper())
+	#nkwin7 add by yuwan
+        #nextAction.window.set_property("distribution", self._distributionText().upper())
+        nextAction.window.set_property("distribution", self._distributionText())
+        #nkwin7 done
 
         if not nextAction.showable:
             self._currentAction.window.hide()

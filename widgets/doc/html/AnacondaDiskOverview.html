@@ -8,7 +8,7 @@
 <link rel="up" href="disks.html" title="Disk-Related Widgets">
 <link rel="prev" href="disks.html" title="Disk-Related Widgets">
 <link rel="next" href="AnacondaMountpointSelector.html" title="AnacondaMountpointSelector">
-<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -45,8 +45,8 @@
 <a name="AnacondaDiskOverview.synopsis"></a><h2>Synopsis</h2>
 <pre class="synopsis">struct              <a class="link" href="AnacondaDiskOverview.html#AnacondaDiskOverview-struct" title="struct AnacondaDiskOverview">AnacondaDiskOverview</a>;
 struct              <a class="link" href="AnacondaDiskOverview.html#AnacondaDiskOverviewClass" title="struct AnacondaDiskOverviewClass">AnacondaDiskOverviewClass</a>;
-<span class="returnvalue">gboolean</span>            <a class="link" href="AnacondaDiskOverview.html#anaconda-disk-overview-get-chosen" title="anaconda_disk_overview_get_chosen ()">anaconda_disk_overview_get_chosen</a>   (<em class="parameter"><code><a class="link" href="AnacondaDiskOverview.html" title="AnacondaDiskOverview"><span class="type">AnacondaDiskOverview</span></a> *widget</code></em>);
 <span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaDiskOverview.html#anaconda-disk-overview-new" title="anaconda_disk_overview_new ()">anaconda_disk_overview_new</a>          ();
+<span class="returnvalue">gboolean</span>            <a class="link" href="AnacondaDiskOverview.html#anaconda-disk-overview-get-chosen" title="anaconda_disk_overview_get_chosen ()">anaconda_disk_overview_get_chosen</a>   (<em class="parameter"><code><a class="link" href="AnacondaDiskOverview.html" title="AnacondaDiskOverview"><span class="type">AnacondaDiskOverview</span></a> *widget</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="AnacondaDiskOverview.html#anaconda-disk-overview-set-chosen" title="anaconda_disk_overview_set_chosen ()">anaconda_disk_overview_set_chosen</a>   (<em class="parameter"><code><a class="link" href="AnacondaDiskOverview.html" title="AnacondaDiskOverview"><span class="type">AnacondaDiskOverview</span></a> *widget</code></em>,
                                                          <em class="parameter"><code><span class="type">gboolean</span> is_chosen</code></em>);
 </pre>
@@ -128,6 +128,26 @@ pointer to be cast to a <span class="type">GtkEventBox</span> pointer.</td>
 </div>
 <hr>
 <div class="refsect2">
+<a name="anaconda-disk-overview-new"></a><h3>anaconda_disk_overview_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_disk_overview_new          ();</pre>
+<p>
+Creates a new <a class="link" href="AnacondaDiskOverview.html" title="AnacondaDiskOverview"><span class="type">AnacondaDiskOverview</span></a>, which is a potentially selectable
+widget that displays basic information about a single storage device, be
+that a regular disk or a more complicated network device.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="AnacondaDiskOverview.html" title="AnacondaDiskOverview"><span class="type">AnacondaDiskOverview</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="anaconda-disk-overview-get-chosen"></a><h3>anaconda_disk_overview_get_chosen ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>            anaconda_disk_overview_get_chosen   (<em class="parameter"><code><a class="link" href="AnacondaDiskOverview.html" title="AnacondaDiskOverview"><span class="type">AnacondaDiskOverview</span></a> *widget</code></em>);</pre>
 <p>
@@ -151,26 +171,6 @@ Returns whether or not this disk has been chosen by the user.
 </tbody>
 </table></div>
 <p class="since">Since 1.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-disk-overview-new"></a><h3>anaconda_disk_overview_new ()</h3>
-<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_disk_overview_new          ();</pre>
-<p>
-Creates a new <a class="link" href="AnacondaDiskOverview.html" title="AnacondaDiskOverview"><span class="type">AnacondaDiskOverview</span></a>, which is a potentially selectable
-widget that displays basic information about a single storage device, be
-that a regular disk or a more complicated network device.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody><tr>
-<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>A new <a class="link" href="AnacondaDiskOverview.html" title="AnacondaDiskOverview"><span class="type">AnacondaDiskOverview</span></a>.</td>
-</tr></tbody>
-</table></div>
 </div>
 <hr>
 <div class="refsect2">
@@ -277,6 +277,6 @@ could be WWID, LUN, and so forth.
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.18</div>
+          Generated by GTK-Doc V1.19</div>
 </body>
 </html>

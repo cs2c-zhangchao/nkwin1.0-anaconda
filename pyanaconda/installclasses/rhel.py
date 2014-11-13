@@ -16,6 +16,22 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
+# Modification(s):
+# No.1 
+# Author(s): Xia Lei <lei.xia@cs2c.com.cn>
+# Descriptions: - reset default partitioning.
+#               - reset defaultFs to be ext4
+#               - reset autopart type to be AUTOPART_TYPE_PLAIN
+#               - add combo to be used to select partitioning scheme 
+#                 on the customPartitioningSpoke gui.
+#               - delete refresh button.
+# Modificated file(s):pyanaconda/installclass.py,
+#                     pyanaconda/installclasses/neokylin.py,
+#                     pyanaconda/ui/gui/spokes/storage.py,
+#                     pyanaconda/ui/gui/spokes/custom.py,
+#                     pyanaconda/ui/gui/spokes/lib/according.py
+#                     pyanaconda/ui/gui/spokes/custom.glade
+# keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
 
 from pyanaconda.installclass import BaseInstallClass
 from pyanaconda.constants import *
@@ -28,7 +44,12 @@ class InstallClass(BaseInstallClass):
     name = N_("Red Hat Enterprise Linux")
     sortPriority = 10000
     hidden = 1
-    defaultFS = "xfs"
+    # nkwin7 add begin
+    # keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
+    # reset defaultFs
+    #defaultFS = "xfs"
+    defaultFS = "ext4"
+    # nkwin7 end
 
     bootloaderTimeoutDefault = 5
     bootloaderExtraArgs = []

@@ -80,7 +80,7 @@ def time_initialize(timezone, storage, bootloader):
     cmd = "hwclock"
     args = ["--hctosys"]
     if timezone.isUtc:
-        args.append("--utc")
+        args.append("--localtime")
     else:
         args.append("--localtime")
 
@@ -129,9 +129,9 @@ def write_timezone_config(timezone, root):
             fobj.write(lines[0])
             fobj.write(lines[1])
             if timezone.isUtc:
-                fobj.write("UTC\n")
-            else:
                 fobj.write("LOCAL\n")
+            else:
+                fobj.write("UTC\n")
     except IOError as ioerr:
         msg = "Error while writing /etc/adjtime file: %s" % ioerr.strerror
         raise TimezoneConfigError(msg)
@@ -150,9 +150,9 @@ def save_hw_clock(timezone):
     cmd = "hwclock"
     args = ["--systohc"]
     if timezone.isUtc:
-        args.append("--utc")
+        args.append("--localtime")
     else:
-        args.append("--local")
+        args.append("--localtime")
 
     iutil.execWithRedirect(cmd, args)
 

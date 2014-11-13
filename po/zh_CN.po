@@ -820,13 +820,15 @@ msgstr "未配置引导程序"
 
 #: pyanaconda/ui/tui/spokes/storage.py:111
 #: pyanaconda/ui/gui/spokes/storage.py:452
+#: pyanaconda/ui/gui/spoke/custom.py:746
 msgid "Error checking storage configuration"
-msgstr "检查存储配置出错"
+msgstr "分区不正确"
 
 #: pyanaconda/ui/tui/spokes/storage.py:113
 #: pyanaconda/ui/gui/spokes/storage.py:454
+#: pyanaconda/ui/gui/spoke/custom.py:748
 msgid "Warning checking storage configuration"
-msgstr "警告，正在检查存储配置"
+msgstr "警告，分区不符合规范"
 
 #: pyanaconda/ui/tui/spokes/storage.py:116
 #: pyanaconda/ui/gui/spokes/storage.py:456
@@ -1101,11 +1103,39 @@ msgstr "存储"
 msgid "USER SETTINGS"
 msgstr "用户设置"
 
-#: pyanaconda/ui/gui/hubs/__init__.py:282
+#: pyanaconda/ui/gui/hubs/__init__.py:274
 msgid ""
-"Please complete items marked with this icon before continuing to the next "
-"step."
-msgstr "请先完成带有此图标标记的内容再进行下一步。"
+"Not enough free space on disks, please click custom "
+"partition page to delete used partition and create new partition."
+msgstr ""
+"您的硬盘上没有足够的空间来自动安装新系统，请点击自定义分区界面，"
+"删除已有分区并为新系统创建新分区。"
+
+#: pyanaconda/ui/gui/hubs/__init__.py:279
+msgid ""
+"Error storage partition, please click custom partition page "
+"to look over details."
+msgstr "分区不正确，请点击自定义分区界面查看详情。"
+
+#: pyanaconda/ui/gui/hubs/__init__.py:283
+msgid ""
+"Warning storage partition, ignoring warning or please click "
+"custom partition page to look over details."
+msgstr "分区不符合规范，忽略警告直接开始安装或点击自定义分区界面，"
+"查看详情。"
+
+#: pyanaconda/ui/gui/hubs/__init__.py:288
+msgid ""
+"Automatic partitioning for you, start to install or click "
+"custom partition page to look over details."
+msgstr "系统已为您自动分区，请直接开始安装或点击自定义分区界面，"
+"查看分区详情。"
+
+#: pyanaconda/ui/gui/hubs/__init__.py:331
+msgid ""
+"Please look over tips upon the mouse before continuing to the "
+"next step."
+msgstr "在继续下一步之前请查看鼠标上方的提示。"
 
 #: pyanaconda/ui/gui/hubs/progress.py:178
 #, python-format
@@ -1231,6 +1261,10 @@ msgstr "手动分区"
 msgid "%d _storage device selected"
 msgid_plural "%d _storage devices selected"
 msgstr[0] "已选择 %d 存储设备(_S)"
+
+#: pyanaconda/ui/gui/spokes/custom.py:740
+msgid "Not enough free space on disks"
+msgstr "没有足够的空间来自动安装新系统"
 
 #: pyanaconda/ui/gui/spokes/custom.py:949
 #: pyanaconda/ui/gui/spokes/network.py:665
@@ -1565,6 +1599,12 @@ msgstr ""
 "\n"
 "当删掉磁盘上的最后一个分区后，如果我们认为该磁盘有更合适的类型时，我们会用新"
 "分区表重新初始化该磁盘。\n"
+
+#: pyanaconda/ui/gui/spokes/custom.py:2922
+msgid ""
+"The following errors were encountered when checking your partition "
+"configuration.  You need modify your partition setting."
+msgstr "在检测您的分区配置时发生以下错误。 您需要修改分区设置。"
 
 #: pyanaconda/ui/gui/spokes/datetime_spoke.py:58
 msgid "Note: pool servers may not be available all the time"
@@ -2116,13 +2156,13 @@ msgid "_Modify Storage Layout"
 msgstr "修改存储布局(_M)"
 
 #: pyanaconda/ui/gui/spokes/storage.py:908
+#: pyanaconda/ui/gui/spokes/custom.py:2934
 msgid ""
-"The following warnings were encountered when checking your storage "
+"The following warnings were encountered when checking your partition "
 "configuration.  These are not fatal, but you may wish to make changes to "
-"your storage layout."
+"your partition setting."
 msgstr ""
-"在检测您的存储配置时发生以下错误。虽然并不是致命错误，但您应该考虑修改存储方"
-"案。"
+"在检测您的分区配置时发生以下错误。虽然并不是致命错误，但您应该考虑修改分区设置。"
 
 #: pyanaconda/ui/gui/spokes/storage.py:912
 msgid "_OK"
@@ -2183,6 +2223,10 @@ msgid ""
 "Or, assign new mount points to existing partitions after selecting them "
 "below."
 msgstr "或者向下方选择的已有分区分配新挂载点。"
+
+#: pyanaconda/ui/gui/spokes/lib/according.py:339
+msgid "_New mount points will use the following partitioning scheme:"
+msgstr "新挂载点将使用以下分区方案（_N）："
 
 #: pyanaconda/ui/gui/spokes/lib/cart.py:128
 #, python-format
@@ -3856,8 +3900,9 @@ msgid "We won't touch your disks until you hit this button."
 msgstr "在点击此按钮前我们并不会操作您的磁盘。"
 
 #: pyanaconda/ui/gui/hubs/progress.glade:9
+#:msgstr "配置"
 msgid "CONFIGURATION"
-msgstr "配置"
+msgstr " "
 
 #: pyanaconda/ui/gui/hubs/progress.glade:83
 msgid "Preparing to install"
@@ -3962,3 +4007,4 @@ msgstr "将 Live 光盘安装到您的硬盘。"
 #: liveinst:5
 msgid "Starting Install to Hard Drive"
 msgstr "开始安装到硬盘"
+

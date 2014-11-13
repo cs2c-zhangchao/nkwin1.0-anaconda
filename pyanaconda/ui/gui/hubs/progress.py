@@ -230,7 +230,7 @@ class ProgressHub(Hub):
         return self.builder.get_object("rebootButton")
 
     def _init_progress_bar(self, steps):
-        self._totalSteps = steps
+        self._totalSteps = steps - 3
         self._currentStep = 0
 
         gtk_call_once(self._progressBar.set_fraction, 0.0)

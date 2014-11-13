@@ -8,7 +8,7 @@
 <link rel="up" href="windows.html" title="Window Widgets">
 <link rel="prev" href="windows.html" title="Window Widgets">
 <link rel="next" href="AnacondaHubWindow.html" title="AnacondaHubWindow">
-<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -47,18 +47,10 @@
 <a name="AnacondaBaseWindow.synopsis"></a><h2>Synopsis</h2>
 <pre class="synopsis">struct              <a class="link" href="AnacondaBaseWindow.html#AnacondaBaseWindow-struct" title="struct AnacondaBaseWindow">AnacondaBaseWindow</a>;
 struct              <a class="link" href="AnacondaBaseWindow.html#AnacondaBaseWindowClass" title="struct AnacondaBaseWindowClass">AnacondaBaseWindowClass</a>;
-<span class="returnvalue">void</span>                <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-clear-info" title="anaconda_base_window_clear_info ()">anaconda_base_window_clear_info</a>     (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
-<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-action-area" title="anaconda_base_window_get_action_area ()">anaconda_base_window_get_action_area</a>
-                                                        (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
-<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-alignment" title="anaconda_base_window_get_alignment ()">anaconda_base_window_get_alignment</a>  (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
-<span class="returnvalue">gboolean</span>            <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-beta" title="anaconda_base_window_get_beta ()">anaconda_base_window_get_beta</a>       (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
-<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-main-box" title="anaconda_base_window_get_main_box ()">anaconda_base_window_get_main_box</a>   (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
-<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-nav-area" title="anaconda_base_window_get_nav_area ()">anaconda_base_window_get_nav_area</a>   (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
-<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-nav-area-background-window" title="anaconda_base_window_get_nav_area_background_window ()">anaconda_base_window_get_nav_area_background_window</a>
-                                                        (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
 <span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-new" title="anaconda_base_window_new ()">anaconda_base_window_new</a>            ();
 <span class="returnvalue">void</span>                <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-retranslate" title="anaconda_base_window_retranslate ()">anaconda_base_window_retranslate</a>    (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *lang</code></em>);
+<span class="returnvalue">gboolean</span>            <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-beta" title="anaconda_base_window_get_beta ()">anaconda_base_window_get_beta</a>       (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-set-beta" title="anaconda_base_window_set_beta ()">anaconda_base_window_set_beta</a>       (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>,
                                                          <em class="parameter"><code><span class="type">gboolean</span> is_beta</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-set-error" title="anaconda_base_window_set_error ()">anaconda_base_window_set_error</a>      (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>,
@@ -67,6 +59,14 @@ struct              <a class="link" href="AnacondaBaseWindow.html#AnacondaBaseWi
                                                          <em class="parameter"><code>const <span class="type">char</span> *msg</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-set-warning" title="anaconda_base_window_set_warning ()">anaconda_base_window_set_warning</a>    (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>,
                                                          <em class="parameter"><code>const <span class="type">char</span> *msg</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-clear-info" title="anaconda_base_window_clear_info ()">anaconda_base_window_clear_info</a>     (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-action-area" title="anaconda_base_window_get_action_area ()">anaconda_base_window_get_action_area</a>
+                                                        (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-alignment" title="anaconda_base_window_get_alignment ()">anaconda_base_window_get_alignment</a>  (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-main-box" title="anaconda_base_window_get_main_box ()">anaconda_base_window_get_main_box</a>   (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-nav-area" title="anaconda_base_window_get_nav_area ()">anaconda_base_window_get_nav_area</a>   (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaBaseWindow.html#anaconda-base-window-get-nav-area-background-window" title="anaconda_base_window_get_nav_area_background_window ()">anaconda_base_window_get_nav_area_background_window</a>
+                                                        (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);
 </pre>
 </div>
 <div class="refsect1">
@@ -134,7 +134,7 @@ The AnacondaBaseWindow implementation of the <span class="type">GtkBuildable</sp
 the <em class="parameter"><code>action_area</code></em> as an internal child with the name "action_area".
 </p>
 <div class="example">
-<a name="idm252249872976"></a><p class="title"><b>Example 1. A <span class="structname">AnacondaBaseWindow</span> UI definition fragment.</b></p>
+<a name="id-1.2.2.8.6.1.3"></a><p class="title"><b>Example 1. A <span class="structname">AnacondaBaseWindow</span> UI definition fragment.</b></p>
 <div class="example-contents">
   <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
     <tbody>
@@ -224,201 +224,6 @@ signal is emitted.</td>
 </div>
 <hr>
 <div class="refsect2">
-<a name="anaconda-base-window-clear-info"></a><h3>anaconda_base_window_clear_info ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                anaconda_base_window_clear_info     (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
-<p>
-Clear and hide any info bar being shown at the bottom of the screen.  This
-must be called before a second call to anaconda_base_window_set_info takes
-effect.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
-<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
-</td>
-</tr></tbody>
-</table></div>
-<p class="since">Since 1.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-base-window-get-action-area"></a><h3>anaconda_base_window_get_action_area ()</h3>
-<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_base_window_get_action_area
-                                                        (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
-<p>
-Returns the action area of <em class="parameter"><code>win</code></em>.  This is the area of the screen where most
-of the widgets the user interacts with will live.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody>
-<tr>
-<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
-<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
-</td>
-</tr>
-<tr>
-<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>The action area. <span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span>
-</td>
-</tr>
-</tbody>
-</table></div>
-<p class="since">Since 1.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-base-window-get-alignment"></a><h3>anaconda_base_window_get_alignment ()</h3>
-<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_base_window_get_alignment  (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
-<p>
-Returns the internal alignment widget of <em class="parameter"><code>win</code></em>.  Currently, this is only used
-by <a class="link" href="AnacondaHubWindow.html" title="AnacondaHubWindow"><span class="type">AnacondaHubWindow</span></a> to set different alignment values than the spokes have.
-This function should probably not be used elsewhere.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody>
-<tr>
-<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
-<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
-</td>
-</tr>
-<tr>
-<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>The alignment widget. <span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span>
-</td>
-</tr>
-</tbody>
-</table></div>
-<p class="since">Since 1.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-base-window-get-beta"></a><h3>anaconda_base_window_get_beta ()</h3>
-<pre class="programlisting"><span class="returnvalue">gboolean</span>            anaconda_base_window_get_beta       (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
-<p>
-Returns whether or not this window is set to display the beta label.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody>
-<tr>
-<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
-<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
-</td>
-</tr>
-<tr>
-<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>Whether <em class="parameter"><code>win</code></em> is set to display the betanag warning</td>
-</tr>
-</tbody>
-</table></div>
-<p class="since">Since 1.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-base-window-get-main-box"></a><h3>anaconda_base_window_get_main_box ()</h3>
-<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_base_window_get_main_box   (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
-<p>
-Returns the main content area of <em class="parameter"><code>win</code></em>.  This widget holds both the action_area
-and the nav_area.  Currently, this is only used by <a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a>
-as a place to store the extra Continue button.  This function should probably
-not be used elsewhere.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody>
-<tr>
-<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
-<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
-</td>
-</tr>
-<tr>
-<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>The main content area. <span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span>
-</td>
-</tr>
-</tbody>
-</table></div>
-<p class="since">Since 1.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-base-window-get-nav-area"></a><h3>anaconda_base_window_get_nav_area ()</h3>
-<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_base_window_get_nav_area   (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
-<p>
-Returns the navigation area of <em class="parameter"><code>win</code></em>.  This is the area at the top of the
-screen displaying the window's title (if it has one), distribution, and
-so forth.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody>
-<tr>
-<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
-<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
-</td>
-</tr>
-<tr>
-<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>The navigation area. <span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span>
-</td>
-</tr>
-</tbody>
-</table></div>
-<p class="since">Since 1.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-base-window-get-nav-area-background-window"></a><h3>anaconda_base_window_get_nav_area_background_window ()</h3>
-<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_base_window_get_nav_area_background_window
-                                                        (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
-<p>
-Returns the event box that houses background window of the navigation area of <em class="parameter"><code>win</code></em>.
-Currently, this is only used by <a class="link" href="AnacondaSpokeWindow.html" title="AnacondaSpokeWindow"><span class="type">AnacondaSpokeWindow</span></a> to have a place to store the
-gradient image.  This function should probably not be used elsewhere.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody>
-<tr>
-<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
-<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
-</td>
-</tr>
-<tr>
-<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>The event box. <span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span>
-</td>
-</tr>
-</tbody>
-</table></div>
-<p class="since">Since 1.0</p>
-</div>
-<hr>
-<div class="refsect2">
 <a name="anaconda-base-window-new"></a><h3>anaconda_base_window_new ()</h3>
 <pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_base_window_new            ();</pre>
 <p>
@@ -458,6 +263,32 @@ kind of ugly but avoids having to destroy and reload the screen.
 <td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
 </td>
 </tr></tbody>
+</table></div>
+<p class="since">Since 1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="anaconda-base-window-get-beta"></a><h3>anaconda_base_window_get_beta ()</h3>
+<pre class="programlisting"><span class="returnvalue">gboolean</span>            anaconda_base_window_get_beta       (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
+<p>
+Returns whether or not this window is set to display the beta label.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
+<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>Whether <em class="parameter"><code>win</code></em> is set to display the betanag warning</td>
+</tr>
+</tbody>
 </table></div>
 <p class="since">Since 1.0</p>
 </div>
@@ -577,6 +408,175 @@ a second message, anaconda_base_window_clear_info must first be called.
 </table></div>
 <p class="since">Since 1.0</p>
 </div>
+<hr>
+<div class="refsect2">
+<a name="anaconda-base-window-clear-info"></a><h3>anaconda_base_window_clear_info ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                anaconda_base_window_clear_info     (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
+<p>
+Clear and hide any info bar being shown at the bottom of the screen.  This
+must be called before a second call to anaconda_base_window_set_info takes
+effect.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
+<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
+</td>
+</tr></tbody>
+</table></div>
+<p class="since">Since 1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="anaconda-base-window-get-action-area"></a><h3>anaconda_base_window_get_action_area ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_base_window_get_action_area
+                                                        (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
+<p>
+Returns the action area of <em class="parameter"><code>win</code></em>.  This is the area of the screen where most
+of the widgets the user interacts with will live.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
+<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The action area. <span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="anaconda-base-window-get-alignment"></a><h3>anaconda_base_window_get_alignment ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_base_window_get_alignment  (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
+<p>
+Returns the internal alignment widget of <em class="parameter"><code>win</code></em>.  Currently, this is only used
+by <a class="link" href="AnacondaHubWindow.html" title="AnacondaHubWindow"><span class="type">AnacondaHubWindow</span></a> to set different alignment values than the spokes have.
+This function should probably not be used elsewhere.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
+<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The alignment widget. <span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="anaconda-base-window-get-main-box"></a><h3>anaconda_base_window_get_main_box ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_base_window_get_main_box   (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
+<p>
+Returns the main content area of <em class="parameter"><code>win</code></em>.  This widget holds both the action_area
+and the nav_area.  Currently, this is only used by <a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a>
+as a place to store the extra Continue button.  This function should probably
+not be used elsewhere.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
+<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The main content area. <span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="anaconda-base-window-get-nav-area"></a><h3>anaconda_base_window_get_nav_area ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_base_window_get_nav_area   (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
+<p>
+Returns the navigation area of <em class="parameter"><code>win</code></em>.  This is the area at the top of the
+screen displaying the window's title (if it has one), distribution, and
+so forth.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
+<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The navigation area. <span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="anaconda-base-window-get-nav-area-background-window"></a><h3>anaconda_base_window_get_nav_area_background_window ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_base_window_get_nav_area_background_window
+                                                        (<em class="parameter"><code><a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a> *win</code></em>);</pre>
+<p>
+Returns the event box that houses background window of the navigation area of <em class="parameter"><code>win</code></em>.
+Currently, this is only used by <a class="link" href="AnacondaSpokeWindow.html" title="AnacondaSpokeWindow"><span class="type">AnacondaSpokeWindow</span></a> to have a place to store the
+gradient image.  This function should probably not be used elsewhere.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
+<td>a <a class="link" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow"><span class="type">AnacondaBaseWindow</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The event box. <span class="annotation">[<a href="http://foldoc.org/transfer%20none"><span class="acronym">transfer none</span></a>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 1.0</p>
+</div>
 </div>
 <div class="refsect1">
 <a name="AnacondaBaseWindow.property-details"></a><h2>Property Details</h2>
@@ -637,6 +637,6 @@ more detailed information.
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.18</div>
+          Generated by GTK-Doc V1.19</div>
 </body>
 </html>

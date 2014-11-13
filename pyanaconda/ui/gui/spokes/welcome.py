@@ -46,7 +46,10 @@ class WelcomeLanguageSpoke(StandaloneSpoke):
     uiFile = "spokes/welcome.glade"
     builderObjects = ["languageStore", "languageStoreFilter", "welcomeWindow", "betaWarnDialog"]
 
-    preForHub = SummaryHub
+    #nkwin7 add by yuwan
+    #preForHub = SummaryHub
+    preForHub = None 
+    #nkwin7 done 
     priority = 0
 
     def __init__(self, *args, **kwargs):
@@ -235,7 +238,11 @@ class WelcomeLanguageSpoke(StandaloneSpoke):
         welcomeLabel.set_label(xlated)
 
         # And of course, don't forget the underlying window.
-        self.window.set_property("distribution", distributionText().upper())
+        #nkwin7 add by yuwan
+        #self.window.set_property("distribution", distributionText().upper())
+        #self.window.set_property("distribution", distributionText().upper())
+        self.window.set_property("distribution", distributionText())
+        #nkwin7 done
         self.window.retranslate(lang)
 
     def refresh(self):

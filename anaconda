@@ -27,6 +27,13 @@
 #            Erik Troan <ewt@rpath.com>
 #            Matt Wilson <msw@rpath.com>
 #
+# Modification(s):
+# No.1
+# Author(s): Xia Lei <lei.xia@cs2c.com.cn>
+# Description(s): - I find this patch to fix delaying reboot from 
+#                   rhel bugzilla, but this patch is invalid to nkwin7,
+#                   i donnot know the reason
+# keywords: fix delaying reboot
 
 # This toplevel file is a little messy at the moment...
 
@@ -70,12 +77,21 @@ def exitHandler(rebootData, storage, exitCode=None):
                     continue
                 dracut_eject(drive.path)
 
+        # nkwin7 add begin
+        # keywords: fix delaying reboot
+        # I find this patch to fix delaying reboot from 
+        # rhel bugzilla, but this patch is invalid to nkwin7,
+        # i donnot know the reason
         if rebootData.action == KS_SHUTDOWN:
-            os.system("systemctl --no-wall poweroff")
+            #os.system("systemctl --no-wall poweroff")
+            subprocess.Popen(["systemctl", "--no-wall", "poweroff"])
         elif rebootData.action == KS_WAIT:
-            os.system("systemctl --no-wall halt")
+            #os.system("systemctl --no-wall halt")
+            subprocess.Popen(["systemctl", "--no-wall", "halt"])
         else: # reboot action is KS_REBOOT or None
-            os.system("systemctl --no-wall reboot")
+            #os.system("systemctl --no-wall reboot")
+            subprocess.Popen(["systemctl", "--no-wall", "reboot"])
+        # nkwin7 end
 
 def startMetacityWM():
     childpid = os.fork()
@@ -89,10 +105,18 @@ def startMetacityWM():
         except BaseException as e:
             # catch all possible exceptions
             log.error("Problems running the window manager: %s" % str(e))
-            sys.exit(1)
+            # nkwin7 add begin
+            # keywords: fix delaying reboot
+            # I find this patch to fix delaying reboot from 
+            # rhel bugzilla, but this patch is invalid to nkwin7,
+            # i donnot know the reason
+            #sys.exit(1)
+            os._exit(1)
 
         log.info("The window manager has terminated.")
-        sys.exit(0)
+        #sys.exit(0)
+        os._exit(0)
+        # nkwin7 end
     return childpid
 
 def startAuditDaemon():
@@ -103,7 +127,14 @@ def startAuditDaemon():
             os.execl(cmd, cmd)
         except OSError as e:
             log.error("Error running the audit daemon: %s" % str(e))
-        sys.exit(0)
+        # nkwin7 add begin
+        # keywords: fix delaying reboot
+        # I find this patch to fix delaying reboot from 
+        # rhel bugzilla, but this patch is invalid to nkwin7,
+        # i donnot know the reason
+        #sys.exit(0)
+        os._exit(0)
+        # nkwin7 end
     # auditd will turn into a daemon so catch the immediate child pid now:
     os.waitpid(childpid, 0)
 
@@ -949,7 +980,17 @@ if __name__ == "__main__":
             log.error("Unknown method: %s", (anaconda.methodstr,))
 
     # Set the language before loading an interface, when it may be too late.
+
+    #nkwin7 add by yuwan
+    if not opts.lang:
+        opts.lang = "zh_CN.UTF-8"
+    #nkwin7 done
+
     if opts.lang:
+        #nkwin7 add by yuwan
+	opts.lang = opts.lang.replace(".utf8", ".UTF-8")    
+	opts.lang = opts.lang.replace(".utf-8", ".UTF-8")    
+        #nkwin7 done
         from pyanaconda.localization import Language, LOCALE_PREFERENCES, expand_langs
 
         langObj = Language(LOCALE_PREFERENCES, territory=None)

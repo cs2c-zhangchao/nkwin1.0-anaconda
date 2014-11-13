@@ -28,7 +28,8 @@
 #include "LayoutIndicator.h"
 #include "intl.h"
 
-#define TOOLTIP_FORMAT_STR _("Current layout: '%s'. Click to switch to the next layout")
+#define MULTIPLE_LAYOUTS_TIP  _("Current layout: '%s'. Click to switch to the next layout.")
+#define SINGLE_LAYOUT_TIP _("Current layout: '%s'. Add more layouts to enable switching.")
 #define DEFAULT_LAYOUT "us"
 #define DEFAULT_LABEL_MAX_CHAR_WIDTH 8
 #define MARKUP_FORMAT_STR "<span fgcolor='black' weight='bold'>%s</span>"
@@ -58,7 +59,9 @@ struct _AnacondaLayoutIndicatorPrivate {
     GdkCursor *cursor;
     XklConfigRec *config_rec;
     gulong state_changed_handler_id;
+    gboolean state_changed_handler_id_set;
     gulong config_changed_handler_id;
+    gboolean config_changed_handler_id_set;
 };
 
 G_DEFINE_TYPE(AnacondaLayoutIndicator, anaconda_layout_indicator, GTK_TYPE_EVENT_BOX)
@@ -72,6 +75,7 @@ static void anaconda_layout_indicator_realize(GtkWidget *widget, gpointer user_d
 static void anaconda_layout_indicator_clicked(GtkWidget *widget, GdkEvent *event, gpointer user_data);
 static void anaconda_layout_indicator_refresh_ui_elements(AnacondaLayoutIndicator *indicator);
 static void anaconda_layout_indicator_refresh_layout(AnacondaLayoutIndicator *indicator);
+static void anaconda_layout_indicator_refresh_tooltip(AnacondaLayoutIndicator *indicator);
 
 /* helper functions */
 static gchar* get_current_layout(XklEngine *engine, XklConfigRec *conf_rec);
@@ -196,9 +200,11 @@ static void anaconda_layout_indicator_init(AnacondaLayoutIndicator *self) {
     self->priv->state_changed_handler_id = g_signal_connect(klass->engine, "X-state-changed",
                                                               G_CALLBACK(x_state_changed),
                                                               g_object_ref(self));
+    self->priv->state_changed_handler_id_set = TRUE;
     self->priv->config_changed_handler_id = g_signal_connect(klass->engine, "X-config-changed",
                                                              G_CALLBACK(x_config_changed),
                                                              g_object_ref(self));
+    self->priv->config_changed_handler_id_set = TRUE;
 
     /* init layout attribute with the current layout */
     self->priv->layout = get_current_layout(klass->engine, self->priv->config_rec);
@@ -228,7 +234,9 @@ static void anaconda_layout_indicator_init(AnacondaLayoutIndicator *self) {
     gtk_widget_set_margin_bottom(GTK_WIDGET(self->priv->main_box), 3);
 
     /* add box to the main container (self) */
-    gtk_container_add(GTK_CONTAINER(self), GTK_WIDGET(self->priv->main_box));
+    //Nkwin7 add by yuwan
+    //*gtk_container_add(GTK_CONTAINER(self), GTK_WIDGET(self->priv->main_box));
+    //Nkwin7 done
 }
 
 static void anaconda_layout_indicator_dispose(GObject *object) {
@@ -236,8 +244,17 @@ static void anaconda_layout_indicator_dispose(GObject *object) {
     AnacondaLayoutIndicatorClass *klass = ANACONDA_LAYOUT_INDICATOR_GET_CLASS(self);
 
     /* disconnect signals (XklEngine will outlive us) */
-    g_signal_handler_disconnect(klass->engine, self->priv->state_changed_handler_id);
-    g_signal_handler_disconnect(klass->engine, self->priv->config_changed_handler_id);
+    if (self->priv->state_changed_handler_id_set)
+    {
+        g_signal_handler_disconnect(klass->engine, self->priv->state_changed_handler_id);
+        self->priv->state_changed_handler_id_set = FALSE;
+    }
+
+    if (self->priv->config_changed_handler_id_set)
+    {
+        g_signal_handler_disconnect(klass->engine, self->priv->config_changed_handler_id);
+        self->priv->config_changed_handler_id_set = FALSE;
+    }
 
     /* unref all objects we reference (may be called multiple times) */
     if (self->priv->layout_label) {
@@ -256,6 +273,8 @@ static void anaconda_layout_indicator_dispose(GObject *object) {
         g_free(self->priv->layout);
         self->priv->layout = NULL;
     }
+
+    G_OBJECT_CLASS(anaconda_layout_indicator_parent_class)->dispose(object);
 }
 
 static void anaconda_layout_indicator_realize(GtkWidget *widget, gpointer data) {
@@ -311,15 +330,12 @@ static void anaconda_layout_indicator_clicked(GtkWidget *widget, GdkEvent *event
 
 static void anaconda_layout_indicator_refresh_ui_elements(AnacondaLayoutIndicator *self) {
     gchar *markup;
-    gchar *tooltip;
 
     markup = g_markup_printf_escaped(MARKUP_FORMAT_STR, self->priv->layout);
     gtk_label_set_markup(self->priv->layout_label, markup);
     g_free(markup);
 
-    tooltip = g_strdup_printf(TOOLTIP_FORMAT_STR, self->priv->layout);
-    gtk_widget_set_tooltip_text(GTK_WIDGET(self), tooltip);
-    g_free(tooltip);
+    anaconda_layout_indicator_refresh_tooltip(self);
 }
 
 static void anaconda_layout_indicator_refresh_layout(AnacondaLayoutIndicator *self) {
@@ -329,6 +345,20 @@ static void anaconda_layout_indicator_refresh_layout(AnacondaLayoutIndicator *se
     self->priv->layout = get_current_layout(klass->engine, self->priv->config_rec);
 
     anaconda_layout_indicator_refresh_ui_elements(self);
+}
+
+static void anaconda_layout_indicator_refresh_tooltip(AnacondaLayoutIndicator *self) {
+    AnacondaLayoutIndicatorClass *klass = ANACONDA_LAYOUT_INDICATOR_GET_CLASS(self);
+    guint n_groups = xkl_engine_get_num_groups(klass->engine);
+    gchar *tooltip;
+
+    if (n_groups > 1)
+        tooltip = g_strdup_printf(MULTIPLE_LAYOUTS_TIP, self->priv->layout);
+    else
+        tooltip = g_strdup_printf(SINGLE_LAYOUT_TIP, self->priv->layout);
+
+    gtk_widget_set_tooltip_text(GTK_WIDGET(self), tooltip);
+    g_free(tooltip);
 }
 
 /**

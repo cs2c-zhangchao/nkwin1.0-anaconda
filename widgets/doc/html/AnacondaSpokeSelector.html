@@ -8,7 +8,7 @@
 <link rel="up" href="miscellaneous.html" title="Miscellaneous Widgets">
 <link rel="prev" href="miscellaneous.html" title="Miscellaneous Widgets">
 <link rel="next" href="misc-functions.html" title="Miscellaneous Functions">
-<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -45,9 +45,9 @@
 <a name="AnacondaSpokeSelector.synopsis"></a><h2>Synopsis</h2>
 <pre class="synopsis">struct              <a class="link" href="AnacondaSpokeSelector.html#AnacondaSpokeSelector-struct" title="struct AnacondaSpokeSelector">AnacondaSpokeSelector</a>;
 struct              <a class="link" href="AnacondaSpokeSelector.html#AnacondaSpokeSelectorClass" title="struct AnacondaSpokeSelectorClass">AnacondaSpokeSelectorClass</a>;
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaSpokeSelector.html#anaconda-spoke-selector-new" title="anaconda_spoke_selector_new ()">anaconda_spoke_selector_new</a>         ();
 <span class="returnvalue">gboolean</span>            <a class="link" href="AnacondaSpokeSelector.html#anaconda-spoke-selector-get-incomplete" title="anaconda_spoke_selector_get_incomplete ()">anaconda_spoke_selector_get_incomplete</a>
                                                         (<em class="parameter"><code><a class="link" href="AnacondaSpokeSelector.html" title="AnacondaSpokeSelector"><span class="type">AnacondaSpokeSelector</span></a> *spoke</code></em>);
-<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaSpokeSelector.html#anaconda-spoke-selector-new" title="anaconda_spoke_selector_new ()">anaconda_spoke_selector_new</a>         ();
 <span class="returnvalue">void</span>                <a class="link" href="AnacondaSpokeSelector.html#anaconda-spoke-selector-set-incomplete" title="anaconda_spoke_selector_set_incomplete ()">anaconda_spoke_selector_set_incomplete</a>
                                                         (<em class="parameter"><code><a class="link" href="AnacondaSpokeSelector.html" title="AnacondaSpokeSelector"><span class="type">AnacondaSpokeSelector</span></a> *spoke</code></em>,
                                                          <em class="parameter"><code><span class="type">gboolean</span> is_incomplete</code></em>);
@@ -132,6 +132,26 @@ pointer to be cast to a <span class="type">GtkEventBox</span> pointer.</td>
 </div>
 <hr>
 <div class="refsect2">
+<a name="anaconda-spoke-selector-new"></a><h3>anaconda_spoke_selector_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_spoke_selector_new         ();</pre>
+<p>
+Creates a new <a class="link" href="AnacondaSpokeSelector.html" title="AnacondaSpokeSelector"><span class="type">AnacondaSpokeSelector</span></a>, which is a selectable display for a
+single spoke of an Anaconda hub.  Many spokes may be put together into a
+grid, displaying everything that a user needs to do in one place.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="AnacondaSpokeSelector.html" title="AnacondaSpokeSelector"><span class="type">AnacondaSpokeSelector</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="anaconda-spoke-selector-get-incomplete"></a><h3>anaconda_spoke_selector_get_incomplete ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>            anaconda_spoke_selector_get_incomplete
                                                         (<em class="parameter"><code><a class="link" href="AnacondaSpokeSelector.html" title="AnacondaSpokeSelector"><span class="type">AnacondaSpokeSelector</span></a> *spoke</code></em>);</pre>
@@ -156,26 +176,6 @@ Returns whether or not this spoke has been completed.
 </tbody>
 </table></div>
 <p class="since">Since 1.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-spoke-selector-new"></a><h3>anaconda_spoke_selector_new ()</h3>
-<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_spoke_selector_new         ();</pre>
-<p>
-Creates a new <a class="link" href="AnacondaSpokeSelector.html" title="AnacondaSpokeSelector"><span class="type">AnacondaSpokeSelector</span></a>, which is a selectable display for a
-single spoke of an Anaconda hub.  Many spokes may be put together into a
-grid, displaying everything that a user needs to do in one place.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody><tr>
-<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>A new <a class="link" href="AnacondaSpokeSelector.html" title="AnacondaSpokeSelector"><span class="type">AnacondaSpokeSelector</span></a>.</td>
-</tr></tbody>
-</table></div>
 </div>
 <hr>
 <div class="refsect2">
@@ -255,6 +255,6 @@ keystroke that can be used to focus this selector.
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.18</div>
+          Generated by GTK-Doc V1.19</div>
 </body>
 </html>

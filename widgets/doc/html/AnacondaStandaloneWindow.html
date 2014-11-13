@@ -8,7 +8,7 @@
 <link rel="up" href="windows.html" title="Window Widgets">
 <link rel="prev" href="AnacondaSpokeWindow.html" title="AnacondaSpokeWindow">
 <link rel="next" href="disks.html" title="Disk-Related Widgets">
-<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -45,15 +45,15 @@
 <a name="AnacondaStandaloneWindow.synopsis"></a><h2>Synopsis</h2>
 <pre class="synopsis">struct              <a class="link" href="AnacondaStandaloneWindow.html#AnacondaStandaloneWindow-struct" title="struct AnacondaStandaloneWindow">AnacondaStandaloneWindow</a>;
 struct              <a class="link" href="AnacondaStandaloneWindow.html#AnacondaStandaloneWindowClass" title="struct AnacondaStandaloneWindowClass">AnacondaStandaloneWindowClass</a>;
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaStandaloneWindow.html#anaconda-standalone-window-new" title="anaconda_standalone_window_new ()">anaconda_standalone_window_new</a>      ();
 <span class="returnvalue">gboolean</span>            <a class="link" href="AnacondaStandaloneWindow.html#anaconda-standalone-window-get-may-continue" title="anaconda_standalone_window_get_may_continue ()">anaconda_standalone_window_get_may_continue</a>
                                                         (<em class="parameter"><code><a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a> *win</code></em>);
-<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaStandaloneWindow.html#anaconda-standalone-window-new" title="anaconda_standalone_window_new ()">anaconda_standalone_window_new</a>      ();
-<span class="returnvalue">void</span>                <a class="link" href="AnacondaStandaloneWindow.html#anaconda-standalone-window-retranslate" title="anaconda_standalone_window_retranslate ()">anaconda_standalone_window_retranslate</a>
-                                                        (<em class="parameter"><code><a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a> *win</code></em>,
-                                                         <em class="parameter"><code>const <span class="type">char</span> *lang</code></em>);
 <span class="returnvalue">void</span>                <a class="link" href="AnacondaStandaloneWindow.html#anaconda-standalone-window-set-may-continue" title="anaconda_standalone_window_set_may_continue ()">anaconda_standalone_window_set_may_continue</a>
                                                         (<em class="parameter"><code><a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a> *win</code></em>,
                                                          <em class="parameter"><code><span class="type">gboolean</span> may_continue</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="AnacondaStandaloneWindow.html#anaconda-standalone-window-retranslate" title="anaconda_standalone_window_retranslate ()">anaconda_standalone_window_retranslate</a>
+                                                        (<em class="parameter"><code><a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a> *win</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *lang</code></em>);
 </pre>
 </div>
 <div class="refsect1">
@@ -160,6 +160,26 @@ signal is emitted.</td>
 </div>
 <hr>
 <div class="refsect2">
+<a name="anaconda-standalone-window-new"></a><h3>anaconda_standalone_window_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_standalone_window_new      ();</pre>
+<p>
+Creates a new <a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a>, which is a window designed for
+displaying a standalone spoke, such as the welcome screen or network
+configuration.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="anaconda-standalone-window-get-may-continue"></a><h3>anaconda_standalone_window_get_may_continue ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>            anaconda_standalone_window_get_may_continue
                                                         (<em class="parameter"><code><a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a> *win</code></em>);</pre>
@@ -183,51 +203,6 @@ user may continue forward from this window).
 <td>Whether the continue button on <em class="parameter"><code>win</code></em> is sensitive.</td>
 </tr>
 </tbody>
-</table></div>
-<p class="since">Since 1.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-standalone-window-new"></a><h3>anaconda_standalone_window_new ()</h3>
-<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_standalone_window_new      ();</pre>
-<p>
-Creates a new <a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a>, which is a window designed for
-displaying a standalone spoke, such as the welcome screen or network
-configuration.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody><tr>
-<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>A new <a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a>.</td>
-</tr></tbody>
-</table></div>
-</div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-standalone-window-retranslate"></a><h3>anaconda_standalone_window_retranslate ()</h3>
-<pre class="programlisting"><span class="returnvalue">void</span>                anaconda_standalone_window_retranslate
-                                                        (<em class="parameter"><code><a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a> *win</code></em>,
-                                                         <em class="parameter"><code>const <span class="type">char</span> *lang</code></em>);</pre>
-<p>
-Reload translations for this widget as needed.  Generally, this is not
-needed.  However when changing the language during installation, we need
-to be able to make sure the screen gets retranslated.  This function is
-kind of ugly but avoids having to destroy and reload the screen.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody><tr>
-<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
-<td>a <span class="type">AnacondaStaldaloneWindow</span>
-</td>
-</tr></tbody>
 </table></div>
 <p class="since">Since 1.0</p>
 </div>
@@ -261,6 +236,31 @@ when no reasonable default may be given.
 <code class="literal">TRUE</code> if this window's continue button should be sensitive.</td>
 </tr>
 </tbody>
+</table></div>
+<p class="since">Since 1.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="anaconda-standalone-window-retranslate"></a><h3>anaconda_standalone_window_retranslate ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                anaconda_standalone_window_retranslate
+                                                        (<em class="parameter"><code><a class="link" href="AnacondaStandaloneWindow.html" title="AnacondaStandaloneWindow"><span class="type">AnacondaStandaloneWindow</span></a> *win</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *lang</code></em>);</pre>
+<p>
+Reload translations for this widget as needed.  Generally, this is not
+needed.  However when changing the language during installation, we need
+to be able to make sure the screen gets retranslated.  This function is
+kind of ugly but avoids having to destroy and reload the screen.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><em class="parameter"><code>win</code></em> :</span></p></td>
+<td>a <span class="type">AnacondaStaldaloneWindow</span>
+</td>
+</tr></tbody>
 </table></div>
 <p class="since">Since 1.0</p>
 </div>
@@ -322,6 +322,6 @@ Emitted when the quit button has been activated (pressed and released).
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.18</div>
+          Generated by GTK-Doc V1.19</div>
 </body>
 </html>

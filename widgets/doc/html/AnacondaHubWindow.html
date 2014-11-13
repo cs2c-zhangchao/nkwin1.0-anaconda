@@ -8,7 +8,7 @@
 <link rel="up" href="windows.html" title="Window Widgets">
 <link rel="prev" href="AnacondaBaseWindow.html" title="AnacondaBaseWindow">
 <link rel="next" href="AnacondaSpokeWindow.html" title="AnacondaSpokeWindow">
-<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -43,8 +43,8 @@
 <a name="AnacondaHubWindow.synopsis"></a><h2>Synopsis</h2>
 <pre class="synopsis">struct              <a class="link" href="AnacondaHubWindow.html#AnacondaHubWindow-struct" title="struct AnacondaHubWindow">AnacondaHubWindow</a>;
 struct              <a class="link" href="AnacondaHubWindow.html#AnacondaHubWindowClass" title="struct AnacondaHubWindowClass">AnacondaHubWindowClass</a>;
-<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaHubWindow.html#anaconda-hub-window-get-spoke-area" title="anaconda_hub_window_get_spoke_area ()">anaconda_hub_window_get_spoke_area</a>  (<em class="parameter"><code><a class="link" href="AnacondaHubWindow.html" title="AnacondaHubWindow"><span class="type">AnacondaHubWindow</span></a> *win</code></em>);
 <span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaHubWindow.html#anaconda-hub-window-new" title="anaconda_hub_window_new ()">anaconda_hub_window_new</a>             ();
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaHubWindow.html#anaconda-hub-window-get-spoke-area" title="anaconda_hub_window_get_spoke_area ()">anaconda_hub_window_get_spoke_area</a>  (<em class="parameter"><code><a class="link" href="AnacondaHubWindow.html" title="AnacondaHubWindow"><span class="type">AnacondaHubWindow</span></a> *win</code></em>);
 </pre>
 </div>
 <div class="refsect1">
@@ -106,7 +106,7 @@ the <em class="parameter"><code>action_area</code></em> and <em class="parameter
 there to give a box to contain both the scrolled_window and a <span class="type">GtkButtonBox</span>.
 </p>
 <div class="example">
-<a name="idm252254164656"></a><p class="title"><b>Example 2. A <span class="structname">AnacondaHubWindow</span> UI definition fragment.</b></p>
+<a name="id-1.2.3.6.7.1.3"></a><p class="title"><b>Example 2. A <span class="structname">AnacondaHubWindow</span> UI definition fragment.</b></p>
 <div class="example-contents">
   <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
     <tbody>
@@ -187,6 +187,25 @@ pointer to be cast to an <a class="link" href="AnacondaBaseWindow.html" title="A
 </div>
 <hr>
 <div class="refsect2">
+<a name="anaconda-hub-window-new"></a><h3>anaconda_hub_window_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_hub_window_new             ();</pre>
+<p>
+Creates a new <a class="link" href="AnacondaHubWindow.html" title="AnacondaHubWindow"><span class="type">AnacondaHubWindow</span></a>, which is a window designed for displaying
+multiple spokes in one location.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="AnacondaHubWindow.html" title="AnacondaHubWindow"><span class="type">AnacondaHubWindow</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="anaconda-hub-window-get-spoke-area"></a><h3>anaconda_hub_window_get_spoke_area ()</h3>
 <pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_hub_window_get_spoke_area  (<em class="parameter"><code><a class="link" href="AnacondaHubWindow.html" title="AnacondaHubWindow"><span class="type">AnacondaHubWindow</span></a> *win</code></em>);</pre>
 <p>
@@ -212,29 +231,10 @@ Returns the scrolled window of <em class="parameter"><code>win</code></em> where
 </table></div>
 <p class="since">Since 1.0</p>
 </div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-hub-window-new"></a><h3>anaconda_hub_window_new ()</h3>
-<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_hub_window_new             ();</pre>
-<p>
-Creates a new <a class="link" href="AnacondaHubWindow.html" title="AnacondaHubWindow"><span class="type">AnacondaHubWindow</span></a>, which is a window designed for displaying
-multiple spokes in one location.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody><tr>
-<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>A new <a class="link" href="AnacondaHubWindow.html" title="AnacondaHubWindow"><span class="type">AnacondaHubWindow</span></a>.</td>
-</tr></tbody>
-</table></div>
-</div>
 </div>
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.18</div>
+          Generated by GTK-Doc V1.19</div>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <link rel="up" href="disks.html" title="Disk-Related Widgets">
 <link rel="prev" href="AnacondaDiskOverview.html" title="AnacondaDiskOverview">
 <link rel="next" href="miscellaneous.html" title="Miscellaneous Widgets">
-<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<meta name="generator" content="GTK-Doc V1.19 (XML mode)">
 <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
@@ -45,9 +45,9 @@
 <a name="AnacondaMountpointSelector.synopsis"></a><h2>Synopsis</h2>
 <pre class="synopsis">struct              <a class="link" href="AnacondaMountpointSelector.html#AnacondaMountpointSelector-struct" title="struct AnacondaMountpointSelector">AnacondaMountpointSelector</a>;
 struct              <a class="link" href="AnacondaMountpointSelector.html#AnacondaMountpointSelectorClass" title="struct AnacondaMountpointSelectorClass">AnacondaMountpointSelectorClass</a>;
+<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaMountpointSelector.html#anaconda-mountpoint-selector-new" title="anaconda_mountpoint_selector_new ()">anaconda_mountpoint_selector_new</a>    ();
 <span class="returnvalue">gboolean</span>            <a class="link" href="AnacondaMountpointSelector.html#anaconda-mountpoint-selector-get-chosen" title="anaconda_mountpoint_selector_get_chosen ()">anaconda_mountpoint_selector_get_chosen</a>
                                                         (<em class="parameter"><code><a class="link" href="AnacondaMountpointSelector.html" title="AnacondaMountpointSelector"><span class="type">AnacondaMountpointSelector</span></a> *widget</code></em>);
-<span class="returnvalue">GtkWidget</span> *         <a class="link" href="AnacondaMountpointSelector.html#anaconda-mountpoint-selector-new" title="anaconda_mountpoint_selector_new ()">anaconda_mountpoint_selector_new</a>    ();
 <span class="returnvalue">void</span>                <a class="link" href="AnacondaMountpointSelector.html#anaconda-mountpoint-selector-set-chosen" title="anaconda_mountpoint_selector_set_chosen ()">anaconda_mountpoint_selector_set_chosen</a>
                                                         (<em class="parameter"><code><a class="link" href="AnacondaMountpointSelector.html" title="AnacondaMountpointSelector"><span class="type">AnacondaMountpointSelector</span></a> *widget</code></em>,
                                                          <em class="parameter"><code><span class="type">gboolean</span> is_chosen</code></em>);
@@ -125,6 +125,26 @@ pointer to be cast to a <span class="type">GtkEventBox</span> pointer.</td>
 </div>
 <hr>
 <div class="refsect2">
+<a name="anaconda-mountpoint-selector-new"></a><h3>anaconda_mountpoint_selector_new ()</h3>
+<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_mountpoint_selector_new    ();</pre>
+<p>
+Creates a new <a class="link" href="AnacondaMountpointSelector.html" title="AnacondaMountpointSelector"><span class="type">AnacondaMountpointSelector</span></a>, which is a selectable display for a
+single mountpoint.  Many mountpoints may be put together into a list, displaying
+all configured filesystems at once.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A new <a class="link" href="AnacondaMountpointSelector.html" title="AnacondaMountpointSelector"><span class="type">AnacondaMountpointSelector</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
 <a name="anaconda-mountpoint-selector-get-chosen"></a><h3>anaconda_mountpoint_selector_get_chosen ()</h3>
 <pre class="programlisting"><span class="returnvalue">gboolean</span>            anaconda_mountpoint_selector_get_chosen
                                                         (<em class="parameter"><code><a class="link" href="AnacondaMountpointSelector.html" title="AnacondaMountpointSelector"><span class="type">AnacondaMountpointSelector</span></a> *widget</code></em>);</pre>
@@ -149,26 +169,6 @@ Returns whether or not this mountpoint has been chosen by the user.
 </tbody>
 </table></div>
 <p class="since">Since 1.0</p>
-</div>
-<hr>
-<div class="refsect2">
-<a name="anaconda-mountpoint-selector-new"></a><h3>anaconda_mountpoint_selector_new ()</h3>
-<pre class="programlisting"><span class="returnvalue">GtkWidget</span> *         anaconda_mountpoint_selector_new    ();</pre>
-<p>
-Creates a new <a class="link" href="AnacondaMountpointSelector.html" title="AnacondaMountpointSelector"><span class="type">AnacondaMountpointSelector</span></a>, which is a selectable display for a
-single mountpoint.  Many mountpoints may be put together into a list, displaying
-all configured filesystems at once.
-</p>
-<div class="variablelist"><table border="0" class="variablelist">
-<colgroup>
-<col align="left" valign="top">
-<col>
-</colgroup>
-<tbody><tr>
-<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
-<td>A new <a class="link" href="AnacondaMountpointSelector.html" title="AnacondaMountpointSelector"><span class="type">AnacondaMountpointSelector</span></a>.</td>
-</tr></tbody>
-</table></div>
 </div>
 <hr>
 <div class="refsect2">
@@ -240,6 +240,6 @@ it is measured in.
 </div>
 <div class="footer">
 <hr>
-          Generated by GTK-Doc V1.18</div>
+          Generated by GTK-Doc V1.19</div>
 </body>
 </html>

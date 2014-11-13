@@ -19,6 +19,22 @@
 #
 # Red Hat Author(s): Chris Lumens <clumens@redhat.com>
 #
+# Modification(s)
+# No.1
+# Author(s): Xia Lei <lei.xia@cs2c.com.cn>
+# Descriptions: - reset default partitioning.
+#               - reset defaultFs to be ext4
+#               - reset autopart type to be AUTOPART_TYPE_PLAIN
+#               - add combo to be used to select partitioning scheme 
+#                 on the customPartitioningSpoke gui.
+#               - delete refresh button.
+# Modificated file(s):pyanaconda/installclass.py,
+#                     pyanaconda/installclasses/neokylin.py,
+#                     pyanaconda/ui/gui/spokes/storage.py,
+#                     pyanaconda/ui/gui/spokes/custom.py,
+#                     pyanaconda/ui/gui/spokes/lib/according.py
+#                     pyanaconda/ui/gui/spokes/custom.glade
+# keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
 
 from blivet.size import Size
 
@@ -243,7 +259,12 @@ class UnknownPage(Page):
 # of this class will be packed into the Accordion first and then when the new installation
 # is created, it will be removed and replaced with a Page for it.
 class CreateNewPage(Page):
-    def __init__(self, title, cb, partitionsToReuse=True):
+    # nkwin7 add begin
+    # keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
+    # add combo
+    #def __init__(self, title, cb, partitionsToReuse=True):
+    def __init__(self, title, createClickedCB, autopartTypeChangedCB, partitionsToReuse=True):
+    # nkwin7 end
         Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL, spacing=6)
         self.members = []
         self.pageTitle = title
@@ -270,9 +291,24 @@ class CreateNewPage(Page):
         label.set_line_wrap(True)
         label.set_use_underline(True)
 
+        # nkwin7 add begin
+        # keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
+        # add combo
+        # Create this now to pass into the callback.  It will be populated later
+        # on in this method.
+        combo = Gtk.ComboBoxText()
+        combo.connect("changed", autopartTypeChangedCB)
+        # nkwin7 end
+
         self._createNewButton.set_has_tooltip(False)
         self._createNewButton.set_halign(Gtk.Align.START)
-        self._createNewButton.connect("clicked", cb)
+
+        # nkwin7 add begin
+        # keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
+        # add combo
+        #self._createNewButton.connect("clicked", cb)
+        self._createNewButton.connect("clicked", createClickedCB, combo)
+        # nkwin7 end
         self._createNewButton.connect("activate-link", lambda *args: Gtk.true())
         self._createBox.attach(self._createNewButton, 1, 1, 1, 1)
 
@@ -296,5 +332,27 @@ class CreateNewPage(Page):
             label.set_hexpand(True)
             label.set_line_wrap(True)
             self._createBox.attach(label, 1, 3, 1, 1)
+
+        # nkwin7 add begin
+        # keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
+        # add combo
+        text_label = _("_New mount points will use the following partitioning scheme:")
+        label = Gtk.Label(text_label)
+        label.set_alignment(0, 0.5)
+        label.set_line_wrap(True)
+        label.set_use_underline(True)
+        self._createBox.attach(label, 0, 4, 2, 1)
+
+        label.set_mnemonic_widget(combo)
+        combo.append_text(_("Standard Partition"))
+        combo.append_text(_("BTRFS"))
+        combo.append_text(_("LVM"))
+        combo.append_text(_("LVM Thin Provisioning"))
+        combo.set_active(0)
+        combo.set_margin_left(18)
+        combo.set_margin_right(18)
+        combo.set_hexpand(False)
+        self._createBox.attach(combo, 0, 5, 2, 1)
+        # nkwin7 end
 
         self.add(self._createBox)

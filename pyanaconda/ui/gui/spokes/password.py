@@ -40,8 +40,11 @@ class PasswordSpoke(FirstbootSpokeMixIn, NormalSpoke):
 
     mainWidgetName = "passwordWindow"
     uiFile = "spokes/password.glade"
-
-    category = UserSettingsCategory
+   
+    #nkwin7 add by yuwan
+    #category = UserSettingsCategory
+    category = None 
+    #nkwin7 done
 
     icon = "dialog-password-symbolic"
     title = N_("_ROOT PASSWORD")

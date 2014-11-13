@@ -325,6 +325,9 @@ use.  Try something else?</property>
       <action-widget response="1">deleteConfirmButton</action-widget>
     </action-widgets>
   </object>
+  <object class="GtkTreeModelFilter" id="containerRaidStoreFiltered">
+    <property name="child_model">raidLevelStore</property>
+  </object>
   <object class="GtkDialog" id="container_dialog">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
@@ -940,7 +943,7 @@ use.  Try something else?</property>
                                   </packing>
                                 </child>
                                 <child>
-                                  <object class="GtkLabel" id="nameLabel">
+                                  <object class="GtkLabel" id="nameLabel1">
                                     <property name="visible">True</property>
                                     <property name="can_focus">False</property>
                                     <property name="xalign">0</property>
@@ -1667,23 +1670,6 @@ until you click on the main menu's 'Begin Installation' button.</property>
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkToolButton" id="refreshButton">
-                            <property name="width_request">42</property>
-                            <property name="height_request">36</property>
-                            <property name="visible">True</property>
-                            <property name="can_focus">False</property>
-                            <property name="tooltip_text" translatable="yes">Reload storage configuration from disk.</property>
-                            <property name="label" translatable="yes">Refresh</property>
-                            <property name="use_underline">True</property>
-                            <property name="icon_name">view-refresh-symbolic</property>
-                            <signal name="clicked" handler="on_refresh_clicked" swapped="no"/>
-                          </object>
-                          <packing>
-                            <property name="expand">False</property>
-                            <property name="homogeneous">True</property>
-                          </packing>
-                        </child>
-                        <child>
                           <object class="GtkToolButton" id="helpButton">
                             <property name="width_request">42</property>
                             <property name="height_request">36</property>
@@ -2160,15 +2146,15 @@ until you click on the main menu's 'Begin Installation' button.</property>
       <action-widget response="0">help_close_button</action-widget>
     </action-widgets>
   </object>
-  <object class="GtkEntryCompletion" id="mountPointCompletion">
-    <property name="model">mountPointStore</property>
-  </object>
   <object class="GtkEntryBuffer" id="mountPointEntryBuffer"/>
   <object class="GtkListStore" id="mountPointStore">
     <columns>
       <!-- column-name path -->
       <column type="gchararray"/>
     </columns>
+  </object>
+  <object class="GtkEntryCompletion" id="mountPointCompletion">
+    <property name="model">mountPointStore</property>
   </object>
   <object class="GtkListStore" id="raidLevelStore">
     <columns>
@@ -2236,9 +2222,6 @@ until you click on the main menu's 'Begin Installation' button.</property>
     </data>
   </object>
   <object class="GtkTreeModelFilter" id="raidStoreFiltered">
-    <property name="child_model">raidLevelStore</property>
-  </object>
-  <object class="GtkTreeModelFilter" id="containerRaidStoreFiltered">
     <property name="child_model">raidLevelStore</property>
   </object>
 </interface>

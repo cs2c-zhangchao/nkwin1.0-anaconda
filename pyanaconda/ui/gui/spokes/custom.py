@@ -19,6 +19,33 @@
 # Red Hat Author(s): Chris Lumens <clumens@redhat.com>
 #                    David Lehman <dlehman@redhat.com>
 #
+# Modification(s):
+# No.1 
+# Author(s): Xia Lei <lei.xia@cs2c.com.cn>
+# Descriptions: - set StorageSpoke to be indirect, and set CustomPartitioningSpoke
+#                 be direct.
+#               - set default selected disks to be all disks.
+#               - show correctly the storage partitioned messages on the hub.
+# Modificated file(s):pyanaconda/ui/gui/spoke/storage.py,
+#                     pyanaconda/ui/gui/spoke/custom.py,
+#                     pyanaconda/ui/gui/hub/__init__.py
+# keywords: indirect and direct; default selected disks; show correctly messages
+#
+# No.2
+# Author(s): Xia Lei <lei.xia@cs2c.com.cn>
+# Descriptions: - reset default partitioning.
+#               - reset defaultFs to be ext4
+#               - reset autopart type to be AUTOPART_TYPE_PLAIN
+#               - add combo to be used to select partitioning scheme 
+#                 on the customPartitioningSpoke gui.
+#               - delete refresh button.
+# Modificated file(s):pyanaconda/installclass.py,
+#                     pyanaconda/installclasses/neokylin.py,
+#                     pyanaconda/ui/gui/spokes/storage.py,
+#                     pyanaconda/ui/gui/spokes/custom.py,
+#                     pyanaconda/ui/gui/spokes/lib/according.py
+#                     pyanaconda/ui/gui/spokes/custom.glade
+# keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
 
 # TODO:
 # - Deleting an LV is not reflected in available space in the bottom left.
@@ -36,6 +63,11 @@ from pyanaconda.i18n import _, N_, P_
 from pyanaconda.product import productName, productVersion
 from pyanaconda.threads import AnacondaThread, threadMgr
 from pyanaconda.constants import THREAD_EXECUTE_STORAGE, THREAD_STORAGE, THREAD_CUSTOM_STORAGE_INIT
+
+# nkwin7 add begin
+# keywords: indirect and direct; default selected disks; show correctly messages
+from pyanaconda.constants import THREAD_CHECK_STORAGE
+# nkwin7 end
 
 from blivet import devicefactory
 from blivet.formats import device_formats
@@ -79,6 +111,11 @@ from pyanaconda.ui.lib.disks import size_str
 # pylint: disable-msg=E0611
 from gi.repository import Gdk, Gtk
 from gi.repository.AnacondaWidgets import MountpointSelector
+
+# nkwin7 add begin
+# keywords: indirect and direct; default selected disks; show correctly messages
+from pyanaconda.flags import flags
+# nkwin7 end
 
 import logging
 log = logging.getLogger("anaconda")
@@ -592,7 +629,16 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
     uiFile = "spokes/custom.glade"
 
     category = StorageCategory
-    title = N_("MANUAL PARTITIONING")
+    # nkwin7 add begin
+    # keywords: indirect and direct; default selected disks; show correctly messages
+    # we set the CustomPartitionSpoke to be direct, so 
+    # we need reset title, and add icon.
+    #title = N_("MANUAL PARTITIONING")
+
+    # other candidates: computer-symbolic, folder-symbolic
+    icon = "drive-harddisk-symbolic"
+    title = N_("INSTALLATION _DESTINATION")
+    # nkwin7 end
 
     def __init__(self, data, storage, payload, instclass):
         NormalSpoke.__init__(self, data, storage, payload, instclass)
@@ -616,6 +662,17 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
                                   DEVICE_TYPE_DISK: ""}
 
         self._initialized = False
+        
+        # nkwin7 add begin
+        # keywords: indirect and direct; default selected disks; show correctly messages
+        self._ready = True
+        self.applyOnSkip = True
+        # To proper show storage configure information in the hub
+        self.firstCheckStorage = False
+        self.secondCallStatus = False
+        self.autopart = True
+        self.data.autopart.autopart = self.autopart
+        # nkwin7 end
 
     def apply(self):
         self.clear_errors()
@@ -650,11 +707,80 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
 
         StorageChecker.errors = []
         StorageChecker.run(self)
-        hubQ.send_ready("StorageSpoke", True)
+        # nkwin7 add begin
+        # keywords:indirect and direct; default selected disks; show correctly messages
+        # the indirect spoke(StorageSpoke is indirect) need not 
+        # communicate with hub.
+        #hubQ.send_ready("StorageSpoke", True)
+        # nkwin7 end
+
+    # nkwin7 add begin
+    # keywords:indirect and direct; default selected disks; show correctly messages
+    # set the CustomPartitionSpoke to be direct
+    #@property
+    #def indirect(self):
+    #    return True
+    # nkwin7 end
+
+    # nkwin7 add begin
+    # keywords:indirect and direct; default selected disks; show correctly messages
+    # we must add some functions for direct spoke.
+    @property
+    def showable(self):
+        return not flags.dirInstall
 
     @property
-    def indirect(self):
-        return True
+    def ready(self):
+        # By default, the storage spoke is not ready. we have to wait until
+        # storageInitialize is done.
+        return self._ready
+
+    def execute(self):
+        pass
+
+    @property
+    def status(self):
+        """ A short string describing the current status of storage setup. """
+        msg = _("No disks selected")
+
+        if flags.automatedInstall and not self.storage.rootDevice:
+            return msg
+        elif flags.automatedInstall and not self.data.bootloader.seen:
+            msg = _("No bootloader configured")
+        elif self.data.ignoredisk.onlyuse:
+            msg = P_(("%d disk selected"),
+                    ("%d disks selected"),
+                    len(self.data.ignoredisk.onlyuse)) % len(self.data.ignoredisk.onlyuse)
+
+            if self.errors and self.firstCheckStorage:
+                msg = _("Not enough free space on disks")
+                self.firstCheckStorage = False
+            elif self.errors and not self.secondCallStatus:
+                msg = _("Not enough free space on disks")
+                self.secondCallStatus = True
+            elif self.errors:
+                msg = _("Error checking storage configuration")
+            elif self.warnings:
+                msg = _("Warning checking storage configuration")
+            elif self.data.autopart.autopart:
+                msg = _("Automatic partitioning selected")
+            else:
+                msg = _("Custom partitioning selected")
+
+        return msg
+
+    @property
+    def completed(self):
+        retval = (threadMgr.get(THREAD_EXECUTE_STORAGE) is None and
+                  threadMgr.get(THREAD_CHECK_STORAGE) is None and
+                  self.storage.rootDevice is not None and
+                  not self.errors)
+
+        if flags.automatedInstall:
+            return retval and self.data.bootloader.seen
+        else:
+            return retval
+    # nkwin7 end
 
     def _grabObjects(self):
         self._configureBox = self.builder.get_object("configureBox")
@@ -707,7 +833,27 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
 
         threadMgr.add(AnacondaThread(name=THREAD_CUSTOM_STORAGE_INIT, target=self._initialize))
 
+    # nkwin7 add begin
+    # keywords: indirect and direct; default selected disks; show correctly messages
+    # we need wait THREAD_EXECUTE_STORAGE and THREAD_CHECK_STORAGE threads
+    # until they have been completed.
+    def _ifCompleted(self):
+        hubQ.send_not_ready(self.__class__.__name__)
+        hubQ.send_message(self.__class__.__name__, _("Probing storage..."))
+        threadMgr.wait(THREAD_EXECUTE_STORAGE)
+        threadMgr.wait(THREAD_CHECK_STORAGE)
+        hubQ.send_ready(self.__class__.__name__, True)
+        self.firstCheckStorage = True
+    # nkwin end
+
     def _initialize(self):
+        # nkwin7 add begin
+        # keywords: indirect and direct; default selected disks; show correctly messages
+        # we need wait THREAD_EXECUTE_STORAGE and THREAD_CHECK_STORAGE threads
+        # until they have been completed.
+        self._ifCompleted()
+        # nkwin7 end
+
         @gtk_action_wait
         def gtk_action(name):
             self._fsCombo.append_text(name)
@@ -829,6 +975,16 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
         self._updateSpaceDisplay()
         self._applyButton.set_sensitive(False)
 
+        # nkwin7 add begin
+        # keywords: indirect and direct; default selected disks; show correctly messages
+        # we need show the results of THREAD_EXECUTE_STORAGE and 
+        # THREAD_CHECK_STORAGE threads on the CustomPartitioningSpoke gui.
+        if self.errors:
+            self.set_warning(_("Error checking storage configuration.  Click for details."))
+        elif self.warnings:
+            self.set_warning(_("Warning checking storage configuration.  Click for details."))
+        # nkwin7 end 
+
     @property
     def translated_new_install_name(self):
         return _(new_install_name) % (productName, productVersion)
@@ -853,6 +1009,21 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
         if self._current_selector:
             self._current_selector.set_chosen(False)
             self._current_selector = None
+
+    # nkwin7 add begin
+    # keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
+    # add combo
+    def _change_autopart_type(self, autopartTypeCombo):
+        # This is called when the autopart type combo on the left hand side of
+        # custom partitioning is changed.  We already know how to handle the
+        # case where the user changes the type and then clicks the autopart
+        # link button.  This handles the case where the user changes the type
+        # and then clicks the '+' button.
+
+        # NOTE: This assumes the order of things in the combo box and the order
+        # of the pykickstart AUTOPART_TYPE_* constants are the same.
+        self.data.autopart.type = autopartTypeCombo.get_active()
+    #nkwin7 end
 
     def _do_refresh(self, mountpointToShow=None):
         # block mountpoint selector signal handler for now
@@ -893,9 +1064,17 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
         # If we've not yet run autopart, add an instance of CreateNewPage.  This
         # ensures it's only added once.
         if not new_devices:
+        # nkwin7 add begin
+        # keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
+        # add combo
+            #page = CreateNewPage(self.translated_new_install_name,
+            #                     self.on_create_clicked,
+            #                     partitionsToReuse=bool(ui_roots))
             page = CreateNewPage(self.translated_new_install_name,
                                  self.on_create_clicked,
+                                 self._change_autopart_type,
                                  partitionsToReuse=bool(ui_roots))
+        #nkwin7 end
             self._accordion.addPage(page, cb=self.on_page_clicked)
 
             self._partitionsNotebook.set_current_page(NOTEBOOK_LABEL_PAGE)
@@ -1844,6 +2023,14 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
                 self._removeButton.emit("clicked")
 
     def on_back_clicked(self, button):
+        # nkwin7 add begin
+        # keywords: indirect and direct; default selected disks; show correctly messages
+        # the direct spoke(CustomPartitionSpoke is direct) need
+        # communicate with hub.
+        hubQ.send_not_ready(self.__class__.__name__)
+        hubQ.send_message(self.__class__.__name__, _("Saving storage configuration..."))
+        # nkwin7 end
+
         # First, save anything from the currently displayed mountpoint.
         self._save_right_side(self._current_selector)
 
@@ -1878,7 +2065,21 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
 
         NormalSpoke.on_back_clicked(self, button)
 
+        # nkwin7 add begin
+        # keywords: indirect and direct; default selected disks; show correctly messages
+        # the direct spoke(CustomPartitionSpoke is direct) need
+        # communicate with hub.
+        hubQ.send_ready(self.__class__.__name__, True)
+        # nkwin7 end
+
     def on_add_clicked(self, button):
+        # nkwin7 add begin
+        # keywords: indirect and direct; default selected disks; show correctly messages
+        # we need show proper partition type.
+        self.autopart = False
+        self.data.autopart.autopart = self.autopart
+        # nkwin7 end 
+
         self._save_right_side(self._current_selector)
 
         dialog = AddDialog(self.data,
@@ -2099,6 +2300,13 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
                 break
 
     def on_remove_clicked(self, button):
+        # nkwin7 add begin
+        # keywords: indirect and direct; default selected disks; show correctly messages
+        # we need show proper partition type.
+        self.autopart = False
+        self.data.autopart.autopart = self.autopart
+        # nkwin7 end 
+
         # Nothing displayed on the RHS?  Nothing to remove.
         if not self._current_selector:
             return
@@ -2490,7 +2698,25 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
                 self.__storage.doAutoPart = False
                 log.debug("finished automatic partitioning")
 
-    def on_create_clicked(self, button):
+    # nkwin7 add begin
+    # keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
+    #def on_create_clicked(self, button):
+    def on_create_clicked(self, button, autopartTypeCombo):
+    # nkwin7 end
+        # nkwin7 add begin
+        # keywords: indirect and direct; default selected disks; show correctly messages
+        # we need show proper partition type.
+        self.autopart = True
+        self.data.autopart.autopart = self.autopart
+        # nkwin7 end
+        # nkwin7 add begin
+        # keywords: default partitioning; defaultFS; autopart type; add combo; delete refresh button
+        # add combo
+        # Then do autopartitioning.  We do not do any clearpart first.  This is
+        # custom partitioning, so you have to make your own room.
+        self.__storage.autoPartType = autopartTypeCombo.get_active()
+        # nkwin7 end 
+
         # Then do autopartitioning.  We do not do any clearpart first.  This is
         # custom partitioning, so you have to make your own room.
         self._do_autopart()
@@ -2736,20 +2962,58 @@ class CustomPartitioningSpoke(NormalSpoke, StorageChecker):
         # did on the shell could have changed what disks are available.
         NormalSpoke.on_back_clicked(self, None)
 
+    # nkwin7 add begin
+    # keywords: indirect and direct; default selected disks; show correctly messages
+    # we need show the results of THREAD_EXECUTE_STORAGE and 
+    # THREAD_CHECK_STORAGE threads on the CustomPartitioningSpoke gui.
+    def showStorageSpokeErrorAndWarning(self, *args):
+        from pyanaconda.ui.gui.spokes.lib.detailederror import DetailedErrorDialog
+        if self.errors:
+            label = _("The following errors were encountered when checking your partition "
+                      "configuration.  You need modify your partition setting.")
+
+            dialog = DetailedErrorDialog(self.data, buttons=[_("_OK")], label=label)
+            with enlightbox(self.window, dialog.window):
+                errors = "\n".join(self.errors)
+                dialog.refresh(errors)
+                rc = dialog.run()
+
+            dialog.window.destroy()
+        
+        elif self.warnings:
+            label = _("The following warnings were encountered when checking your partition "
+                      "configuration.  These are not fatal, but you may wish to make "
+                      "changes to your partition setting.")
+
+            dialog = DetailedErrorDialog(self.data, buttons=[_("_OK")], label=label)
+            with enlightbox(self.window, dialog.window):
+                warnings = "\n".join(self.warnings)
+                dialog.refresh(warnings)
+                rc = dialog.run()
+
+            dialog.window.destroy()
+    # nkwin7 end
+
     def on_info_bar_clicked(self, *args):
         log.debug("info bar clicked: %s (%s)" % (self._error, args))
+        # nkwin7 add begin
+        # keywords: indirect and direct; default selected disks; show correctly messages
+        # we need show the results of THREAD_EXECUTE_STORAGE and 
+        # THREAD_CHECK_STORAGE threads on the CustomPartitioningSpoke gui.
         if not self._error:
-            return
+            #return
+            self.showStorageSpokeErrorAndWarning()
+        else:
+            dlg = Gtk.MessageDialog(flags=Gtk.DialogFlags.MODAL,
+                                    message_type=Gtk.MessageType.ERROR,
+                                    buttons=Gtk.ButtonsType.CLOSE,
+                                    message_format=str(self._error))
+            dlg.set_decorated(False)
 
-        dlg = Gtk.MessageDialog(flags=Gtk.DialogFlags.MODAL,
-                                message_type=Gtk.MessageType.ERROR,
-                                buttons=Gtk.ButtonsType.CLOSE,
-                                message_format=str(self._error))
-        dlg.set_decorated(False)
-
-        with enlightbox(self.window, dlg):
-            dlg.run()
-            dlg.destroy()
+            with enlightbox(self.window, dlg):
+                dlg.run()
+                dlg.destroy()
+        # nkwin7 end
 
     def on_apply_clicked(self, button):
         """ call _save_right_side, then, perhaps, populate_right_side. """

@@ -221,15 +221,16 @@ static void anaconda_base_window_init(AnacondaBaseWindow *win) {
      */
 
     win->priv->nav_box = gtk_event_box_new();
-    gtk_widget_set_app_paintable(win->priv->nav_box, TRUE);
+    gtk_widget_set_name(win->priv->nav_box, "nav-box");
     gtk_box_pack_start(GTK_BOX(win->priv->main_box), win->priv->nav_box, FALSE, FALSE, 0);
 
     win->priv->nav_area = gtk_grid_new();
     gtk_grid_set_row_homogeneous(GTK_GRID(win->priv->nav_area), FALSE);
     gtk_grid_set_column_homogeneous(GTK_GRID(win->priv->nav_area), FALSE);
-    gtk_widget_set_margin_left(win->priv->nav_area, 6);
-    gtk_widget_set_margin_right(win->priv->nav_area, 6);
-    gtk_widget_set_margin_top(win->priv->nav_area, 6);
+    gtk_widget_set_margin_left(win->priv->nav_area, 18);
+    gtk_widget_set_margin_right(win->priv->nav_area, 18);
+    gtk_widget_set_margin_top(win->priv->nav_area, 12);
+    gtk_widget_set_margin_bottom(win->priv->nav_area, 6);
 
     gtk_container_add(GTK_CONTAINER(win->priv->nav_box), win->priv->nav_area);
 
@@ -281,6 +282,7 @@ static void anaconda_base_window_init(AnacondaBaseWindow *win) {
     win->priv->layout_indicator = anaconda_layout_indicator_new();
     anaconda_layout_indicator_set_label_width(ANACONDA_LAYOUT_INDICATOR(win->priv->layout_indicator),
                                               LAYOUT_INDICATOR_LABEL_WIDTH);
+    gtk_widget_set_name(win->priv->layout_indicator, "layout-indicator");
     gtk_widget_set_halign(win->priv->layout_indicator, GTK_ALIGN_START);
     gtk_widget_set_hexpand(win->priv->layout_indicator, FALSE);
     gtk_widget_set_margin_top(win->priv->layout_indicator, 6);
@@ -561,8 +563,6 @@ static gboolean anaconda_base_window_info_bar_clicked(GtkWidget *wiget, GdkEvent
 void anaconda_base_window_clear_info(AnacondaBaseWindow *win) {
     if (!win->priv->info_shown)
         return;
-
-    g_object_disconnect(win->priv->info_bar, "button-release-event", NULL);
 
     gtk_widget_hide(win->priv->info_bar);
     gtk_widget_destroy(win->priv->info_bar);

@@ -131,6 +131,7 @@ GtkWidget *anaconda_spoke_window_new() {
 
 static void anaconda_spoke_window_init(AnacondaSpokeWindow *win) {
     GtkWidget *nav_area;
+    GtkStyleContext *context;
 
     win->priv = G_TYPE_INSTANCE_GET_PRIVATE(win,
                                             ANACONDA_TYPE_SPOKE_WINDOW,
@@ -148,6 +149,10 @@ static void anaconda_spoke_window_init(AnacondaSpokeWindow *win) {
     gtk_widget_set_valign(win->priv->button, GTK_ALIGN_END);
     gtk_widget_set_margin_bottom(win->priv->button, 6);
 
+    /* Set 'Done' button to blue 'suggested-action' style class */
+    context = gtk_widget_get_style_context(win->priv->button);
+    gtk_style_context_add_class(context, "suggested-action");
+
     /* Hook up some signals for that button.  The signal handlers here will
      * just raise our own custom signals for the whole window.
      */
@@ -161,40 +166,8 @@ static void anaconda_spoke_window_init(AnacondaSpokeWindow *win) {
 
 static void anaconda_spoke_window_realize(GtkWidget *widget, gpointer user_data) {
     GtkAccelGroup *accel_group;
-    GError *error;
-    GdkPixbuf *pixbuf;
-    cairo_pattern_t *pattern;
-    cairo_surface_t *surface;
-    cairo_t *cr;
 
     AnacondaSpokeWindow *window = ANACONDA_SPOKE_WINDOW(widget);
-
-    /* Set the background gradient in the header.  If we fail to load the
-     * background for any reason, just print an error message and display the
-     * header without an image.
-     */
-    error = NULL;
-    pixbuf = gdk_pixbuf_new_from_file("/usr/share/anaconda/pixmaps/anaconda_spoke_header.png", &error);
-    if (!pixbuf) {
-        fprintf(stderr, "could not load header background: %s\n", error->message);
-        g_error_free(error);
-    } else {
-        GtkWidget *nav_box = anaconda_base_window_get_nav_area_background_window(ANACONDA_BASE_WINDOW(window));
-        gtk_widget_set_size_request(nav_box, -1, gdk_pixbuf_get_height (pixbuf));
-
-        surface = gdk_window_create_similar_surface(gtk_widget_get_window(nav_box), CAIRO_CONTENT_COLOR_ALPHA,
-                                                    gdk_pixbuf_get_width(pixbuf), gdk_pixbuf_get_height(pixbuf));
-        cr = cairo_create(surface);
-
-        gdk_cairo_set_source_pixbuf(cr, pixbuf, 0, 0);
-        cairo_paint(cr);
-        cairo_destroy(cr);
-        pattern = cairo_pattern_create_for_surface(surface);
-        cairo_surface_destroy(surface);
-
-        cairo_pattern_set_extend(pattern, CAIRO_EXTEND_REPEAT);
-        gdk_window_set_background_pattern(gtk_widget_get_window(nav_box), pattern);
-    }
 
     /* Pressing F12 should send you back to the hub, similar to how the old UI worked. */
     accel_group = gtk_accel_group_new();

@@ -1423,8 +1423,11 @@ class NetworkStandaloneSpoke(StandaloneSpoke):
     builderObjects = ["networkStandaloneWindow", "networkControlBox_vbox", "liststore_wireless_network", "liststore_devices", "add_device_dialog", "liststore_add_device"]
     mainWidgetName = "networkStandaloneWindow"
     uiFile = "spokes/network.glade"
-
-    preForHub = SummaryHub
+    
+    #nkwin7 add by yuwan
+    #preForHub = SummaryHub
+    preForHub = None
+    #nkwin7 done
     priority = 10
 
     def __init__(self, *args, **kwargs):
